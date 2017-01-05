@@ -2,9 +2,9 @@ import pandas as pd
 import networkx as nx
 
 def make_graph():
-    taxi = pd.read_csv('taxi.csv')
-    bus = pd.read_csv('bus.csv')
-    underground = pd.read_csv('underground.csv')
+    taxi = pd.read_csv('data/taxi.csv')
+    bus = pd.read_csv('data/bus.csv')
+    underground = pd.read_csv('data/underground.csv')
 
     G = nx.MultiGraph()
     G.add_nodes_from( range(1,200) )
