@@ -1,8 +1,5 @@
-include networkx as nx
-include numpy as np
-
-import sys
-sys.path.insert(0, '/data')
+import networkx as nx
+import numpy as np
 import const
 
 starting_nodes = np.array([13,26,29,34,50,53,91,94,103,112,117,132,138,141,155,174,197,198])
