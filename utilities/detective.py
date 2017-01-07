@@ -1,14 +1,11 @@
 import networkx as nx
 import numpy as np
-import const as const
+import utilities.const as const
 
-starting_nodes = np.array([13,26,29,34,50,53,91,94,103,112,117,132,138,141,155,174,197,198])
+def initialize_detective(n):
 
-def initialize_detective():
-    #The state of the detective is defined by number of tokens and node position.
     detective = np.array([0,0,0,0])
-    #Choose random starting point
-    #Set detective[0] = node
+    detective[0] = n
     detective[1] = const.start_taxi
     detective[2] = const.start_bus
     detective[3] = const.start_underground
@@ -19,15 +16,20 @@ def move_detective(detective,target_node,mode):
     #target_node is the node number
     #mode is a 1-D array of length 3, [taxi,bus,underground] - 1 hot encoded
 
-    detective[0] = target_node
     if mode[0] == 1:
         detective[1] = detective[1] - 1
+        detective[0] = target_node
+        return detective
     elif mode[1] == 1:
         detective[2] = detective[2] - 1
+        detective[0] = target_node
+        return detective
     elif mode[2] == 1:
         detective[3] = detective[3] - 1
-
-    return detective
+        detective[0] = target_node
+        return detective
+    print ('ERROR ERROR ERROR')
+    print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
 
 def valid_detective_move(detective,edge):
     #detective is the detective list
@@ -41,12 +43,3 @@ def valid_detective_move(detective,edge):
     elif edge[4] == 1 and detective[3] > 0:
         return True
     return False
-
-
-
-
-
-
-
-
-    
