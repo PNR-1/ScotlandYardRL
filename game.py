@@ -52,19 +52,18 @@ class ScotlandYard(object):
         if self.turn_sub_counter == 6: #Turn over, reset turn_number
             self.turn_number = self.turn_number + 1
             self.turn_sub_counter = 0
-        #self.update(); #Checks if game has ended
+        self.update(); #Checks if game has ended
 
     def update(self):
         assertion1 = False #Assume no detective is on MRx's node
         for detective in self.detectives:
-            if detective[0] == self.MRx[0]:
+            if self.detectives[0] == self.MRx[0]:
                 assertion1 = True
                 break
         assertion2 = False #Assume no detective has any legal moves left
         #Check if detective has no legal moves
+        self.detective_moves = d_util.detective_has_valid_moves(self.G,self.detectives)
         for i in range(5):
-            if self.detective_moves[i] == True:
-                self.detective_moves[i] = d_util.detective_has_valid_moves()
             if self.detective_moves[i] == True:
                 assertion2 = True
 

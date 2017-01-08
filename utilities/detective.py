@@ -1,6 +1,7 @@
 import networkx as nx
 import numpy as np
 import utilities.const as const
+import utilities.graph_utils as g_util
 
 def initialize_detective(n):
 
@@ -44,19 +45,20 @@ def valid_detective_move(detective,edge):
         return True
     return False
 
-def choose_detective_move(self,detective_id):
-    print(detective_id)
-    print (self.detectives[detective_id][0])
-
-    next_node = int(input('Next Node for Detective '))
-    mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
-    return next_node,mode
-
-def isNodeEmptyForDetectives(detectives,target_node):
-    #Detectives can move onto empty nodes not occupied by other detectives
-    result = True
+def detective_has_valid_moves(G,detectives):
+    valid_moves = [False,False,False,False,False]
+    counter = 0
     for detective in detectives:
-        if detective[0] == target_node:
-            result = False
-            break
-    return result
+        all_connections = g_util.connections(G,detective[0])
+        for connection in all_connections:
+            if connection[2] == 1 and detective[1] > 0:
+                valid_moves[counter] = True
+                break
+            elif connection[3] == 1 and detective[2] > 0:
+                valid_moves[counter] = True
+                break
+            elif connection[4] == 1 and detective[3] > 0:
+                valid_moves[counter] = True
+                break
+        counter = counter + 1
+    return valid_moves
