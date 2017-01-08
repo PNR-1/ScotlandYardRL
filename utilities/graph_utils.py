@@ -39,5 +39,5 @@ def connections(G,node):
 
 def node_one_hot(n):
     list = [0] * 199
-    list[n] = 1
+    list[n-1] = 1 #Cause nodes are 1,2,3,4,5,6,7....199 and list is 0,1,....,198
     return list

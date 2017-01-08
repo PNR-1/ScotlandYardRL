@@ -19,15 +19,15 @@ def move_detective(detective,target_node,mode):
     if mode[0] == 1:
         detective[1] = detective[1] - 1
         detective[0] = target_node
-        return detective
+        return np.copy(detective)
     elif mode[1] == 1:
         detective[2] = detective[2] - 1
         detective[0] = target_node
-        return detective
+        return np.copy(detective)
     elif mode[2] == 1:
         detective[3] = detective[3] - 1
         detective[0] = target_node
-        return detective
+        return np.copy(detective)
     print ('ERROR ERROR ERROR')
     print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
 

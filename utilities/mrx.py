@@ -20,15 +20,15 @@ def move_x(x,target_node,mode):
     if mode[0] == 1:
         x[1] = x[1] - 1
         x[0] = target_node
-        return x
+        return np.copy(x)
     elif mode[1] == 1:
         x[2] = x[2] - 1
         x[0] = target_node
-        return x
+        return np.copy(x)
     elif mode[2] == 1:
         x[3] = x[3] - 1
         x[0] = target_node
-        return x
+        return np.copy(x)
     print ('ERROR ERROR ERROR')
     print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
 
