@@ -33,20 +33,40 @@ class ScotlandYard(object):
         self.MRx = x_util.initialize_x(self.starting_nodes[0])
 
     def take_action(self,next_node,mode):
-
-        if turn_sub_counter == 0:
+        if self.complete == True:
+            print ('Game Over!')
+            return
+        if self.turn_sub_counter == 0:
             self.MRx = x_util.move_x(self.MRx,next_node,mode) #Can pass extra arguments
             self.transport_log[self.turn_number] = mode
             self.locations[self.turn_number] = next_node
-            self.turn_sub_counter = turn_sub_counter + 1
+            self.turn_sub_counter = self.turn_sub_counter + 1
         else:
             if self.detective_moves[self.turn_sub_counter - 1] == False:
                 return
             self.detectives[self.turn_sub_counter - 1] = d_util.move_detective(self.detectives[self.turn_sub_counter - 1],next_node,mode)
             self.detectives_transport_log[self.turn_sub_counter - 1][self.turn_number] = mode
             self.detectives_location_log[self.turn_sub_counter - 1][self.turn_number] = next_node
-            self.turn_sub_counter = turn_sub_counter + 1
+            self.turn_sub_counter = self.turn_sub_counter + 1
 
         if self.turn_sub_counter == 6: #Turn over, reset turn_number
             self.turn_number = self.turn_number + 1
             self.turn_sub_counter = 0
+        #self.update(); #Checks if game has ended
+
+    def update(self):
+        assertion1 = False #Assume no detective is on MRx's node
+        for detective in self.detectives:
+            if detective[0] == self.MRx[0]:
+                assertion1 = True
+                break
+        assertion2 = False #Assume no detective has any legal moves left
+        #Check if detective has no legal moves
+        for i in range(5):
+            if self.detective_moves[i] == True:
+                self.detective_moves[i] = d_util.detective_has_valid_moves()
+            if self.detective_moves[i] == True:
+                assertion2 = True
+
+        if assertion1 == True or assertion2 == False:
+            self.complete = True

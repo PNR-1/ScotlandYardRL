@@ -56,7 +56,7 @@ def isNodeEmptyForDetectives(detectives,target_node):
     #Detectives can move onto empty nodes not occupied by other detectives
     result = True
     for detective in detectives:
-        if detective[0] == target_node
-        result = False
-        break
+        if detective[0] == target_node:
+            result = False
+            break
     return result
