@@ -32,41 +32,21 @@ class ScotlandYard(object):
             self.detectives.append(d_util.initialize_detective(self.starting_nodes[i+1]))
         self.MRx = x_util.initialize_x(self.starting_nodes[0])
 
-    def play_turn(self):
+    def take_action(self,next_node,mode):
 
-        if self.turn_sub_counter == 0: #Redundant Statement
-            self.play_MRx()
-            self.turn_sub_counter = self.turn_sub_counter + 1
+        if turn_sub_counter == 0:
+            self.MRx = x_util.move_x(self.MRx,next_node,mode) #Can pass extra arguments
+            self.transport_log[self.turn_number] = mode
+            self.locations[self.turn_number] = next_node
+            self.turn_sub_counter = turn_sub_counter + 1
+        else:
+            if self.detective_moves[self.turn_sub_counter - 1] == False:
+                return
+            self.detectives[self.turn_sub_counter - 1] = d_util.move_detective(self.detectives[self.turn_sub_counter - 1],next_node,mode)
+            self.detectives_transport_log[self.turn_sub_counter - 1][self.turn_number] = mode
+            self.detectives_location_log[self.turn_sub_counter - 1][self.turn_number] = next_node
+            self.turn_sub_counter = turn_sub_counter + 1
 
-        for i in range(5):
-            if self.detective_moves[i] == True:
-                self.play_detective(i) #Passing 0,1,2,3,4
-            self.turn_sub_counter = self.turn_sub_counter + 1 #Goes 1,2,3,4,5
-
-        self.turn_number = self.turn_number + 1
-        self.turn_sub_counter = 0
-        self.isGameEnd()
-
-    def play_MRx(self):
-        next_node = 0
-        mode = [0,0,0]
-
-        next_node,mode = x_util.choose_x_move()
-        mode = np.array(mode)
-        print(next_node,mode)
-        self.MRx = x_util.move_x(self.MRx,next_node,mode) #Can pass extra arguments
-        self.transport_log[self.turn_number] = mode
-        self.locations[self.turn_number] = next_node
-        del next_node,mode
-
-
-    def play_detective(self,detective_id):
-        next_node = 0
-        mode = [0,0,0]
-
-        next_node,mode = x_util.choose_detective_move(detective_id) #Can pass extra arguments
-        print(next_node,mode)
-        self.detectives[detective_id] = d_util.move_detective(self.detectives[detective_id],next_node,mode)
-        self.detectives_transport_log[detective_id][self.turn_number] = mode
-        self.detectives_location_log[detective_id][self.turn_number] = next_node
-        del next_node,mode
+        if self.turn_sub_counter == 6: #Turn over, reset turn_number
+            self.turn_number = self.turn_number + 1
+            self.turn_sub_counter = 0

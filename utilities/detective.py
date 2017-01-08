@@ -51,3 +51,12 @@ def choose_detective_move(self,detective_id):
     next_node = int(input('Next Node for Detective '))
     mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
     return next_node,mode
+
+def isNodeEmptyForDetectives(detectives,target_node):
+    #Detectives can move onto empty nodes not occupied by other detectives
+    result = True
+    for detective in detectives:
+        if detective[0] == target_node
+        result = False
+        break
+    return result
