@@ -43,3 +43,11 @@ def valid_detective_move(detective,edge):
     elif edge[4] == 1 and detective[3] > 0:
         return True
     return False
+
+def choose_detective_move(self,detective_id):
+    print(detective_id)
+    print (self.detectives[detective_id][0])
+
+    next_node = int(input('Next Node for Detective '))
+    mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
+    return next_node,mode

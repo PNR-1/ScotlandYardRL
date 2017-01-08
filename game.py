@@ -45,16 +45,16 @@ class ScotlandYard(object):
 
         self.turn_number = self.turn_number + 1
         self.turn_sub_counter = 0
-        #isGameEnd() Implement This function
+        self.isGameEnd()
 
     def play_MRx(self):
         next_node = 0
         mode = [0,0,0]
 
-        next_node,mode = self.choose_x_move()
+        next_node,mode = x_util.choose_x_move()
         mode = np.array(mode)
         print(next_node,mode)
-        self.MRx = x_util.move_x(self.MRx,next_node,mode)
+        self.MRx = x_util.move_x(self.MRx,next_node,mode) #Can pass extra arguments
         self.transport_log[self.turn_number] = mode
         self.locations[self.turn_number] = next_node
         del next_node,mode
@@ -64,25 +64,9 @@ class ScotlandYard(object):
         next_node = 0
         mode = [0,0,0]
 
-        next_node,mode = self.choose_detective_move(detective_id)
+        next_node,mode = x_util.choose_detective_move(detective_id) #Can pass extra arguments
         print(next_node,mode)
         self.detectives[detective_id] = d_util.move_detective(self.detectives[detective_id],next_node,mode)
         self.detectives_transport_log[detective_id][self.turn_number] = mode
         self.detectives_location_log[detective_id][self.turn_number] = next_node
         del next_node,mode
-
-    #Function to be changed to use RL methods
-    def choose_x_move(self):
-        print('Current Location ',self.MRx[0], end = ' ')
-        next_node = int(input('Next Node for Mr.X '))
-        mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
-        return next_node,mode
-
-    #Function to be changed to use RL methods
-    def choose_detective_move(self,detective_id):
-        print(detective_id)
-        print (self.detectives[detective_id][0])
-
-        next_node = int(input('Next Node for Detective '))
-        mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
-        return next_node,mode

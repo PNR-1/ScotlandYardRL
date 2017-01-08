@@ -1,5 +1,6 @@
 import pandas as pd
 import networkx as nx
+import numpy as np
 
 def make_graph():
     taxi = pd.read_csv('data/taxi.csv')
@@ -35,9 +36,20 @@ def connections(G,node):
         elif (data['type'] == 'underground'):
             add_list[4] = 1
         list.append(add_list)
-    return list
+    return np.copy(list)
 
 def node_one_hot(n):
     list = [0] * 199
     list[n-1] = 1 #Cause nodes are 1,2,3,4,5,6,7....199 and list is 0,1,....,198
     return list
+
+def isNodeEmptyForDetectives(G,detectives,target_node):
+    #Detectives can move onto empty nodes not occupied by other detectives
+    all_connections = connections(G,target_node)
+    result = True
+    for connection in all_connections:
+        if connection[1] == target_node:
+            result = False
+            break
+    return result
+    

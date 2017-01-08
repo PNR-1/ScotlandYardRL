@@ -46,3 +46,9 @@ def valid_x(x,edge):
     elif edge[4] == 1 and x[3] > 0:
         return True
     return False
+    
+def choose_x_move():
+    print('Current Location ',self.MRx[0], end = ' ')
+    next_node = int(input('Next Node for Mr.X '))
+    mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
+    return next_node,mode
