@@ -69,3 +69,6 @@ class ScotlandYard(object):
 
         if assertion1 == True or assertion2 == False:
             self.complete = True
+
+        if self.turn_number == 22:
+            self.complete = True
