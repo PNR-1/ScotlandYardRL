@@ -1,0 +1,7 @@
+# ScotlandYardRL
+Reinforcement Learning and Scotland Yard
+Staring New Game 
+
+Starting Nodes: Mr_X Detective [0:4] [ 91  34  50 132 103  53]Staring New Game 
+
+Starting Nodes: Mr_X Detective [0:4] [ 50 141  34  91 112 117]

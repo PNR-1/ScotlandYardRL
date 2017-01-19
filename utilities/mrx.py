@@ -32,23 +32,11 @@ def move_x(x,target_node,mode):
     print ('ERROR ERROR ERROR')
     print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
 
+def x_valid_list(MRx,detectives):
 
+    current_node = MRx[0]
+    taxi = MRx[1]
+    bus = MRx[2]
+    underground = MRx[3]
 
-def valid_x(x,edge):
-    #x is the x list
-    #edge is the list that contains [current node,next node,taxi,bus,underground]
-    #As the edge list is created by another function and not queried, we do not check of the validness of the edge
-    #We only check if x has enough tokens for that move
-    if edge[2] == 1 and x[1] > 0:
-        return True
-    elif edge[3] == 1 and x[2] > 0:
-        return True
-    elif edge[4] == 1 and x[3] > 0:
-        return True
-    return False
-    
-def choose_x_move():
-    print('Current Location ',self.MRx[0], end = ' ')
-    next_node = int(input('Next Node for Mr.X '))
-    mode = [int(x) for x in input('Enter Mode ').split()] #Enter as 0 0 1 or 0 1 0 or 1 0 0
-    return next_node,mode
+    edges = 
