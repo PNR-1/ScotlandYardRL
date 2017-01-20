@@ -1,6 +1,7 @@
 import networkx as nx
 import numpy as np
 import utilities.const as const
+import utilities.graph_utils as g_util
 
 
 def initialize_x(n):
@@ -32,11 +33,23 @@ def move_x(x,target_node,mode):
     print ('ERROR ERROR ERROR')
     print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
 
-def x_valid_list(MRx,detectives):
+def x_valid_list(MRx,G):
 
     current_node = MRx[0]
     taxi = MRx[1]
     bus = MRx[2]
     underground = MRx[3]
 
-    edges = 
+    edges = g_util.connections(G,current_node)
+
+    x_valid_list = []
+
+    for edge in edges:
+        if edge[2] == 1 and taxi > 0:
+            x_valid_list.append(edge)
+        elif edge[3] == 1 and bus > 0:
+            x_valid_list.append(edge)
+        elif edge[4] == 1 and underground > 0:
+            x_valid_list.append(edge)
+
+    return np.array(x_valid_list)

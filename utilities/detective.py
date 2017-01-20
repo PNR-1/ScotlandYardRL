@@ -3,6 +3,7 @@ import numpy as np
 import utilities.const as const
 import utilities.graph_utils as g_util
 
+
 def initialize_detective(n):
 
     detective = np.array([0,0,0,0])
@@ -45,20 +46,45 @@ def valid_detective_move(detective,edge):
         return True
     return False
 
-def detective_has_valid_moves(G,detectives):
-    valid_moves = [False,False,False,False,False]
-    counter = 0
-    for detective in detectives:
-        all_connections = g_util.connections(G,detective[0])
-        for connection in all_connections:
-            if connection[2] == 1 and detective[1] > 0:
-                valid_moves[counter] = True
+def dec_valid_list(detectives,G,detective_id):
+    #detective_id is the id of detective - [0,4]
+
+    current_node = detectives[detective_id][0]
+    taxi = detectives[detective_id][1]
+    bus = detectives[detective_id][2]
+    underground = detectives[detective_id][3]
+
+    edges = g_util.connections(G,current_node)
+
+    x_valid_list = []
+
+    for edge in edges:
+        if edge[2] == 1 and taxi > 0:
+            x_valid_list.append(edge)
+        elif edge[3] == 1 and bus > 0:
+            x_valid_list.append(edge)
+        elif edge[4] == 1 and underground > 0:
+            x_valid_list.append(edge)
+
+    valid_list = []
+
+    for edge in x_valid_list:
+        invalid_move = False
+        for detective in detectives:
+            if detective[0] == edge[1]:
+                invalid_move = True
                 break
-            elif connection[3] == 1 and detective[2] > 0:
-                valid_moves[counter] = True
-                break
-            elif connection[4] == 1 and detective[3] > 0:
-                valid_moves[counter] = True
-                break
-        counter = counter + 1
-    return valid_moves
+        if invalid_move == False:
+            valid_list.append(edge)
+
+    return np.array(valid_list)
+
+def send_token(MRx,mode):
+    if mode[0] == 1:
+        MRx[1] = MRx[1] + 1
+    elif mode[1] == 1:
+        MRx[2] = MRx[2] + 1
+    elif mode[3] == 1:
+        MRx[3] = MRx[3] + 1
+
+    return MRx 
