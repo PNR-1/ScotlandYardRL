@@ -14,4 +14,5 @@ def choose_starting_nodes():
 
 surface_points = np.array([2,7,12,17,23]) # Mr. X's location is revealed after turns 3,8,13,18,24
                                           # Note: Turns start as 0,1,2,3...... and the maximum turns are
-                                          # (10 + 8 + 4 = ) 22. So after turn counter hits 21, game ends. 
+                                          # (10 + 8 + 4 = ) 22. So after turn counter hits 21, game ends.
+turn_to_next_reveal = np.array([2,1,0,4,3,2,1,0,4,3,2,1,0,4,3,2,1,0,4,3,2,1,0])
