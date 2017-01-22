@@ -1,8 +1,8 @@
 Staring New Game 
 
 Turn Number: 0		 Turn Sub Counter: 0
-Starting Nodes: Mr_X, Detective [0:4] [ 91 155  50 197 112 138]
-MRx: [91  4  3  3]
+Starting Nodes: Mr_X, Detective [0:4] [198 174 103 117  26 132]
+MRx: [198   4   3   3]
 MRx Locations: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
 MRx transport_log: [[0 0 0]
  [0 0 0]
@@ -29,11 +29,11 @@ MRx transport_log: [[0 0 0]
  [0 0 0]
  [0 0 0]]
 Does MRx have a valid move? True
-Detectives: [[155  10   8   4]
- [ 50  10   8   4]
- [197  10   8   4]
- [112  10   8   4]
- [138  10   8   4]]
+Detectives: [[174  10   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [ 26  10   8   4]
+ [132  10   8   4]]
 Detectives Location Log: [[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
