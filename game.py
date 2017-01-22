@@ -207,7 +207,7 @@ class ScotlandYard(object):
             observation = observation + g_util.node_one_hot(last_reveal_turn)
         else:
             observation = observation + [0] * 199
-        #observation = observation + const.turn_to_next_reveal[self.turn_number]
+        observation = observation + const.turn_to_next_reveal[self.turn_number]
 
         detective_turn = np.array([0,0,0,0,0])
         detective_turn[self.turn_sub_counter - 1] = 1
