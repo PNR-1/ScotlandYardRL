@@ -40,7 +40,7 @@ class ScotlandYard(object):
         self.MRx = x_util.initialize_x(self.starting_nodes[0])
         self.reward = 0
         self.log_start()
-        print('Enter Move for MRx:', end = ' ')
+        #print('Enter Move for MRx:', end = ' ')
 #Done
 
     def valid_moves(self):
@@ -55,7 +55,8 @@ class ScotlandYard(object):
         elif self.turn_sub_counter == 0:
             return d_util.dec_valid_list(self.detectives,self.G,4)
         else:
-            return d_util.dec_valid_list(self.detectives,self.G,self.turn_sub_counter - 1)
+            return d_util.dec_valid_list(self.detectives,self.G,self.turn_sub_counter - 2)
+
     def take_action(self,next_node,mode):
         if self.complete == True:
             print('Game Over. Please call initialize_game again.')
@@ -80,8 +81,8 @@ class ScotlandYard(object):
 
         if self.complete == True:
             self.log_file.close()
-        else:
-            self.print_action_request()
+        #else:
+            #self.print_action_request()
 
         return observation,self.reward,self.complete
 
