@@ -73,7 +73,7 @@ def deep_q_learning(num_episodes = 100,
                 q_target = Q_values[optimum_action] + reward
                 modelX.optimize(used_state, q_target)
 
-            else
+            else:
                 for j in range(len(actions.shape[0])):
                     Q_values = np.zeros(len(actions.shape[0]))
                     for j in range(len(actions.shape[0])):

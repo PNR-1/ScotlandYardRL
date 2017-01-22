@@ -9,9 +9,9 @@ import utilities
 learning_rate = 0.001
 
 columns = 0
-X_pl = tf.placeholder(shape=[None, columns], dtype=tf.int8, name="X")
+X = tf.placeholder(shape=[None, columns], dtype=tf.float32, name="X")
     # The TD target value
-y_pl = tf.placeholder(shape=[None,1], dtype=tf.float32, name="Y")
+Y = tf.placeholder(shape=[None,1], dtype=tf.float32, name="Y")
 
 
 W1 = tf.Variable(tf.zeros([columns, 128]))
@@ -29,7 +29,7 @@ pred = tf.nn.relu(tf.matmul(hidden2, W3) + b3)
 cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=Y))
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
-init = tf.global_variables_initializer()
+init = tf.initialize_all_variables()
 
 def initialize(size):
     columns = size
@@ -39,7 +39,7 @@ def initialize(size):
 
 def predict(x):
     sess = tf.session()
-    y = sess.run(pred, feed_dict(X:x))
+    y = sess.run(pred, feed_dict={X:x})
     return y
 
 
