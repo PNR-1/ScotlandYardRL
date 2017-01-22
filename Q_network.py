@@ -8,8 +8,8 @@ import rl_backend.model as md
 import game
 
 def deep_q_learning(num_episodes = 100,
-                    epsilon_start = 1.0
-                    epsilon_end = 0.1
+                    epsilon_start = 1.0,
+                    epsilon_end = 0.1,
                     epsilon_decay_steps = 5000
                         ):
 
