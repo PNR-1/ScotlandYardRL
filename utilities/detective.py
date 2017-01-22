@@ -33,19 +33,6 @@ def move_detective(detective,target_node,mode):
     print ('ERROR ERROR ERROR')
     print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
 
-def valid_detective_move(detective,edge):
-    #detective is the detective list
-    #edge is the list that contains [current node,next node,taxi,bus,underground]
-    #As the edge list is created by another function and not queried, we do not check of the validness of the edge
-    #We only check if the detective has enough tokens for that move
-    if edge[2] == 1 and detective[1] > 0:
-        return True
-    elif edge[3] == 1 and detective[2] > 0:
-        return True
-    elif edge[4] == 1 and detective[3] > 0:
-        return True
-    return False
-
 def dec_valid_list(detectives,G,detective_id):
     #detective_id is the id of detective - [0,4]
 
@@ -84,7 +71,7 @@ def send_token(MRx,mode):
         MRx[1] = MRx[1] + 1
     elif mode[1] == 1:
         MRx[2] = MRx[2] + 1
-    elif mode[3] == 1:
+    elif mode[2] == 1:
         MRx[3] = MRx[3] + 1
 
-    return MRx 
+    return MRx
