@@ -30,18 +30,36 @@ class ScotlandYard(object):
 
         self.detectives_transport_log = np.array([self.transport_log] * 5)
         self.detectives_location_log = np.array([self.locations] * 5)
+        self.last_move_by_which_player = 0
 #Done
 
     def initialize_game(self):
 
         self.G = g_util.make_graph()
+        self.starting_nodes = const.choose_starting_nodes()
         for i in range(5):
             self.detectives[i] = d_util.initialize_detective( self.starting_nodes[i+1] )
         self.MRx = x_util.initialize_x(self.starting_nodes[0])
         self.reward = 0
         self.log_start()
-        #print('Enter Move for MRx:', end = ' ')
-#Done
+        self.complete = False
+
+        self.locations = np.array([0] * 24)   #For MRx
+        self.transport_log = np.array([[0,0,0]] * 24)   #For MRx
+
+        self.turn_number = 0 # Retains the turn number that has been completed
+        self.turn_sub_counter = 0 #Retains whose turn it is during the specific turn
+                                  #0 - MRx, [1->5] for detectives iteratively
+
+
+        self.MRx_moves = True
+        self.detective_moves = [True,True,True,True,True] #If any detective is in a location where he does
+                                                          #not have the token to move away from, it is set to False
+
+        self.detectives_transport_log = np.array([self.transport_log] * 5)
+        self.detectives_location_log = np.array([self.locations] * 5)
+        self.last_move_by_which_player = 0
+
 
     def valid_moves(self):
         if self.turn_sub_counter == 0:
@@ -50,18 +68,18 @@ class ScotlandYard(object):
             return d_util.dec_valid_list(self.detectives,self.G,self.turn_sub_counter - 1)
 
     def end_turn_valid_moves(self):
-        if self.turn_sub_counter == 1:
+
+        #print('Moves for ',self.last_move_by_which_player)
+        if self.last_move_by_which_player == 0:
             return x_util.x_valid_list(self.MRx,self.G)
-        elif self.turn_sub_counter == 0:
-            return d_util.dec_valid_list(self.detectives,self.G,4)
         else:
-            return d_util.dec_valid_list(self.detectives,self.G,self.turn_sub_counter - 2)
+            return d_util.dec_valid_list(self.detectives,self.G,self.last_move_by_which_player - 1)
+
 
     def take_action(self,next_node,mode):
         if self.complete == True:
             print('Game Over. Please call initialize_game again.')
             return
-
         if self.turn_sub_counter == 0:
             self.play_MRx(next_node,mode)
         else:
@@ -70,8 +88,9 @@ class ScotlandYard(object):
         self.update()
         self.log_turn(next_node,mode)
 
-        observation = self.observe()
+        observation,_ = self.observe()
 
+        self.last_move_by_which_player = self.turn_sub_counter
         self.turn_sub_counter = self.turn_sub_counter + 1
         if self.turn_sub_counter == 6: #1 turn over
             self.turn_sub_counter = 0
@@ -80,21 +99,10 @@ class ScotlandYard(object):
         self.skip_turn()
 
         if self.complete == True:
+            self.complete_log()
             self.log_file.close()
-        #else:
-            #self.print_action_request()
 
         return observation,self.reward,self.complete
-
-    def print_action_request(self):
-        if self.turn_sub_counter == 0:
-            print('Enter Move for MRx:',end = ' ')
-            self.log_file.write('Enter Move for MRx: \n')
-        else:
-            print('Enter Move for Detective',self.turn_sub_counter - 1,':',end = ' ')
-            self.log_file.write('Enter Move for Detective ')
-            self.log_file.write(str(self.turn_sub_counter - 1))
-            self.log_file.write('\n')
 
     def skip_turn(self):
         if self.turn_sub_counter == 0:
@@ -131,12 +139,17 @@ class ScotlandYard(object):
 
         if (x_util.x_valid_list(self.MRx,self.G).size == 0):
             self.MRx_moves = False
+        else:
+            self.MRx_moves = True
+
         all_detectives_cant_move = True
+
         for i in range(5):
             if (d_util.dec_valid_list(self.detectives,self.G,i).size == 0):
                 self.detective_moves[i] = False
             else:
                 all_detectives_cant_move = False
+                self.detective_moves[i] = True
 
         assumption = False #If MRx and detective are on same node. Game is Over
 
@@ -190,13 +203,11 @@ class ScotlandYard(object):
         observation = observation + self.detectives[4][1:].tolist()
 
         observation = observation + [self.turn_number]
-
         return np.array(observation)
 
     def observe_as_detective(self):
         observation = []
 
-        last_location = 0
         last_reveal_turn = 0
         for surface_point in const.surface_points:
             if surface_point > self.turn_number:
@@ -206,16 +217,13 @@ class ScotlandYard(object):
         if last_reveal_turn != 0:
             observation = observation + g_util.node_one_hot(last_reveal_turn)
         else:
-            observation = observation + [0] * 199
-        observation = observation + const.turn_to_next_reveal[self.turn_number]
+            observation = observation + g_util.node_one_hot_zero()
+
+        observation = observation + [const.turn_to_next_reveal[self.turn_number]]
 
         detective_turn = np.array([0,0,0,0,0])
         detective_turn[self.turn_sub_counter - 1] = 1
 
-        #print(detective_turn)
-        #print(detective_turn.tolist())
-        #observation = observation + detective_turn
-        #Which detective should play
         for i in range(5):
             if self.turn_sub_counter - 1 == i:
                 observation = observation + [1]
@@ -234,8 +242,6 @@ class ScotlandYard(object):
         observation = observation + self.detectives[3][1:].tolist()
         observation = observation + self.detectives[4][1:].tolist()
 
-        #observation = observation + [self.turn_number]
-        #Add MRx Tokens last 5
         for i in range(self.turn_number - 5, self.turn_number):
             observation = observation + self.transport_log[i].tolist()
 
@@ -247,65 +253,25 @@ class ScotlandYard(object):
         self.log_file.write('\t\t Turn Sub Counter: ')
         self.log_file.write(str(self.turn_sub_counter))
         self.log_file.write('\n')
-
         self.log_file.write('Next Node: ')
         self.log_file.write(str(next_node))
         self.log_file.write('\n')
-
         self.log_file.write('Mode: ')
         self.log_file.write(str(mode))
         self.log_file.write('\n')
-
-        self.log_file.write('Starting Nodes: Mr_X, Detective [0:4] ')
-        self.log_file.write(str(self.starting_nodes))
-        self.log_file.write('\n')
-
         self.log_file.write('MRx: ')
         self.log_file.write(str(self.MRx))
         self.log_file.write('\n')
-
-        self.log_file.write('MRx Locations: ')
-        self.log_file.write(str(self.locations))
-        self.log_file.write('\n')
-
-        self.log_file.write('MRx transport_log: ')
-        self.log_file.write(str(self.transport_log))
-        self.log_file.write('\n')
-
-        self.log_file.write('Does MRx have a valid move? ')
-        self.log_file.write(str(self.MRx_moves))
-        self.log_file.write('\n')
-
         self.log_file.write('Detectives: ')
         self.log_file.write(str(self.detectives))
         self.log_file.write('\n')
-
-        self.log_file.write('Detectives Location Log: ')
-        self.log_file.write(str(self.detectives_location_log))
-        self.log_file.write('\n')
-
-        self.log_file.write('Detectives Transport Log: ')
-        self.log_file.write(str(self.detectives_transport_log))
-        self.log_file.write('\n')
-
-        self.log_file.write('Does a detective have a valid move? ')
-        self.log_file.write(str(self.detective_moves))
-        self.log_file.write('\n')
-
-        self.log_file.write('Complete: ')
-        self.log_file.write(str(self.complete))
-        self.log_file.write('\n')
-
-        self.log_file.write('Reward: ')
-        self.log_file.write(str(self.reward))
-        self.log_file.write('\n')
-
         self.log_file.write('#######')
+        self.log_file.write('\n')
 
     def log_start(self):
         log_path = './log'
         _,month,day,hour,minute,second,_,_,_ = time.localtime(time.time())
-        log_path = log_path + '/' + str(month) + '-' + str(day) + '/' + str(hour) + '/'
+        log_path = log_path + '/gamelog/' + str(month) + '-' + str(day) + '/' + str(hour) + '/'
         print(log_path)
         if not os.path.exists(log_path):
             os.makedirs(log_path)
@@ -314,26 +280,39 @@ class ScotlandYard(object):
 
         self.log_file.write('Staring New Game \n')
         self.log_file.write('\n')
+        self.log_file.write('Starting Nodes: Mr_X, Detective [0:4] ')
+        self.log_file.write(str(self.starting_nodes))
+        self.log_file.write('\n')
+        self.log_file.write('MRx: ')
+        self.log_file.write(str(self.MRx))
+        self.log_file.write('\n')
+        self.log_file.write('MRx Locations: ')
+        self.log_file.write(str(self.locations))
+        self.log_file.write('\n')
+        self.log_file.write('Detectives: ')
+        self.log_file.write(str(self.detectives))
+        self.log_file.write('\n')
+        self.log_file.write('\t\t\t\t#######')
+        self.log_file.write('\n')
+        self.log_file.write('\n')
 
+    def complete_log(self):
+        self.log_file.write('\n\n ####### ###### END GAME\n')
         self.log_file.write('Turn Number: ')
         self.log_file.write(str(self.turn_number))
         self.log_file.write('\t\t Turn Sub Counter: ')
         self.log_file.write(str(self.turn_sub_counter))
         self.log_file.write('\n')
 
-        self.log_file.write('Starting Nodes: Mr_X, Detective [0:4] ')
-        self.log_file.write(str(self.starting_nodes))
-        self.log_file.write('\n')
-
         self.log_file.write('MRx: ')
         self.log_file.write(str(self.MRx))
         self.log_file.write('\n')
 
-        self.log_file.write('MRx Locations: ')
+        self.log_file.write('MRx Locations:\n')
         self.log_file.write(str(self.locations))
         self.log_file.write('\n')
 
-        self.log_file.write('MRx transport_log: ')
+        self.log_file.write('MRx transport_log:\n')
         self.log_file.write(str(self.transport_log))
         self.log_file.write('\n')
 
@@ -341,17 +320,15 @@ class ScotlandYard(object):
         self.log_file.write(str(self.MRx_moves))
         self.log_file.write('\n')
 
-        self.log_file.write('Detectives: ')
+        self.log_file.write('Detectives:\n')
         self.log_file.write(str(self.detectives))
         self.log_file.write('\n')
 
-        self.log_file.write('Detectives Location Log: ')
+        self.log_file.write('Detectives Location Log:\n')
         self.log_file.write(str(self.detectives_location_log))
         self.log_file.write('\n')
 
-        self.log_file.write('Detectives Transport Log: ')
-        self.log_file.write(str(self.detectives_transport_log))
-        self.log_file.write('\n')
+        g_util.print_list(self.log_file,self.detectives_transport_log)
 
         self.log_file.write('Does a detective have a valid move? ')
         self.log_file.write(str(self.detective_moves))
@@ -366,7 +343,3 @@ class ScotlandYard(object):
         self.log_file.write('\n')
 
         self.log_file.write('#######')
-        self.log_file.write('\n')
-
-        self.log_file.write('Enter Move for MRx: ')
-        self.log_file.write('\n')
