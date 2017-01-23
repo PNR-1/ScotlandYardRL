@@ -42,3 +42,15 @@ def node_one_hot(n):
     list = [0] * 199
     list[n-1] = 1 #Cause nodes are 1,2,3,4,5,6,7....199 and list is 0,1,....,198
     return list
+
+def node_one_hot_zero():
+    list = [0] * 199
+    return list
+
+def print_list(log_file,D_3_list):
+    number_of_det,rows,_ = D_3_list.shape
+    for row in range(rows):
+        for det in range(number_of_det):
+            log_file.write(str(D_3_list[det][row]))
+            log_file.write('\t')
+        log_file.write('\n')
