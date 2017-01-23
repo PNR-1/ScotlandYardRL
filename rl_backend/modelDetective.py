@@ -4,45 +4,52 @@ import os
 import random
 import tensorflow as tf
 import utilities
+class Model(object):
 
+    def __init__(self):
+        tf.reset_default_graph
+        self.learning_rate = 0.001
 
-learning_rate = 0.001
-
-columns = 1432
-X = tf.placeholder(shape=[None, columns], dtype=tf.float32, name="X")
+        self.columns = 1432
+        self.X = tf.placeholder(shape=[None, self.columns], dtype=tf.float32, name="X")
     # The TD target value
-Y = tf.placeholder(shape=[None,1], dtype=tf.float32, name="Y")
+        self.Y = tf.placeholder(shape=[None,1], dtype=tf.float32, name="Y")
 
 
-W1 = tf.Variable(tf.zeros([columns, 128]))
-b1 = tf.Variable(tf.zeros([128]))
-hidden1 = tf.nn.relu(tf.matmul(X, W1) + b1)
+        self.W1 = tf.Variable(tf.random_normal([self.columns, 128]))
+        self.b1 = tf.Variable(tf.random_normal([128]))
+        self.hidden1 = tf.nn.relu(tf.matmul(self.X, self.W1) + self.b1)
 
-W2 = tf.Variable(tf.zeros([128, 64]))
-b2 = tf.Variable(tf.zeros([64]))
-hidden2 = tf.nn.relu(tf.matmul(hidden1, W2) + b2)
+        self.W2 = tf.Variable(tf.random_normal([128, 64]))
+        self.b2 = tf.Variable(tf.random_normal([64]))
+        self.hidden2 = tf.nn.relu(tf.matmul(self.hidden1, self.W2) + self.b2)
 
-W3 = tf.Variable(tf.zeros([64, 1]))
-b3 = tf.Variable(tf.zeros([1]))
-pred = tf.nn.relu(tf.matmul(hidden2, W3) + b3)
+        self.W3 = tf.Variable(tf.random_normal([64, 1]))
+        self.b3 = tf.Variable(tf.random_normal([1]))
+        self.pred = tf.nn.relu(tf.matmul(self.hidden2, self.W3) + self.b3)
 
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=Y))
-optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
-
-init = tf.initialize_all_variables()
-
-def initialize():
-    with tf.Session() as sess:
-        sess.run(init)
-
-
-def predict(x):
-    sess = tf.Session()
-    print (len(x))
-    y = sess.run(pred, feed_dict={X:x})
-    return y
+        self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.pred, labels=self.Y))
+        self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
+        #print("hello")
+        self.init = tf.initialize_all_variables()
+        global sess
+        sess = tf.Session()
+        sess.run(self.init)
 
 
-def optimize(x, y):
-    sess = tf.Session()
-    sess.run([optimizer, cost], feed_dict={X: x, Y: y})
+
+    def initialize(self):
+        init = tf.global_variables_initializer()
+        with tf.Session() as sess:
+            sess.run(init)
+        return sess
+
+
+    def predict(self,x):
+        y = sess.run(self.pred, feed_dict={self.X:x})
+        return y
+
+
+    def optimize(self,x, y):
+        #sess = tf.Session()
+        sess.run([self.optimizer, self.cost], feed_dict={self.X: x, self.Y: y})
