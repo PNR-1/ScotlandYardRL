@@ -1,5 +1,9 @@
+import itertools
 import numpy as np
+import os
+import random
 import tensorflow as tf
+import utilities
 class Model(object):
 
     def __init__(self):
@@ -12,28 +16,39 @@ class Model(object):
 
         self.hidden1 = int(self.columns/2)
         self.hidden2 = int(self.columns/2)
+        self.hidden3 = int(self.columns/4)
+        self.hidden4 = int(self.columns/4)
         self.out = 1
 
         self.weights = {
             'w1' : tf.Variable(tf.random_normal([self.columns, self.hidden1])),
             'w2' : tf.Variable(tf.random_normal([self.hidden1, self.hidden2])),
-            'out' : tf.Variable(tf.random_normal([self.hidden2, self.out]))
+            'w3' : tf.Variable(tf.random_normal([self.hidden2, self.hidden3])),
+            'w4' : tf.Variable(tf.random_normal([self.hidden3, self.hidden4])),
+            'out' : tf.Variable(tf.random_normal([self.hidden4, self.out]))
         }
 
         self.biases = {
             'b1': tf.Variable(tf.random_normal([self.hidden1])),
             'b2': tf.Variable(tf.random_normal([self.hidden2])),
+            'b3': tf.Variable(tf.random_normal([self.hidden3])),
+            'b4': tf.Variable(tf.random_normal([self.hidden4])),
             'out': tf.Variable(tf.random_normal([self.out]))
             }
 
 
         self.layer1 = tf.nn.relu(tf.matmul(self.X, self.weights['w1']) + self.biases['b1'])
         self.layer2 = tf.nn.relu(tf.matmul(self.layer1, self.weights['w2']) + self.biases['b2'])
-        self.pred = tf.nn.relu(tf.matmul(self.layer2, self.weights['out']) + self.biases['out'])
+        self.layer3 = tf.nn.relu(tf.matmul(self.layer2, self.weights['w3']) + self.biases['b3'])
+        self.layer4 = tf.nn.relu(tf.matmul(self.layer3, self.weights['w4']) + self.biases['b4'])
+
+        self.pred = tf.nn.relu(tf.matmul(self.layer4, self.weights['out']) + self.biases['out'])
 
         self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.pred, labels=self.Y))
         self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
-        self.init = tf.initialize_all_variables()
+        self.init = tf.global_variables_initializer()
+        self.save_path = None
+        self.saver = tf.train.Saver(max_to_keep = 5)
 
         global sess
         sess = tf.Session()
@@ -47,3 +62,9 @@ class Model(object):
 
     def optimize(self,x, y):
         sess.run([self.optimizer, self.cost], feed_dict={self.X: x, self.Y: y})
+
+    def save(self, episode):
+        self.save_path = self.saver.save(sess, 'models/x_models/', global_step = episode)
+
+    def restore(self):
+        self.saver.restore(sess, self.save_path)
