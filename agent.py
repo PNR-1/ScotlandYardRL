@@ -10,11 +10,11 @@ import game
 class RunAgent(object):
     def __init__(self):
         self.mdx = mdX.Model()
-        self.mdd = [None] * 5
-        for i in range (5):
+        self.mdd = [None] * 6
+        for i in range (1,6):
             self.mdd[i] = mdD.Model()
         self.q_target = []
-        self.d_last_obs = [[0] * 1427] * 5
+        self.d_last_obs = []
         self.x_last_obs = []
 
         self.log_path = './log'
@@ -26,7 +26,7 @@ class RunAgent(object):
         print(self.log_path)
 
         self.log_file = open(self.log_path,'w')
-        self.log_file.write('episode_num,explore,result\n')
+        self.log_file.write('episode_num,explore,result,detective_wins,x_wins\n')
         self.log_file.close()
         self.run_number = 0
         self.reward = 0
@@ -42,7 +42,7 @@ class RunAgent(object):
 
 
         for i in range(self.epsilon_decay_steps):
-            print('Detectives: ',self.detective_win,'\t\tMR X: ',self.x_win)
+            print('\nDetectives: ',self.detective_win,'\t\tMR X: ',self.x_win)
             print('Running Episode: ',i,end = '\t')
             self.explore = i
             print('Explore = ',self.epsilon[self.explore],end = '\t')
@@ -52,6 +52,12 @@ class RunAgent(object):
             self.log_file = open(self.log_path,'a')
             self.run_log()
             self.log_file.close()
+            # Saving model every x = 20 episodes
+            if (self.run_number % 20 == 0):
+                for i in range(1,6):
+                    self.mdd[i].save(episode = self.run_number)
+                self.mdx.save(episode = self.run_number)
+
 
     def run_log(self):
         self.log_file.write(str(self.run_number))
@@ -59,12 +65,18 @@ class RunAgent(object):
         self.log_file.write(str(self.epsilon[self.explore]))
         self.log_file.write(',')
         self.log_file.write(str(self.reward))
+        self.log_file.write(',')
+        self.log_file.write(str(self.detective_win))
+        self.log_file.write(',')
+        self.log_file.write(str(self.x_win))
         self.log_file.write('\n')
 
     def run_episode(self):
         self.SL = game.ScotlandYard()
         self.SL.initialize_game()
         done = False
+        import time
+        import os
         while done == False:
             present_observation,sub_turn = self.SL.observe()
             actions = self.SL.valid_moves()
@@ -72,7 +84,7 @@ class RunAgent(object):
             if sub_turn == 0:
                 optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdx)
             else:
-                optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdd[sub_turn - 1])
+                optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdd[sub_turn])
 
                 #Have optimum_action
 
@@ -95,15 +107,15 @@ class RunAgent(object):
                 self.mdx.optimize([state_used], [q_target])
 
             else:
-                _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdd[sub_turn - 1])
+                _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdd[sub_turn])
                 q_target = [Q_max + reward]
                     #print ('Q_traget',q_target)
-                self.mdd[sub_turn -1].optimize([state_used], [q_target])
+                self.mdd[sub_turn].optimize([state_used], [q_target])
             if done == False:
                 if sub_turn == 0:
                     self.x_last_obs = state_used
                 elif sub_turn == 5:
-                    self.d_last_obs[sub_turn - 1] = state_used
+                    self.d_last_obs = state_used
 
         self.reward = reward
         print('Reward: ',reward)
@@ -111,10 +123,9 @@ class RunAgent(object):
             self.detective_win = self.detective_win + 1
         else:
             self.x_win = self.x_win + 1
-
         if sub_turn == 0:
-            for i in range(5):
-                self.mdd[i].optimize([self.d_last_obs[i]],[[Q_max]])
+            for i in range(1,6):
+                self.mdd[i].optimize([self.d_last_obs],[[Q_max]])
         else:
             self.mdx.optimize([self.x_last_obs],[[Q_max]])
 
