@@ -42,7 +42,7 @@ class Model(object):
 
         self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.pred, labels=self.Y))
         self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
-        self.init = tf.global_variables_initializer()
+        self.init = tf.initialize_all_variables()
         self.save_path = None
         self.saver = tf.train.Saver(max_to_keep = 5)
 
