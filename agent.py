@@ -10,7 +10,9 @@ import game
 class RunAgent(object):
     def __init__(self):
         self.mdx = mdX.Model()
-        self.mdd = mdD.Model()
+        self.mdd = [None] * 6
+        for i in range (6):
+            self.mdd[i] = mdD.Model()
         self.q_target = []
         self.d_last_obs = []
         self.x_last_obs = []
@@ -72,7 +74,7 @@ class RunAgent(object):
             if sub_turn == 0:
                 optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdx)
             else:
-                optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdd)
+                optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdd[sub_turn])
 
                 #Have optimum_action
 
@@ -95,10 +97,10 @@ class RunAgent(object):
                 self.mdx.optimize([state_used], [q_target])
 
             else:
-                _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdd)
+                _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdd[sub_turn])
                 q_target = [Q_max + reward]
                     #print ('Q_traget',q_target)
-                self.mdd.optimize([state_used], [q_target])
+                self.mdd[sub_turn].optimize([state_used], [q_target])
             if done == False:
                 if sub_turn == 0:
                     self.x_last_obs = state_used
@@ -112,7 +114,8 @@ class RunAgent(object):
         else:
             self.x_win = self.x_win + 1
         if sub_turn == 0:
-            self.mdd.optimize([self.d_last_obs],[[Q_max]])
+            for i in range(5):
+                self.mdd[i].optimize([self.d_last_obs],[[Q_max]])
         else:
             self.mdx.optimize([self.x_last_obs],[[Q_max]])
 
