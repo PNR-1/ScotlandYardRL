@@ -15,7 +15,7 @@ class RunAgent(object):
             self.mdd[i] = mdD.Model()
         self.q_target = []
         self.d_last_obs = []
-        self.x_last_obs = []
+        self.d_last_obs = [[0] * 1427] * 6
 
         self.log_path = './log'
         _,month,day,hour,minute,_,_,_,_ = time.localtime(time.time())
@@ -125,7 +125,7 @@ class RunAgent(object):
             self.x_win = self.x_win + 1
         if sub_turn == 0:
             for i in range(1,6):
-                self.mdd[i].optimize([self.d_last_obs],[[Q_max]])
+                self.mdd[i].optimize([self.d_last_obs[i]],[[Q_max]])
         else:
             self.mdx.optimize([self.x_last_obs],[[Q_max]])
 
