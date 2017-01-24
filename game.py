@@ -272,10 +272,10 @@ class ScotlandYard(object):
         log_path = './log'
         _,month,day,hour,minute,second,_,_,_ = time.localtime(time.time())
         log_path = log_path + '/gamelog/' + str(month) + '-' + str(day) + '/' + str(hour) + '/'
-        print(log_path)
         if not os.path.exists(log_path):
             os.makedirs(log_path)
         log_path = log_path +  str(minute) + 'o' + str(second) + '.txt'
+        print('Game Path: ',log_path,end = '\t')
         self.log_file = open(log_path,'w')
 
         self.log_file.write('Staring New Game \n')
