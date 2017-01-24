@@ -1,15 +1,11 @@
-import itertools
 import numpy as np
-import os
-import random
 import tensorflow as tf
-import utilities
 class Model(object):
 
     def __init__(self):
         tf.reset_default_graph
         self.learning_rate = 0.001
-        self.columns = 1432
+        self.columns = 1427
         self.X = tf.placeholder(shape=[None, self.columns], dtype=tf.float32, name="X")
     # The TD target value
         self.Y = tf.placeholder(shape=[1, None], dtype=tf.float32, name="Y")
