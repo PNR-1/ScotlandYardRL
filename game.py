@@ -221,14 +221,14 @@ class ScotlandYard(object):
 
         observation = observation + [const.turn_to_next_reveal[self.turn_number]]
 
-        detective_turn = np.array([0,0,0,0,0])
-        detective_turn[self.turn_sub_counter - 1] = 1
+        #detective_turn = np.array([0,0,0,0,0])
+        #detective_turn[self.turn_sub_counter - 1] = 1
 
-        for i in range(5):
-            if self.turn_sub_counter - 1 == i:
-                observation = observation + [1]
-            else:
-                observation = observation + [0]
+        #for i in range(5):
+        #    if self.turn_sub_counter - 1 == i:
+        #        observation = observation + [1]
+        #    else:
+        #        observation = observation + [0]
 
         observation = observation + g_util.node_one_hot(self.detectives[0][0])
         observation = observation + g_util.node_one_hot(self.detectives[1][0])
