@@ -1,5 +1,7 @@
 import numpy as np
 import tensorflow as tf
+import os
+import time
 class Model(object):
 
     def __init__(self):
@@ -42,8 +44,9 @@ class Model(object):
 
         self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.pred, labels=self.Y))
         self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
-        self.init = tf.initialize_all_variables()
+        self.init = tf.global_variables_initializer() #Do not change this. The line you used is deprecated
         self.save_path = None
+        # Creating a saver object with a maximum of 5 latest models to be saved. The oldest one is automatically deleted
         self.saver = tf.train.Saver(max_to_keep = 5)
 
         global sess
@@ -60,7 +63,10 @@ class Model(object):
         sess.run([self.optimizer, self.cost], feed_dict={self.X: x, self.Y: y})
 
     def save(self, episode):
+        # Saving the file path and storing the file path. The episode which it saves is appended to the file name.
+        # Will make this more organized.
         self.save_path = self.saver.save(sess, 'models/x_models/', global_step = episode)
 
     def restore(self):
+        # Restoring the file from a previous save path.
         self.saver.restore(sess, self.save_path)
