@@ -37,7 +37,7 @@ class q_learn(object):
             present_observation,sub_turn = self.SL.observe()
             self.logger.debug('Calling observation')
             self.logger.debug('present_observation: \n%s',str(present_observation))
-            self.logger.debug('sub_turn: %s',str(sub_turn))
+            self.logger.info('sub_turn: %s',str(sub_turn))
             self.logger.debug('Shape of present_observation: %s',str(np.array(present_observation).shape))
             actions = self.SL.valid_moves()
             self.logger.debug('Calling Valid moves')
