@@ -10,7 +10,7 @@ class Model(object):
         tf.reset_default_graph
         self.learning_rate = 0.001
 
-        self.columns = 1432
+        self.columns = 1427
         self.X = tf.placeholder(shape=[None, self.columns], dtype=tf.float32, name="X")
     # The TD target value
         self.Y = tf.placeholder(shape=[None,1], dtype=tf.float32, name="Y")
@@ -31,7 +31,7 @@ class Model(object):
         self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.pred, labels=self.Y))
         self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
         #print("hello")
-        self.init = tf.initialize_all_variables()
+        self.init = tf.global_variables_initializer()
         global sess
         sess = tf.Session()
         sess.run(self.init)

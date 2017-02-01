@@ -125,11 +125,13 @@ class q_learn(object):
             self.logger.debug('No Actions Possible')
             return -30,0
         #print('Actions',actions)
-        Q_values = np.zeros(actions.shape[0])
+        #Q_values = np.zeros(actions.shape[0])
+        observation = [[]]*actions.shape[0]
+        #print(len(observation))
         for i in range(actions.shape[0]):
             next_node = g_util.node_one_hot(actions[i][1])
-            observation = present_state.tolist() + next_node + actions[i][2:].tolist()
-            Q_values[i] = model.predict([observation])
+            observation[i] = present_state.tolist() + next_node + actions[i][2:].tolist()
+        Q_values = model.predict(observation)
         self.logger.debug('Q_values: %s',str(Q_values))
         self.logger.debug('Index,Max: %s %s',str(np.argmax(Q_values)),str(np.amax(Q_values)))
         return np.argmax(Q_values),np.amax(Q_values)

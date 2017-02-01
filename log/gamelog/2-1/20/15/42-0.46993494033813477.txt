@@ -1,0 +1,238 @@
+2017-02-01 20:15:42,495 INFO Starting New Game
+2017-02-01 20:15:42,495 INFO Starting Nodes: Mr_X, Detective [0:4] [ 29  94  50 117  53 138]
+2017-02-01 20:15:42,495 INFO MRx: [29  4  3  3]
+2017-02-01 20:15:42,496 INFO Detectives:
+[[ 94  10   8   4]
+ [ 50  10   8   4]
+ [117  10   8   4]
+ [ 53  10   8   4]
+ [138  10   8   4]]
+2017-02-01 20:15:42,496 INFO END OF INIT
+
+
+
+
+
+2017-02-01 20:15:42,496 DEBUG Initialize_Game Called
+2017-02-01 20:15:42,496 DEBUG Observation Called
+2017-02-01 20:15:42,496 DEBUG Turn Number = 0, Sub_Counter = 0
+2017-02-01 20:15:42,496 DEBUG Calling MRx's observation
+2017-02-01 20:15:42,496 DEBUG Creating MRx Observation
+2017-02-01 20:15:42,496 DEBUG MRX-> [29  4  3  3]
+2017-02-01 20:15:42,496 DEBUG One Hot Encoding Value: 29
+2017-02-01 20:15:42,497 DEBUG Mode Values: [4, 3, 3]
+2017-02-01 20:15:42,497 DEBUG Adding Detective Positions
+2017-02-01 20:15:42,497 DEBUG Detectives -> [[ 94  10   8   4]
+ [ 50  10   8   4]
+ [117  10   8   4]
+ [ 53  10   8   4]
+ [138  10   8   4]]
+2017-02-01 20:15:42,497 DEBUG Adding One Hot - 94 50 117 53 138
+2017-02-01 20:15:42,497 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-01 20:15:42,497 DEBUG Adding turn number 0
+2017-02-01 20:15:42,497 DEBUG Shape of Observation = (1213,)
+2017-02-01 20:15:42,497 DEBUG Calling observation
+2017-02-01 20:15:42,498 DEBUG present_observation: 
+[0 0 0 ..., 8 4 0]
+2017-02-01 20:15:42,498 INFO sub_turn: 0
+2017-02-01 20:15:42,498 DEBUG Shape of present_observation: (1213,)
+2017-02-01 20:15:42,498 DEBUG Sending Valid Moves for 0
+2017-02-01 20:15:42,498 DEBUG Calling Valid moves
+2017-02-01 20:15:42,499 DEBUG Shape of valid_moves: (10, 5)
+2017-02-01 20:15:42,499 DEBUG valid_actions: 
+[[29 16  1  0  0]
+ [29 17  1  0  0]
+ [29 51  1  0  0]
+ [29  6  1  0  0]
+ [29 55  0  1  0]
+ [29 41  1  0  0]
+ [29 41  0  1  0]
+ [29 42  1  0  0]
+ [29 42  0  1  0]
+ [29 15  0  1  0]]
+2017-02-01 20:15:42,499 DEBUG In getOptimum_Action
+2017-02-01 20:15:42,500 DEBUG Actions,Actions.shape:(10, 5) 
+[[29 16  1  0  0]
+ [29 17  1  0  0]
+ [29 51  1  0  0]
+ [29  6  1  0  0]
+ [29 55  0  1  0]
+ [29 41  1  0  0]
+ [29 41  0  1  0]
+ [29 42  1  0  0]
+ [29 42  0  1  0]
+ [29 15  0  1  0]]
+2017-02-01 20:15:42,999 DEBUG Q_values: [array([[ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.],
+       [ 0.]], dtype=float32)]
+2017-02-01 20:15:43,000 DEBUG Index,Max: 0 0.0
+2017-02-01 20:15:43,000 DEBUG Optimum_action for MRx: 0
+2017-02-01 20:15:43,000 DEBUG Action_probs: [ 0.1  0.1  0.1  0.1  0.1  0.1  0.1  0.1  0.1  0.1]
+2017-02-01 20:15:43,003 DEBUG Taken Action: 1
+2017-02-01 20:15:43,004 INFO EXPLORING
+2017-02-01 20:15:43,004 DEBUG next_node: 17
+2017-02-01 20:15:43,006 DEBUG mode: [1 0 0]
+2017-02-01 20:15:43,006 DEBUG take_action called
+2017-02-01 20:15:43,006 DEBUG Turn Number = 0, Sub Counter = 0
+2017-02-01 20:15:43,006 DEBUG Values Given - next_node = 17, mode = [1 0 0]
+2017-02-01 20:15:43,006 DEBUG turn_sub_counter = 0, Playing Mrx with values
+2017-02-01 20:15:43,007 DEBUG Reached play_MRx, next_node = 17, mode = [1 0 0]
+2017-02-01 20:15:43,007 DEBUG Before Move-> MRx: [29  4  3  3]
+2017-02-01 20:15:43,007 DEBUG After Move-> MRx: [17  3  3  3]
+2017-02-01 20:15:43,007 DEBUG Calling Update
+2017-02-01 20:15:43,007 DEBUG Valid Moves for MRx: [[17 29  1  0  0]
+ [17 30  1  0  0]
+ [17  7  1  0  0]]
+2017-02-01 20:15:43,008 DEBUG MRx has valid moves
+2017-02-01 20:15:43,008 DEBUG Detective 0's valid move: [[94 74  0  1  0]
+ [94 75  1  0  0]
+ [94 93  1  0  0]
+ [94 93  0  1  0]
+ [94 77  0  1  0]
+ [94 95  1  0  0]]
+2017-02-01 20:15:43,009 DEBUG Detective can move
+2017-02-01 20:15:43,009 DEBUG Detective 1's valid move: [[50 49  1  0  0]
+ [50 37  1  0  0]
+ [50 38  1  0  0]]
+2017-02-01 20:15:43,010 DEBUG Detective can move
+2017-02-01 20:15:43,010 DEBUG Detective 2's valid move: [[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-01 20:15:43,011 DEBUG Detective can move
+2017-02-01 20:15:43,011 DEBUG Detective 3's valid move: [[53 40  1  0  0]
+ [53 69  1  0  0]
+ [53 54  1  0  0]]
+2017-02-01 20:15:43,012 DEBUG Detective can move
+2017-02-01 20:15:43,012 DEBUG Detective 4's valid move: [[138 152   1   0   0]
+ [138 124   1   0   0]
+ [138 150   1   0   0]]
+2017-02-01 20:15:43,013 DEBUG Detective can move
+2017-02-01 20:15:43,013 DEBUG Update Over
+2017-02-01 20:15:43,013 INFO Turn Number: 0
+2017-02-01 20:15:43,013 INFO Turn Sub Counter: 0
+2017-02-01 20:15:43,013 INFO Next Node: 17
+2017-02-01 20:15:43,014 INFO Mode: [1 0 0]
+2017-02-01 20:15:43,014 INFO MRx: [17  3  3  3]
+2017-02-01 20:15:43,014 INFO Detectives: 
+[[ 94  10   8   4]
+ [ 50  10   8   4]
+ [117  10   8   4]
+ [ 53  10   8   4]
+ [138  10   8   4]]
+2017-02-01 20:15:43,014 INFO #######
+
+
+
+
+2017-02-01 20:15:43,015 DEBUG Observation Called
+2017-02-01 20:15:43,015 DEBUG Turn Number = 0, Sub_Counter = 0
+2017-02-01 20:15:43,015 DEBUG Calling MRx's observation
+2017-02-01 20:15:43,015 DEBUG Creating MRx Observation
+2017-02-01 20:15:43,015 DEBUG MRX-> [17  3  3  3]
+2017-02-01 20:15:43,015 DEBUG One Hot Encoding Value: 17
+2017-02-01 20:15:43,015 DEBUG Mode Values: [3, 3, 3]
+2017-02-01 20:15:43,015 DEBUG Adding Detective Positions
+2017-02-01 20:15:43,015 DEBUG Detectives -> [[ 94  10   8   4]
+ [ 50  10   8   4]
+ [117  10   8   4]
+ [ 53  10   8   4]
+ [138  10   8   4]]
+2017-02-01 20:15:43,016 DEBUG Adding One Hot - 94 50 117 53 138
+2017-02-01 20:15:43,016 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-01 20:15:43,016 DEBUG Adding turn number 0
+2017-02-01 20:15:43,016 DEBUG Shape of Observation = (1213,)
+2017-02-01 20:15:43,016 DEBUG Skip Turn
+2017-02-01 20:15:43,016 DEBUG next_observation: 
+[0 0 0 ..., 8 4 0]
+2017-02-01 20:15:43,016 DEBUG Shape of next_observation: (1213,)
+2017-02-01 20:15:43,016 INFO Reward: 0
+2017-02-01 20:15:43,016 INFO Complete: False
+2017-02-01 20:15:43,016 DEBUG Sending Valid Moves for 0
+2017-02-01 20:15:43,017 DEBUG New set of actions: 
+[[17 29  1  0  0]
+ [17 30  1  0  0]
+ [17  7  1  0  0]]
+2017-02-01 20:15:43,017 DEBUG Shape of new Set of Actions: (3, 5)
+2017-02-01 20:15:43,017 DEBUG Getting MaxQ for MRx and Optimizing for MRx
+2017-02-01 20:15:43,017 DEBUG In getOptimum_Action
+2017-02-01 20:15:43,018 DEBUG Actions,Actions.shape:(3, 5) 
+[[17 29  1  0  0]
+ [17 30  1  0  0]
+ [17  7  1  0  0]]
+2017-02-01 20:15:43,019 DEBUG Q_values: [array([[ 0.],
+       [ 0.],
+       [ 0.]], dtype=float32)]
+2017-02-01 20:15:43,019 DEBUG Index,Max: 0 0.0
+2017-02-01 20:15:43,056 DEBUG Saving this Observation as last used by MRx
+2017-02-01 20:15:43,056 INFO 
+
+
+2017-02-01 20:15:43,056 DEBUG Observation Called
+2017-02-01 20:15:43,057 DEBUG Turn Number = 0, Sub_Counter = 1
+2017-02-01 20:15:43,057 DEBUG Calling Detective Observation
+2017-02-01 20:15:43,057 DEBUG Creating Detective Observation
+2017-02-01 20:15:43,057 DEBUG Last Reveal Turn = 0
+2017-02-01 20:15:43,057 DEBUG Adding 0 node for MRx Location
+2017-02-01 20:15:43,057 DEBUG Turn to next Reveal = 2
+2017-02-01 20:15:43,057 DEBUG Adding One Hot - 94 50 117 53 138
+2017-02-01 20:15:43,057 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-01 20:15:43,058 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-01 20:15:43,058 DEBUG Adding : [0, 0, 0]
+2017-02-01 20:15:43,058 DEBUG Adding : [0, 0, 0]
+2017-02-01 20:15:43,058 DEBUG Adding : [0, 0, 0]
+2017-02-01 20:15:43,058 DEBUG Adding : [0, 0, 0]
+2017-02-01 20:15:43,058 DEBUG Adding : [1, 0, 0]
+2017-02-01 20:15:43,058 DEBUG Shape of Observations (1225,)
+2017-02-01 20:15:43,059 DEBUG Calling observation
+2017-02-01 20:15:43,059 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-01 20:15:43,059 INFO sub_turn: 1
+2017-02-01 20:15:43,059 DEBUG Shape of present_observation: (1225,)
+2017-02-01 20:15:43,059 DEBUG Sending Valid Moves for 1
+2017-02-01 20:15:43,059 DEBUG Calling Valid moves
+2017-02-01 20:15:43,059 DEBUG Shape of valid_moves: (6, 5)
+2017-02-01 20:15:43,060 DEBUG valid_actions: 
+[[94 74  0  1  0]
+ [94 75  1  0  0]
+ [94 93  1  0  0]
+ [94 93  0  1  0]
+ [94 77  0  1  0]
+ [94 95  1  0  0]]
+2017-02-01 20:15:43,060 DEBUG In getOptimum_Action
+2017-02-01 20:15:43,060 DEBUG Actions,Actions.shape:(6, 5) 
+[[94 74  0  1  0]
+ [94 75  1  0  0]
+ [94 93  1  0  0]
+ [94 93  0  1  0]
+ [94 77  0  1  0]
+ [94 95  1  0  0]]

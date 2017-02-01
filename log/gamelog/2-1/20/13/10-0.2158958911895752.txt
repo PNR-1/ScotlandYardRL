@@ -1,0 +1,50 @@
+2017-02-01 20:13:10,237 INFO Starting New Game
+2017-02-01 20:13:10,238 INFO Starting Nodes: Mr_X, Detective [0:4] [ 53 112  26 103 197  91]
+2017-02-01 20:13:10,238 INFO MRx: [53  4  3  3]
+2017-02-01 20:13:10,238 INFO Detectives:
+[[112  10   8   4]
+ [ 26  10   8   4]
+ [103  10   8   4]
+ [197  10   8   4]
+ [ 91  10   8   4]]
+2017-02-01 20:13:10,239 INFO END OF INIT
+
+
+
+
+
+2017-02-01 20:13:10,239 DEBUG Initialize_Game Called
+2017-02-01 20:13:10,239 DEBUG Observation Called
+2017-02-01 20:13:10,239 DEBUG Turn Number = 0, Sub_Counter = 0
+2017-02-01 20:13:10,239 DEBUG Calling MRx's observation
+2017-02-01 20:13:10,239 DEBUG Creating MRx Observation
+2017-02-01 20:13:10,239 DEBUG MRX-> [53  4  3  3]
+2017-02-01 20:13:10,239 DEBUG One Hot Encoding Value: 53
+2017-02-01 20:13:10,239 DEBUG Mode Values: [4, 3, 3]
+2017-02-01 20:13:10,239 DEBUG Adding Detective Positions
+2017-02-01 20:13:10,240 DEBUG Detectives -> [[112  10   8   4]
+ [ 26  10   8   4]
+ [103  10   8   4]
+ [197  10   8   4]
+ [ 91  10   8   4]]
+2017-02-01 20:13:10,240 DEBUG Adding One Hot - 112 26 103 197 91
+2017-02-01 20:13:10,240 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-01 20:13:10,240 DEBUG Adding turn number 0
+2017-02-01 20:13:10,240 DEBUG Shape of Observation = (1213,)
+2017-02-01 20:13:10,240 DEBUG Calling observation
+2017-02-01 20:13:10,241 DEBUG present_observation: 
+[0 0 0 ..., 8 4 0]
+2017-02-01 20:13:10,241 INFO sub_turn: 0
+2017-02-01 20:13:10,241 DEBUG Shape of present_observation: (1213,)
+2017-02-01 20:13:10,241 DEBUG Sending Valid Moves for 0
+2017-02-01 20:13:10,241 DEBUG Calling Valid moves
+2017-02-01 20:13:10,241 DEBUG Shape of valid_moves: (3, 5)
+2017-02-01 20:13:10,241 DEBUG valid_actions: 
+[[53 40  1  0  0]
+ [53 69  1  0  0]
+ [53 54  1  0  0]]
+2017-02-01 20:13:10,241 DEBUG In getOptimum_Action
+2017-02-01 20:13:10,242 DEBUG Actions,Actions.shape:(3, 5) 
+[[53 40  1  0  0]
+ [53 69  1  0  0]
+ [53 54  1  0  0]]
