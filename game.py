@@ -336,7 +336,7 @@ class ScotlandYard(object):
 
         self.logger.info('Detectives Location Log:\n%s',str(self.detectives_location_log))
 
-        self.logger.info('Detective Transport Log \n%s',str(g_util.print_list(self.detectives_transport_log)))
+        #self.logger.info('Detective Transport Log \n%s',str(g_util.print_list(self.detectives_transport_log)))
 
         self.logger.info('Does a detective have a valid move? %s',str(self.detective_moves))
 
