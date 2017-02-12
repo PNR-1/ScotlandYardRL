@@ -3,6 +3,7 @@ import os
 import utilities.graph_utils as g_util
 import game
 import logging
+import random as rd
 
 class q_learn(object):
     def __init__(self,mdx,mdd,explore = 0.0,directory='test/',file_name='test.txt',loglevel='INFO'):
@@ -46,7 +47,12 @@ class q_learn(object):
 
 
             if sub_turn == 0:
-                optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdx)
+                #optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdx)
+                random = rd.randint(0, actions.shape[0]-1)
+                next_node = actions[random][1]
+                mode = actions[random][2:]
+                next_observation,reward,done = self.SL.take_action(next_node,mode)
+                continue
                 self.logger.debug('Optimum_action for MRx: %s',str(optimum_action))
             else:
                 optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdd[sub_turn - 1])
@@ -80,9 +86,9 @@ class q_learn(object):
 
             if sub_turn == 0:
                 self.logger.debug('Getting MaxQ for MRx and Optimizing for MRx')
-                _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdx)
-                q_target = [Q_max - reward]
-                self.mdx.optimize([state_used], [q_target])
+                ##_,Q_max = self.getOptimum_Action(next_observation,actions,self.mdx)
+                ##q_target = [Q_max - reward]
+                ##self.mdx.optimize([state_used], [q_target])
 
             else:
                 self.logger.debug('Getting MaxQ for Detective %s and Optimizing for him/her',str(sub_turn - 1))
@@ -93,7 +99,7 @@ class q_learn(object):
             if done == False:
                 if sub_turn == 0:
                     self.logger.debug('Saving this Observation as last used by MRx')
-                    self.x_last_obs = state_used
+                    ##self.x_last_obs = state_used
                 else:
                     self.logger.debug('Saving this Observation as last used by Detective %s',str(sub_turn - 1))
                     self.d_last_obs[sub_turn - 1] = state_used
@@ -108,7 +114,7 @@ class q_learn(object):
         else:
             self.logger.debug('Last Turn By Detective %s',str(sub_turn))
             self.logger.debug('Optimizing MRx')
-            self.mdx.optimize([self.x_last_obs],[[self.reward]])
+            #self.mdx.optimize([self.x_last_obs],[[self.reward]])
             for i in range(5):
                 if i == sub_turn - 1:
                     continue
