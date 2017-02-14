@@ -4,11 +4,8 @@ import utilities.graph_utils as g_util
 import game
 import logging
 import random as rd
-<<<<<<< HEAD
 import rl_backend.modelX
 import rl_backend.modelDetective
-=======
->>>>>>> 2f744e67739147e729ece0226257010b6cd4a7bb
 
 class q_learn(object):
     def __init__(self,mdx,mdd,explore = 0.0,directory='test/',file_name='test.txt',loglevel='INFO'):
