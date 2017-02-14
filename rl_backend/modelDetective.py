@@ -42,7 +42,7 @@ class Model(object):
 
         self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.pred, labels=self.Y))
         self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate).minimize(self.cost)
-        self.init = tf.global_variables_initializer() # Do not change this. The line you used is deprecated.
+        self.init = tf.initialize_all_variables() # Do not change this. The line you used is deprecated.
         self.save_path = None
         # Creating a saver object with a maximum of 5 latest models to be saved. The oldest one is automatically deleted.
         self.saver = tf.train.Saver(max_to_keep = 5)
