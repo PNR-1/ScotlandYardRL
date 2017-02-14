@@ -105,6 +105,8 @@ class q_learn(object):
             self.logger.debug('Last Turn by MRx, Optimizing for detective')
             for i in range(5):
                 self.mdd[i].optimize([self.d_last_obs[i]],[[self.reward]])
+             self.mdx.optimize([self.x_last_obs],[[self.reward]])
+
         else:
             self.logger.debug('Last Turn By Detective %s',str(sub_turn))
             self.logger.debug('Optimizing MRx')
