@@ -345,3 +345,9 @@ class ScotlandYard(object):
         self.logger.info('Reward: %s',str(self.reward))
 
         self.logger.info('#######\n\n\n')
+
+    def close_log(self):
+        handlers = self.logger.handlers[:]
+        for handler in handlers:
+            handler.close()
+            self.logger.removeHandler(handler)

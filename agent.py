@@ -20,6 +20,7 @@ def run_agent():
         file_name = str(second)+'-'+ str(times - int(times)) + '.txt'
         ag = q_l.q_learn(mdx,mdd,explore = epsilon[start],directory = directory,file_name=file_name,loglevel='DEBUG')
         print(epsilon[start],'\t',ag.run_episode())
+        ag.close_log()
         start = start + 1
 
 run_agent()

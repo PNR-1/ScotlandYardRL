@@ -1,0 +1,4892 @@
+2017-02-14 22:01:07,342 INFO Starting New Game
+2017-02-14 22:01:07,345 INFO Starting Nodes: Mr_X, Detective [0:4] [ 50 132 155 103 117 112]
+2017-02-14 22:01:07,345 INFO MRx: [50  4  3  3]
+2017-02-14 22:01:07,346 INFO Detectives:
+[[132  10   8   4]
+ [155  10   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:07,346 INFO END OF INIT
+
+
+
+
+
+2017-02-14 22:01:07,346 DEBUG Initialize_Game Called
+2017-02-14 22:01:07,346 DEBUG Observation Called
+2017-02-14 22:01:07,346 DEBUG Turn Number = 0, Sub_Counter = 0
+2017-02-14 22:01:07,346 DEBUG Calling MRx's observation
+2017-02-14 22:01:07,346 DEBUG Creating MRx Observation
+2017-02-14 22:01:07,347 DEBUG MRX-> [50  4  3  3]
+2017-02-14 22:01:07,347 DEBUG One Hot Encoding Value: 50
+2017-02-14 22:01:07,347 DEBUG Mode Values: [4, 3, 3]
+2017-02-14 22:01:07,347 DEBUG Adding Detective Positions
+2017-02-14 22:01:07,348 DEBUG Detectives -> [[132  10   8   4]
+ [155  10   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:07,348 DEBUG Adding One Hot - 132 155 103 117 112
+2017-02-14 22:01:07,348 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:07,348 DEBUG Adding turn number 0
+2017-02-14 22:01:07,348 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:07,348 DEBUG Calling observation
+2017-02-14 22:01:07,348 DEBUG present_observation: 
+[0 0 0 ..., 8 4 0]
+2017-02-14 22:01:07,348 INFO sub_turn: 0
+2017-02-14 22:01:07,349 DEBUG Shape of present_observation: (1213,)
+2017-02-14 22:01:07,349 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:07,349 DEBUG Calling Valid moves
+2017-02-14 22:01:07,349 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:07,349 DEBUG valid_actions: 
+[[50 49  1  0  0]
+ [50 37  1  0  0]
+ [50 38  1  0  0]]
+2017-02-14 22:01:07,349 DEBUG In getOptimum_Action
+2017-02-14 22:01:07,349 DEBUG Actions,Actions.shape:(3, 5) 
+[[50 49  1  0  0]
+ [50 37  1  0  0]
+ [50 38  1  0  0]]
+2017-02-14 22:01:08,837 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:08,837 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:08,837 DEBUG Optimum_action for MRx: 0
+2017-02-14 22:01:08,838 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:08,839 DEBUG Taken Action: 0
+2017-02-14 22:01:08,839 INFO NO EXPLORING
+2017-02-14 22:01:08,839 DEBUG next_node: 49
+2017-02-14 22:01:08,840 DEBUG mode: [1 0 0]
+2017-02-14 22:01:08,840 DEBUG take_action called
+2017-02-14 22:01:08,840 DEBUG Turn Number = 0, Sub Counter = 0
+2017-02-14 22:01:08,840 DEBUG Values Given - next_node = 49, mode = [1 0 0]
+2017-02-14 22:01:08,840 DEBUG turn_sub_counter = 0, Playing Mrx with values
+2017-02-14 22:01:08,840 DEBUG Reached play_MRx, next_node = 49, mode = [1 0 0]
+2017-02-14 22:01:08,841 DEBUG Before Move-> MRx: [50  4  3  3]
+2017-02-14 22:01:08,841 DEBUG After Move-> MRx: [49  3  3  3]
+2017-02-14 22:01:08,841 DEBUG Calling Update
+2017-02-14 22:01:08,841 DEBUG Valid Moves for MRx: [[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:08,842 DEBUG MRx has valid moves
+2017-02-14 22:01:08,842 DEBUG Detective 0's valid move: [[132 114   1   0   0]
+ [132 140   1   0   0]]
+2017-02-14 22:01:08,842 DEBUG Detective can move
+2017-02-14 22:01:08,843 DEBUG Detective 1's valid move: [[155 168   1   0   0]
+ [155 154   1   0   0]
+ [155 156   1   0   0]
+ [155 167   1   0   0]]
+2017-02-14 22:01:08,843 DEBUG Detective can move
+2017-02-14 22:01:08,843 DEBUG Detective 2's valid move: [[103 102   1   0   0]
+ [103  85   1   0   0]
+ [103  86   1   0   0]]
+2017-02-14 22:01:08,844 DEBUG Detective can move
+2017-02-14 22:01:08,844 DEBUG Detective 3's valid move: [[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-14 22:01:08,845 DEBUG Detective can move
+2017-02-14 22:01:08,845 DEBUG Detective 4's valid move: [[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:08,845 DEBUG Detective can move
+2017-02-14 22:01:08,845 DEBUG Update Over
+2017-02-14 22:01:08,845 INFO Turn Number: 0
+2017-02-14 22:01:08,846 INFO Turn Sub Counter: 0
+2017-02-14 22:01:08,846 INFO Next Node: 49
+2017-02-14 22:01:08,846 INFO Mode: [1 0 0]
+2017-02-14 22:01:08,846 INFO MRx: [49  3  3  3]
+2017-02-14 22:01:08,847 INFO Detectives: 
+[[132  10   8   4]
+ [155  10   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:08,847 INFO #######
+
+
+
+
+2017-02-14 22:01:08,847 DEBUG Observation Called
+2017-02-14 22:01:08,847 DEBUG Turn Number = 0, Sub_Counter = 0
+2017-02-14 22:01:08,847 DEBUG Calling MRx's observation
+2017-02-14 22:01:08,847 DEBUG Creating MRx Observation
+2017-02-14 22:01:08,847 DEBUG MRX-> [49  3  3  3]
+2017-02-14 22:01:08,847 DEBUG One Hot Encoding Value: 49
+2017-02-14 22:01:08,847 DEBUG Mode Values: [3, 3, 3]
+2017-02-14 22:01:08,847 DEBUG Adding Detective Positions
+2017-02-14 22:01:08,848 DEBUG Detectives -> [[132  10   8   4]
+ [155  10   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:08,848 DEBUG Adding One Hot - 132 155 103 117 112
+2017-02-14 22:01:08,848 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:08,848 DEBUG Adding turn number 0
+2017-02-14 22:01:08,848 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:08,848 DEBUG Skip Turn
+2017-02-14 22:01:08,848 DEBUG next_observation: 
+[0 0 0 ..., 8 4 0]
+2017-02-14 22:01:08,849 DEBUG Shape of next_observation: (1213,)
+2017-02-14 22:01:08,849 INFO Reward: 0
+2017-02-14 22:01:08,849 INFO Complete: False
+2017-02-14 22:01:08,849 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:08,849 DEBUG New set of actions: 
+[[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:08,849 DEBUG Shape of new Set of Actions: (3, 5)
+2017-02-14 22:01:08,849 DEBUG Getting MaxQ for MRx and Optimizing for MRx
+2017-02-14 22:01:08,849 DEBUG In getOptimum_Action
+2017-02-14 22:01:08,850 DEBUG Actions,Actions.shape:(3, 5) 
+[[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:08,852 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:08,853 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:08,907 DEBUG Saving this Observation as last used by MRx
+2017-02-14 22:01:08,907 INFO 
+
+
+2017-02-14 22:01:08,908 DEBUG Observation Called
+2017-02-14 22:01:08,908 DEBUG Turn Number = 0, Sub_Counter = 1
+2017-02-14 22:01:08,908 DEBUG Calling Detective Observation
+2017-02-14 22:01:08,908 DEBUG Creating Detective Observation
+2017-02-14 22:01:08,908 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:08,908 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:08,908 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:08,909 DEBUG Adding One Hot - 132 155 103 117 112
+2017-02-14 22:01:08,909 DEBUG Adding modes - [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:08,910 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:08,910 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,910 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,910 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,911 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,911 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:08,911 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:08,911 DEBUG Calling observation
+2017-02-14 22:01:08,912 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:08,912 INFO sub_turn: 1
+2017-02-14 22:01:08,912 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:08,912 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:08,913 DEBUG Calling Valid moves
+2017-02-14 22:01:08,913 DEBUG Shape of valid_moves: (2, 5)
+2017-02-14 22:01:08,913 DEBUG valid_actions: 
+[[132 114   1   0   0]
+ [132 140   1   0   0]]
+2017-02-14 22:01:08,913 DEBUG In getOptimum_Action
+2017-02-14 22:01:08,914 DEBUG Actions,Actions.shape:(2, 5) 
+[[132 114   1   0   0]
+ [132 140   1   0   0]]
+2017-02-14 22:01:08,945 DEBUG Q_values: [[ 930339.25 ]
+ [ 925063.375]]
+2017-02-14 22:01:08,945 DEBUG Index,Max: 0 930339.0
+2017-02-14 22:01:08,945 DEBUG Optimum_action for Detective 0 : 0
+2017-02-14 22:01:08,946 DEBUG Action_probs: [ 0.5  0.5]
+2017-02-14 22:01:08,946 DEBUG Taken Action: 1
+2017-02-14 22:01:08,946 INFO EXPLORING
+2017-02-14 22:01:08,946 DEBUG next_node: 140
+2017-02-14 22:01:08,947 DEBUG mode: [1 0 0]
+2017-02-14 22:01:08,947 DEBUG take_action called
+2017-02-14 22:01:08,947 DEBUG Turn Number = 0, Sub Counter = 1
+2017-02-14 22:01:08,947 DEBUG Values Given - next_node = 140, mode = [1 0 0]
+2017-02-14 22:01:08,947 DEBUG turn_sub_counter = 1, Playing respective detective
+2017-02-14 22:01:08,947 DEBUG Reached play_detective, next_node = 140, mode = [1 0 0], turn_sub_counter = 1
+2017-02-14 22:01:08,948 DEBUG Before Move-> Detective[0]: [132  10   8   4]
+2017-02-14 22:01:08,948 DEBUG After Move-> Detective[0]: [140   9   8   4]
+2017-02-14 22:01:08,948 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:08,948 DEBUG Before Sending-> MRx: [49  3  3  3]
+2017-02-14 22:01:08,948 DEBUG After Sending-> MRx: [49  4  3  3]
+2017-02-14 22:01:08,948 DEBUG Calling Update
+2017-02-14 22:01:08,949 DEBUG Valid Moves for MRx: [[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:08,949 DEBUG MRx has valid moves
+2017-02-14 22:01:08,949 DEBUG Detective 0's valid move: [[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 156   1   0   0]
+ [140 156   0   1   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:08,950 DEBUG Detective can move
+2017-02-14 22:01:08,950 DEBUG Detective 1's valid move: [[155 168   1   0   0]
+ [155 154   1   0   0]
+ [155 156   1   0   0]
+ [155 167   1   0   0]]
+2017-02-14 22:01:08,951 DEBUG Detective can move
+2017-02-14 22:01:08,951 DEBUG Detective 2's valid move: [[103 102   1   0   0]
+ [103  85   1   0   0]
+ [103  86   1   0   0]]
+2017-02-14 22:01:08,952 DEBUG Detective can move
+2017-02-14 22:01:08,952 DEBUG Detective 3's valid move: [[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-14 22:01:08,952 DEBUG Detective can move
+2017-02-14 22:01:08,953 DEBUG Detective 4's valid move: [[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:08,955 DEBUG Detective can move
+2017-02-14 22:01:08,955 DEBUG Update Over
+2017-02-14 22:01:08,955 INFO Turn Number: 0
+2017-02-14 22:01:08,955 INFO Turn Sub Counter: 1
+2017-02-14 22:01:08,955 INFO Next Node: 140
+2017-02-14 22:01:08,956 INFO Mode: [1 0 0]
+2017-02-14 22:01:08,956 INFO MRx: [49  4  3  3]
+2017-02-14 22:01:08,957 INFO Detectives: 
+[[140   9   8   4]
+ [155  10   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:08,957 INFO #######
+
+
+
+
+2017-02-14 22:01:08,957 DEBUG Observation Called
+2017-02-14 22:01:08,957 DEBUG Turn Number = 0, Sub_Counter = 1
+2017-02-14 22:01:08,958 DEBUG Calling Detective Observation
+2017-02-14 22:01:08,958 DEBUG Creating Detective Observation
+2017-02-14 22:01:08,958 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:08,958 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:08,958 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:08,958 DEBUG Adding One Hot - 140 155 103 117 112
+2017-02-14 22:01:08,958 DEBUG Adding modes - [9, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:08,959 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:08,959 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,959 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,960 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,960 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:08,960 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:08,961 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:08,961 DEBUG Skip Turn
+2017-02-14 22:01:08,961 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:08,962 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:08,962 INFO Reward: 0
+2017-02-14 22:01:08,962 INFO Complete: False
+2017-02-14 22:01:08,962 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:08,962 DEBUG New set of actions: 
+[[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 156   1   0   0]
+ [140 156   0   1   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:08,964 DEBUG Shape of new Set of Actions: (13, 5)
+2017-02-14 22:01:08,964 DEBUG Getting MaxQ for Detective 0 and Optimizing for him/her
+2017-02-14 22:01:08,964 DEBUG In getOptimum_Action
+2017-02-14 22:01:08,965 DEBUG Actions,Actions.shape:(13, 5) 
+[[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 156   1   0   0]
+ [140 156   0   1   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:08,974 DEBUG Q_values: [[  996293.5   ]
+ [  800944.0625]
+ [  850277.75  ]
+ [  875604.0625]
+ [  863315.3125]
+ [  905354.8125]
+ [  841177.5   ]
+ [ 1006864.125 ]
+ [  743755.1875]
+ [  767954.9375]
+ [  825872.5   ]
+ [  786552.625 ]
+ [  755823.625 ]]
+2017-02-14 22:01:08,974 DEBUG Index,Max: 7 1.00686e+06
+2017-02-14 22:01:09,003 DEBUG Saving this Observation as last used by Detective 0
+2017-02-14 22:01:09,003 INFO 
+
+
+2017-02-14 22:01:09,003 DEBUG Observation Called
+2017-02-14 22:01:09,003 DEBUG Turn Number = 0, Sub_Counter = 2
+2017-02-14 22:01:09,003 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,003 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,004 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,004 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,004 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,004 DEBUG Adding One Hot - 140 155 103 117 112
+2017-02-14 22:01:09,004 DEBUG Adding modes - [9, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,004 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,004 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,004 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,005 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,005 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,005 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,005 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,005 DEBUG Calling observation
+2017-02-14 22:01:09,005 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,005 INFO sub_turn: 2
+2017-02-14 22:01:09,005 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,005 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,005 DEBUG Calling Valid moves
+2017-02-14 22:01:09,005 DEBUG Shape of valid_moves: (4, 5)
+2017-02-14 22:01:09,006 DEBUG valid_actions: 
+[[155 168   1   0   0]
+ [155 154   1   0   0]
+ [155 156   1   0   0]
+ [155 167   1   0   0]]
+2017-02-14 22:01:09,006 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,006 DEBUG Actions,Actions.shape:(4, 5) 
+[[155 168   1   0   0]
+ [155 154   1   0   0]
+ [155 156   1   0   0]
+ [155 167   1   0   0]]
+2017-02-14 22:01:09,025 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,025 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,025 DEBUG Optimum_action for Detective 1 : 0
+2017-02-14 22:01:09,025 DEBUG Action_probs: [ 0.25  0.25  0.25  0.25]
+2017-02-14 22:01:09,025 DEBUG Taken Action: 2
+2017-02-14 22:01:09,026 INFO EXPLORING
+2017-02-14 22:01:09,026 DEBUG next_node: 156
+2017-02-14 22:01:09,026 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,026 DEBUG take_action called
+2017-02-14 22:01:09,026 DEBUG Turn Number = 0, Sub Counter = 2
+2017-02-14 22:01:09,026 DEBUG Values Given - next_node = 156, mode = [1 0 0]
+2017-02-14 22:01:09,026 DEBUG turn_sub_counter = 2, Playing respective detective
+2017-02-14 22:01:09,027 DEBUG Reached play_detective, next_node = 156, mode = [1 0 0], turn_sub_counter = 2
+2017-02-14 22:01:09,027 DEBUG Before Move-> Detective[1]: [155  10   8   4]
+2017-02-14 22:01:09,027 DEBUG After Move-> Detective[1]: [156   9   8   4]
+2017-02-14 22:01:09,027 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,027 DEBUG Before Sending-> MRx: [49  4  3  3]
+2017-02-14 22:01:09,028 DEBUG After Sending-> MRx: [49  5  3  3]
+2017-02-14 22:01:09,028 DEBUG Calling Update
+2017-02-14 22:01:09,028 DEBUG Valid Moves for MRx: [[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:09,028 DEBUG MRx has valid moves
+2017-02-14 22:01:09,029 DEBUG Detective 0's valid move: [[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,030 DEBUG Detective can move
+2017-02-14 22:01:09,030 DEBUG Detective 1's valid move: [[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,030 DEBUG Detective can move
+2017-02-14 22:01:09,031 DEBUG Detective 2's valid move: [[103 102   1   0   0]
+ [103  85   1   0   0]
+ [103  86   1   0   0]]
+2017-02-14 22:01:09,031 DEBUG Detective can move
+2017-02-14 22:01:09,031 DEBUG Detective 3's valid move: [[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-14 22:01:09,032 DEBUG Detective can move
+2017-02-14 22:01:09,032 DEBUG Detective 4's valid move: [[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:09,033 DEBUG Detective can move
+2017-02-14 22:01:09,033 DEBUG Update Over
+2017-02-14 22:01:09,033 INFO Turn Number: 0
+2017-02-14 22:01:09,033 INFO Turn Sub Counter: 2
+2017-02-14 22:01:09,033 INFO Next Node: 156
+2017-02-14 22:01:09,033 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,034 INFO MRx: [49  5  3  3]
+2017-02-14 22:01:09,034 INFO Detectives: 
+[[140   9   8   4]
+ [156   9   8   4]
+ [103  10   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:09,034 INFO #######
+
+
+
+
+2017-02-14 22:01:09,034 DEBUG Observation Called
+2017-02-14 22:01:09,034 DEBUG Turn Number = 0, Sub_Counter = 2
+2017-02-14 22:01:09,034 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,034 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,034 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,034 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,034 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,035 DEBUG Adding One Hot - 140 156 103 117 112
+2017-02-14 22:01:09,035 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,035 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,035 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,035 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,035 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,035 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,035 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,036 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,036 DEBUG Skip Turn
+2017-02-14 22:01:09,036 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,036 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,036 INFO Reward: 0
+2017-02-14 22:01:09,036 INFO Complete: False
+2017-02-14 22:01:09,036 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,036 DEBUG New set of actions: 
+[[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,037 DEBUG Shape of new Set of Actions: (6, 5)
+2017-02-14 22:01:09,037 DEBUG Getting MaxQ for Detective 1 and Optimizing for him/her
+2017-02-14 22:01:09,037 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,038 DEBUG Actions,Actions.shape:(6, 5) 
+[[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,040 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,041 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,070 DEBUG Saving this Observation as last used by Detective 1
+2017-02-14 22:01:09,070 INFO 
+
+
+2017-02-14 22:01:09,070 DEBUG Observation Called
+2017-02-14 22:01:09,071 DEBUG Turn Number = 0, Sub_Counter = 3
+2017-02-14 22:01:09,071 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,071 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,071 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,071 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,071 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,071 DEBUG Adding One Hot - 140 156 103 117 112
+2017-02-14 22:01:09,071 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [10, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,071 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,072 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,072 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,072 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,072 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,072 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,072 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,072 DEBUG Calling observation
+2017-02-14 22:01:09,072 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,072 INFO sub_turn: 3
+2017-02-14 22:01:09,072 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,072 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,073 DEBUG Calling Valid moves
+2017-02-14 22:01:09,073 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:09,073 DEBUG valid_actions: 
+[[103 102   1   0   0]
+ [103  85   1   0   0]
+ [103  86   1   0   0]]
+2017-02-14 22:01:09,073 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,073 DEBUG Actions,Actions.shape:(3, 5) 
+[[103 102   1   0   0]
+ [103  85   1   0   0]
+ [103  86   1   0   0]]
+2017-02-14 22:01:09,091 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,091 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,091 DEBUG Optimum_action for Detective 2 : 0
+2017-02-14 22:01:09,091 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:09,092 DEBUG Taken Action: 2
+2017-02-14 22:01:09,092 INFO EXPLORING
+2017-02-14 22:01:09,092 DEBUG next_node: 86
+2017-02-14 22:01:09,092 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,092 DEBUG take_action called
+2017-02-14 22:01:09,092 DEBUG Turn Number = 0, Sub Counter = 3
+2017-02-14 22:01:09,092 DEBUG Values Given - next_node = 86, mode = [1 0 0]
+2017-02-14 22:01:09,093 DEBUG turn_sub_counter = 3, Playing respective detective
+2017-02-14 22:01:09,093 DEBUG Reached play_detective, next_node = 86, mode = [1 0 0], turn_sub_counter = 3
+2017-02-14 22:01:09,093 DEBUG Before Move-> Detective[2]: [103  10   8   4]
+2017-02-14 22:01:09,093 DEBUG After Move-> Detective[2]: [86  9  8  4]
+2017-02-14 22:01:09,093 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,094 DEBUG Before Sending-> MRx: [49  5  3  3]
+2017-02-14 22:01:09,094 DEBUG After Sending-> MRx: [49  6  3  3]
+2017-02-14 22:01:09,094 DEBUG Calling Update
+2017-02-14 22:01:09,094 DEBUG Valid Moves for MRx: [[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:09,095 DEBUG MRx has valid moves
+2017-02-14 22:01:09,095 DEBUG Detective 0's valid move: [[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,096 DEBUG Detective can move
+2017-02-14 22:01:09,096 DEBUG Detective 1's valid move: [[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,096 DEBUG Detective can move
+2017-02-14 22:01:09,097 DEBUG Detective 2's valid move: [[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,097 DEBUG Detective can move
+2017-02-14 22:01:09,097 DEBUG Detective 3's valid move: [[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-14 22:01:09,098 DEBUG Detective can move
+2017-02-14 22:01:09,098 DEBUG Detective 4's valid move: [[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:09,099 DEBUG Detective can move
+2017-02-14 22:01:09,099 DEBUG Update Over
+2017-02-14 22:01:09,099 INFO Turn Number: 0
+2017-02-14 22:01:09,099 INFO Turn Sub Counter: 3
+2017-02-14 22:01:09,099 INFO Next Node: 86
+2017-02-14 22:01:09,099 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,099 INFO MRx: [49  6  3  3]
+2017-02-14 22:01:09,100 INFO Detectives: 
+[[140   9   8   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [117  10   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:09,100 INFO #######
+
+
+
+
+2017-02-14 22:01:09,100 DEBUG Observation Called
+2017-02-14 22:01:09,100 DEBUG Turn Number = 0, Sub_Counter = 3
+2017-02-14 22:01:09,100 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,100 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,100 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,100 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,100 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,100 DEBUG Adding One Hot - 140 156 86 117 112
+2017-02-14 22:01:09,100 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,101 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,101 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,101 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,101 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,101 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,101 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,101 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,101 DEBUG Skip Turn
+2017-02-14 22:01:09,102 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,102 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,102 INFO Reward: 0
+2017-02-14 22:01:09,102 INFO Complete: False
+2017-02-14 22:01:09,102 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,102 DEBUG New set of actions: 
+[[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,103 DEBUG Shape of new Set of Actions: (7, 5)
+2017-02-14 22:01:09,103 DEBUG Getting MaxQ for Detective 2 and Optimizing for him/her
+2017-02-14 22:01:09,103 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,103 DEBUG Actions,Actions.shape:(7, 5) 
+[[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,106 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,107 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,133 DEBUG Saving this Observation as last used by Detective 2
+2017-02-14 22:01:09,133 INFO 
+
+
+2017-02-14 22:01:09,133 DEBUG Observation Called
+2017-02-14 22:01:09,133 DEBUG Turn Number = 0, Sub_Counter = 4
+2017-02-14 22:01:09,133 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,133 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,133 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,133 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,133 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,134 DEBUG Adding One Hot - 140 156 86 117 112
+2017-02-14 22:01:09,134 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [10, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,134 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,134 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,134 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,134 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,134 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,134 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,135 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,135 DEBUG Calling observation
+2017-02-14 22:01:09,135 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,135 INFO sub_turn: 4
+2017-02-14 22:01:09,135 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,135 DEBUG Sending Valid Moves for 4
+2017-02-14 22:01:09,135 DEBUG Calling Valid moves
+2017-02-14 22:01:09,135 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:09,136 DEBUG valid_actions: 
+[[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-14 22:01:09,136 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,136 DEBUG Actions,Actions.shape:(3, 5) 
+[[117  88   1   0   0]
+ [117 116   1   0   0]
+ [117 108   1   0   0]]
+2017-02-14 22:01:09,153 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,154 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,154 DEBUG Optimum_action for Detective 3 : 0
+2017-02-14 22:01:09,154 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:09,154 DEBUG Taken Action: 0
+2017-02-14 22:01:09,154 INFO NO EXPLORING
+2017-02-14 22:01:09,154 DEBUG next_node: 88
+2017-02-14 22:01:09,154 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,155 DEBUG take_action called
+2017-02-14 22:01:09,155 DEBUG Turn Number = 0, Sub Counter = 4
+2017-02-14 22:01:09,155 DEBUG Values Given - next_node = 88, mode = [1 0 0]
+2017-02-14 22:01:09,155 DEBUG turn_sub_counter = 4, Playing respective detective
+2017-02-14 22:01:09,155 DEBUG Reached play_detective, next_node = 88, mode = [1 0 0], turn_sub_counter = 4
+2017-02-14 22:01:09,155 DEBUG Before Move-> Detective[3]: [117  10   8   4]
+2017-02-14 22:01:09,156 DEBUG After Move-> Detective[3]: [88  9  8  4]
+2017-02-14 22:01:09,156 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,156 DEBUG Before Sending-> MRx: [49  6  3  3]
+2017-02-14 22:01:09,156 DEBUG After Sending-> MRx: [49  7  3  3]
+2017-02-14 22:01:09,156 DEBUG Calling Update
+2017-02-14 22:01:09,156 DEBUG Valid Moves for MRx: [[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:09,157 DEBUG MRx has valid moves
+2017-02-14 22:01:09,157 DEBUG Detective 0's valid move: [[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,158 DEBUG Detective can move
+2017-02-14 22:01:09,158 DEBUG Detective 1's valid move: [[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,159 DEBUG Detective can move
+2017-02-14 22:01:09,159 DEBUG Detective 2's valid move: [[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,160 DEBUG Detective can move
+2017-02-14 22:01:09,160 DEBUG Detective 3's valid move: [[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,160 DEBUG Detective can move
+2017-02-14 22:01:09,161 DEBUG Detective 4's valid move: [[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:09,161 DEBUG Detective can move
+2017-02-14 22:01:09,161 DEBUG Update Over
+2017-02-14 22:01:09,161 INFO Turn Number: 0
+2017-02-14 22:01:09,161 INFO Turn Sub Counter: 4
+2017-02-14 22:01:09,161 INFO Next Node: 88
+2017-02-14 22:01:09,162 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,162 INFO MRx: [49  7  3  3]
+2017-02-14 22:01:09,162 INFO Detectives: 
+[[140   9   8   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [112  10   8   4]]
+2017-02-14 22:01:09,162 INFO #######
+
+
+
+
+2017-02-14 22:01:09,163 DEBUG Observation Called
+2017-02-14 22:01:09,163 DEBUG Turn Number = 0, Sub_Counter = 4
+2017-02-14 22:01:09,163 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,163 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,163 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,163 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,163 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,163 DEBUG Adding One Hot - 140 156 86 88 112
+2017-02-14 22:01:09,163 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,164 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,164 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,164 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,164 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,164 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,164 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,164 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,164 DEBUG Skip Turn
+2017-02-14 22:01:09,164 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,164 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,164 INFO Reward: 0
+2017-02-14 22:01:09,164 INFO Complete: False
+2017-02-14 22:01:09,165 DEBUG Sending Valid Moves for 4
+2017-02-14 22:01:09,165 DEBUG New set of actions: 
+[[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,165 DEBUG Shape of new Set of Actions: (3, 5)
+2017-02-14 22:01:09,165 DEBUG Getting MaxQ for Detective 3 and Optimizing for him/her
+2017-02-14 22:01:09,165 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,166 DEBUG Actions,Actions.shape:(3, 5) 
+[[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,168 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,168 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,197 DEBUG Saving this Observation as last used by Detective 3
+2017-02-14 22:01:09,197 INFO 
+
+
+2017-02-14 22:01:09,197 DEBUG Observation Called
+2017-02-14 22:01:09,197 DEBUG Turn Number = 0, Sub_Counter = 5
+2017-02-14 22:01:09,197 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,197 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,197 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,197 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,197 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,197 DEBUG Adding One Hot - 140 156 86 88 112
+2017-02-14 22:01:09,197 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [10, 8, 4]
+2017-02-14 22:01:09,198 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,198 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,198 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,198 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,198 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,198 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,198 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,198 DEBUG Calling observation
+2017-02-14 22:01:09,199 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,199 INFO sub_turn: 5
+2017-02-14 22:01:09,199 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,199 DEBUG Sending Valid Moves for 5
+2017-02-14 22:01:09,199 DEBUG Calling Valid moves
+2017-02-14 22:01:09,199 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:09,199 DEBUG valid_actions: 
+[[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:09,199 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,200 DEBUG Actions,Actions.shape:(3, 5) 
+[[112 100   1   0   0]
+ [112 125   1   0   0]
+ [112 111   1   0   0]]
+2017-02-14 22:01:09,218 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,218 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,219 DEBUG Optimum_action for Detective 4 : 0
+2017-02-14 22:01:09,219 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:09,219 DEBUG Taken Action: 0
+2017-02-14 22:01:09,219 INFO NO EXPLORING
+2017-02-14 22:01:09,219 DEBUG next_node: 100
+2017-02-14 22:01:09,219 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,219 DEBUG take_action called
+2017-02-14 22:01:09,220 DEBUG Turn Number = 0, Sub Counter = 5
+2017-02-14 22:01:09,220 DEBUG Values Given - next_node = 100, mode = [1 0 0]
+2017-02-14 22:01:09,220 DEBUG turn_sub_counter = 5, Playing respective detective
+2017-02-14 22:01:09,220 DEBUG Reached play_detective, next_node = 100, mode = [1 0 0], turn_sub_counter = 5
+2017-02-14 22:01:09,220 DEBUG Before Move-> Detective[4]: [112  10   8   4]
+2017-02-14 22:01:09,221 DEBUG After Move-> Detective[4]: [100   9   8   4]
+2017-02-14 22:01:09,221 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,221 DEBUG Before Sending-> MRx: [49  7  3  3]
+2017-02-14 22:01:09,221 DEBUG After Sending-> MRx: [49  8  3  3]
+2017-02-14 22:01:09,221 DEBUG Calling Update
+2017-02-14 22:01:09,221 DEBUG Valid Moves for MRx: [[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:09,222 DEBUG MRx has valid moves
+2017-02-14 22:01:09,222 DEBUG Detective 0's valid move: [[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,223 DEBUG Detective can move
+2017-02-14 22:01:09,223 DEBUG Detective 1's valid move: [[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,224 DEBUG Detective can move
+2017-02-14 22:01:09,224 DEBUG Detective 2's valid move: [[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,225 DEBUG Detective can move
+2017-02-14 22:01:09,225 DEBUG Detective 3's valid move: [[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,226 DEBUG Detective can move
+2017-02-14 22:01:09,227 DEBUG Detective 4's valid move: [[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,227 DEBUG Detective can move
+2017-02-14 22:01:09,227 DEBUG Update Over
+2017-02-14 22:01:09,228 INFO Turn Number: 0
+2017-02-14 22:01:09,228 INFO Turn Sub Counter: 5
+2017-02-14 22:01:09,228 INFO Next Node: 100
+2017-02-14 22:01:09,228 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,228 INFO MRx: [49  8  3  3]
+2017-02-14 22:01:09,229 INFO Detectives: 
+[[140   9   8   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,229 INFO #######
+
+
+
+
+2017-02-14 22:01:09,229 DEBUG Observation Called
+2017-02-14 22:01:09,229 DEBUG Turn Number = 0, Sub_Counter = 5
+2017-02-14 22:01:09,229 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,229 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,229 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,229 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,229 DEBUG Turn to next Reveal = 2
+2017-02-14 22:01:09,230 DEBUG Adding One Hot - 140 156 86 88 100
+2017-02-14 22:01:09,230 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,230 DEBUG MRx's Last transport: [[1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,230 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,230 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,231 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,231 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,231 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,231 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,231 DEBUG Skip Turn
+2017-02-14 22:01:09,232 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,232 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,232 INFO Reward: 0
+2017-02-14 22:01:09,232 INFO Complete: False
+2017-02-14 22:01:09,232 DEBUG Sending Valid Moves for 5
+2017-02-14 22:01:09,232 DEBUG New set of actions: 
+[[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,233 DEBUG Shape of new Set of Actions: (8, 5)
+2017-02-14 22:01:09,233 DEBUG Getting MaxQ for Detective 4 and Optimizing for him/her
+2017-02-14 22:01:09,233 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,233 DEBUG Actions,Actions.shape:(8, 5) 
+[[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,237 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,237 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,268 DEBUG Saving this Observation as last used by Detective 4
+2017-02-14 22:01:09,268 INFO 
+
+
+2017-02-14 22:01:09,268 DEBUG Observation Called
+2017-02-14 22:01:09,268 DEBUG Turn Number = 1, Sub_Counter = 0
+2017-02-14 22:01:09,268 DEBUG Calling MRx's observation
+2017-02-14 22:01:09,268 DEBUG Creating MRx Observation
+2017-02-14 22:01:09,268 DEBUG MRX-> [49  8  3  3]
+2017-02-14 22:01:09,268 DEBUG One Hot Encoding Value: 49
+2017-02-14 22:01:09,269 DEBUG Mode Values: [8, 3, 3]
+2017-02-14 22:01:09,269 DEBUG Adding Detective Positions
+2017-02-14 22:01:09,269 DEBUG Detectives -> [[140   9   8   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,269 DEBUG Adding One Hot - 140 156 86 88 100
+2017-02-14 22:01:09,269 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,269 DEBUG Adding turn number 1
+2017-02-14 22:01:09,269 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:09,269 DEBUG Calling observation
+2017-02-14 22:01:09,270 DEBUG present_observation: 
+[0 0 0 ..., 8 4 1]
+2017-02-14 22:01:09,270 INFO sub_turn: 0
+2017-02-14 22:01:09,270 DEBUG Shape of present_observation: (1213,)
+2017-02-14 22:01:09,270 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:09,270 DEBUG Calling Valid moves
+2017-02-14 22:01:09,270 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:09,270 DEBUG valid_actions: 
+[[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:09,270 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,271 DEBUG Actions,Actions.shape:(3, 5) 
+[[49 50  1  0  0]
+ [49 36  1  0  0]
+ [49 66  1  0  0]]
+2017-02-14 22:01:09,273 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,273 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,273 DEBUG Optimum_action for MRx: 0
+2017-02-14 22:01:09,274 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:09,274 DEBUG Taken Action: 2
+2017-02-14 22:01:09,274 INFO EXPLORING
+2017-02-14 22:01:09,274 DEBUG next_node: 66
+2017-02-14 22:01:09,274 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,274 DEBUG take_action called
+2017-02-14 22:01:09,274 DEBUG Turn Number = 1, Sub Counter = 0
+2017-02-14 22:01:09,275 DEBUG Values Given - next_node = 66, mode = [1 0 0]
+2017-02-14 22:01:09,275 DEBUG turn_sub_counter = 0, Playing Mrx with values
+2017-02-14 22:01:09,275 DEBUG Reached play_MRx, next_node = 66, mode = [1 0 0]
+2017-02-14 22:01:09,275 DEBUG Before Move-> MRx: [49  8  3  3]
+2017-02-14 22:01:09,276 DEBUG After Move-> MRx: [66  7  3  3]
+2017-02-14 22:01:09,276 DEBUG Calling Update
+2017-02-14 22:01:09,276 DEBUG Valid Moves for MRx: [[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,276 DEBUG MRx has valid moves
+2017-02-14 22:01:09,277 DEBUG Detective 0's valid move: [[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,277 DEBUG Detective can move
+2017-02-14 22:01:09,278 DEBUG Detective 1's valid move: [[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,278 DEBUG Detective can move
+2017-02-14 22:01:09,278 DEBUG Detective 2's valid move: [[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,279 DEBUG Detective can move
+2017-02-14 22:01:09,279 DEBUG Detective 3's valid move: [[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,280 DEBUG Detective can move
+2017-02-14 22:01:09,280 DEBUG Detective 4's valid move: [[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,281 DEBUG Detective can move
+2017-02-14 22:01:09,281 DEBUG Update Over
+2017-02-14 22:01:09,281 INFO Turn Number: 1
+2017-02-14 22:01:09,281 INFO Turn Sub Counter: 0
+2017-02-14 22:01:09,281 INFO Next Node: 66
+2017-02-14 22:01:09,281 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,281 INFO MRx: [66  7  3  3]
+2017-02-14 22:01:09,282 INFO Detectives: 
+[[140   9   8   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,282 INFO #######
+
+
+
+
+2017-02-14 22:01:09,282 DEBUG Observation Called
+2017-02-14 22:01:09,282 DEBUG Turn Number = 1, Sub_Counter = 0
+2017-02-14 22:01:09,282 DEBUG Calling MRx's observation
+2017-02-14 22:01:09,282 DEBUG Creating MRx Observation
+2017-02-14 22:01:09,282 DEBUG MRX-> [66  7  3  3]
+2017-02-14 22:01:09,282 DEBUG One Hot Encoding Value: 66
+2017-02-14 22:01:09,282 DEBUG Mode Values: [7, 3, 3]
+2017-02-14 22:01:09,283 DEBUG Adding Detective Positions
+2017-02-14 22:01:09,283 DEBUG Detectives -> [[140   9   8   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,283 DEBUG Adding One Hot - 140 156 86 88 100
+2017-02-14 22:01:09,283 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,283 DEBUG Adding turn number 1
+2017-02-14 22:01:09,283 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:09,283 DEBUG Skip Turn
+2017-02-14 22:01:09,284 DEBUG next_observation: 
+[0 0 0 ..., 8 4 1]
+2017-02-14 22:01:09,284 DEBUG Shape of next_observation: (1213,)
+2017-02-14 22:01:09,284 INFO Reward: 0
+2017-02-14 22:01:09,284 INFO Complete: False
+2017-02-14 22:01:09,284 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:09,284 DEBUG New set of actions: 
+[[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,284 DEBUG Shape of new Set of Actions: (4, 5)
+2017-02-14 22:01:09,285 DEBUG Getting MaxQ for MRx and Optimizing for MRx
+2017-02-14 22:01:09,285 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,285 DEBUG Actions,Actions.shape:(4, 5) 
+[[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,288 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,288 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,294 DEBUG Saving this Observation as last used by MRx
+2017-02-14 22:01:09,294 INFO 
+
+
+2017-02-14 22:01:09,294 DEBUG Observation Called
+2017-02-14 22:01:09,294 DEBUG Turn Number = 1, Sub_Counter = 1
+2017-02-14 22:01:09,294 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,294 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,294 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,294 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,294 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,294 DEBUG Adding One Hot - 140 156 86 88 100
+2017-02-14 22:01:09,294 DEBUG Adding modes - [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,295 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,295 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,295 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,295 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,295 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,295 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,295 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,295 DEBUG Calling observation
+2017-02-14 22:01:09,296 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,296 INFO sub_turn: 1
+2017-02-14 22:01:09,296 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,296 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:09,296 DEBUG Calling Valid moves
+2017-02-14 22:01:09,296 DEBUG Shape of valid_moves: (11, 5)
+2017-02-14 22:01:09,297 DEBUG valid_actions: 
+[[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,297 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,297 DEBUG Actions,Actions.shape:(11, 5) 
+[[140 128   0   0   1]
+ [140  82   0   1   0]
+ [140 132   1   0   0]
+ [140 133   1   0   0]
+ [140 133   0   1   0]
+ [140  89   0   0   1]
+ [140 153   0   1   0]
+ [140 153   0   0   1]
+ [140 154   1   0   0]
+ [140 139   1   0   0]
+ [140 126   1   0   0]]
+2017-02-14 22:01:09,302 DEBUG Q_values: [[ 2078490.75 ]
+ [ 1914917.75 ]
+ [ 2033438.25 ]
+ [ 2020283.625]
+ [ 1996552.125]
+ [ 2078848.5  ]
+ [ 1986587.   ]
+ [ 2131369.75 ]
+ [ 1914683.25 ]
+ [ 1918139.5  ]
+ [ 1903332.75 ]]
+2017-02-14 22:01:09,302 DEBUG Index,Max: 7 2.13137e+06
+2017-02-14 22:01:09,302 DEBUG Optimum_action for Detective 0 : 7
+2017-02-14 22:01:09,303 DEBUG Action_probs: [ 0.09090909  0.09090909  0.09090909  0.09090909  0.09090909  0.09090909
+  0.09090909  0.09090909  0.09090909  0.09090909  0.09090909]
+2017-02-14 22:01:09,303 DEBUG Taken Action: 6
+2017-02-14 22:01:09,303 INFO EXPLORING
+2017-02-14 22:01:09,303 DEBUG next_node: 153
+2017-02-14 22:01:09,304 DEBUG mode: [0 1 0]
+2017-02-14 22:01:09,304 DEBUG take_action called
+2017-02-14 22:01:09,304 DEBUG Turn Number = 1, Sub Counter = 1
+2017-02-14 22:01:09,304 DEBUG Values Given - next_node = 153, mode = [0 1 0]
+2017-02-14 22:01:09,305 DEBUG turn_sub_counter = 1, Playing respective detective
+2017-02-14 22:01:09,305 DEBUG Reached play_detective, next_node = 153, mode = [0 1 0], turn_sub_counter = 1
+2017-02-14 22:01:09,305 DEBUG Before Move-> Detective[0]: [140   9   8   4]
+2017-02-14 22:01:09,305 DEBUG After Move-> Detective[0]: [153   9   7   4]
+2017-02-14 22:01:09,305 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,306 DEBUG Before Sending-> MRx: [66  7  3  3]
+2017-02-14 22:01:09,306 DEBUG After Sending-> MRx: [66  7  4  3]
+2017-02-14 22:01:09,306 DEBUG Calling Update
+2017-02-14 22:01:09,306 DEBUG Valid Moves for MRx: [[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,307 DEBUG MRx has valid moves
+2017-02-14 22:01:09,307 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,308 DEBUG Detective can move
+2017-02-14 22:01:09,308 DEBUG Detective 1's valid move: [[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 140   1   0   0]
+ [156 140   0   1   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,309 DEBUG Detective can move
+2017-02-14 22:01:09,309 DEBUG Detective 2's valid move: [[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,310 DEBUG Detective can move
+2017-02-14 22:01:09,310 DEBUG Detective 3's valid move: [[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,311 DEBUG Detective can move
+2017-02-14 22:01:09,311 DEBUG Detective 4's valid move: [[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,311 DEBUG Detective can move
+2017-02-14 22:01:09,312 DEBUG Update Over
+2017-02-14 22:01:09,312 INFO Turn Number: 1
+2017-02-14 22:01:09,312 INFO Turn Sub Counter: 1
+2017-02-14 22:01:09,312 INFO Next Node: 153
+2017-02-14 22:01:09,312 INFO Mode: [0 1 0]
+2017-02-14 22:01:09,312 INFO MRx: [66  7  4  3]
+2017-02-14 22:01:09,313 INFO Detectives: 
+[[153   9   7   4]
+ [156   9   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,313 INFO #######
+
+
+
+
+2017-02-14 22:01:09,313 DEBUG Observation Called
+2017-02-14 22:01:09,313 DEBUG Turn Number = 1, Sub_Counter = 1
+2017-02-14 22:01:09,313 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,313 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,313 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,313 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,313 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,313 DEBUG Adding One Hot - 153 156 86 88 100
+2017-02-14 22:01:09,313 DEBUG Adding modes - [9, 7, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,314 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,314 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,314 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,314 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,314 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,314 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,314 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,314 DEBUG Skip Turn
+2017-02-14 22:01:09,314 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,315 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,315 INFO Reward: 0
+2017-02-14 22:01:09,315 INFO Complete: False
+2017-02-14 22:01:09,315 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:09,315 DEBUG New set of actions: 
+[[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,316 DEBUG Shape of new Set of Actions: (14, 5)
+2017-02-14 22:01:09,316 DEBUG Getting MaxQ for Detective 0 and Optimizing for him/her
+2017-02-14 22:01:09,316 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,316 DEBUG Actions,Actions.shape:(14, 5) 
+[[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,322 DEBUG Q_values: [[ 2113821.   ]
+ [ 1961553.25 ]
+ [ 2000946.875]
+ [ 1956060.   ]
+ [ 2015396.875]
+ [ 2112617.5  ]
+ [ 1963175.25 ]
+ [ 2055327.5  ]
+ [ 1977789.75 ]
+ [ 2067926.25 ]
+ [ 2112120.   ]
+ [ 1976811.5  ]
+ [ 1932835.125]
+ [ 1987302.875]]
+2017-02-14 22:01:09,322 DEBUG Index,Max: 0 2.11382e+06
+2017-02-14 22:01:09,328 DEBUG Saving this Observation as last used by Detective 0
+2017-02-14 22:01:09,328 INFO 
+
+
+2017-02-14 22:01:09,328 DEBUG Observation Called
+2017-02-14 22:01:09,328 DEBUG Turn Number = 1, Sub_Counter = 2
+2017-02-14 22:01:09,328 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,328 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,328 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,328 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,329 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,329 DEBUG Adding One Hot - 153 156 86 88 100
+2017-02-14 22:01:09,329 DEBUG Adding modes - [9, 7, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,329 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,329 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,329 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,329 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,329 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,330 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,330 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,330 DEBUG Calling observation
+2017-02-14 22:01:09,330 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,330 INFO sub_turn: 2
+2017-02-14 22:01:09,330 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,330 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,330 DEBUG Calling Valid moves
+2017-02-14 22:01:09,330 DEBUG Shape of valid_moves: (8, 5)
+2017-02-14 22:01:09,331 DEBUG valid_actions: 
+[[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 140   1   0   0]
+ [156 140   0   1   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,331 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,331 DEBUG Actions,Actions.shape:(8, 5) 
+[[156 184   0   1   0]
+ [156 169   1   0   0]
+ [156 154   0   1   0]
+ [156 155   1   0   0]
+ [156 140   1   0   0]
+ [156 140   0   1   0]
+ [156 157   1   0   0]
+ [156 157   0   1   0]]
+2017-02-14 22:01:09,336 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,336 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,337 DEBUG Optimum_action for Detective 1 : 0
+2017-02-14 22:01:09,337 DEBUG Action_probs: [ 0.125  0.125  0.125  0.125  0.125  0.125  0.125  0.125]
+2017-02-14 22:01:09,337 DEBUG Taken Action: 6
+2017-02-14 22:01:09,337 INFO EXPLORING
+2017-02-14 22:01:09,337 DEBUG next_node: 157
+2017-02-14 22:01:09,337 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,338 DEBUG take_action called
+2017-02-14 22:01:09,338 DEBUG Turn Number = 1, Sub Counter = 2
+2017-02-14 22:01:09,338 DEBUG Values Given - next_node = 157, mode = [1 0 0]
+2017-02-14 22:01:09,338 DEBUG turn_sub_counter = 2, Playing respective detective
+2017-02-14 22:01:09,338 DEBUG Reached play_detective, next_node = 157, mode = [1 0 0], turn_sub_counter = 2
+2017-02-14 22:01:09,338 DEBUG Before Move-> Detective[1]: [156   9   8   4]
+2017-02-14 22:01:09,339 DEBUG After Move-> Detective[1]: [157   8   8   4]
+2017-02-14 22:01:09,339 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,339 DEBUG Before Sending-> MRx: [66  7  4  3]
+2017-02-14 22:01:09,339 DEBUG After Sending-> MRx: [66  8  4  3]
+2017-02-14 22:01:09,339 DEBUG Calling Update
+2017-02-14 22:01:09,339 DEBUG Valid Moves for MRx: [[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,340 DEBUG MRx has valid moves
+2017-02-14 22:01:09,340 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,341 DEBUG Detective can move
+2017-02-14 22:01:09,341 DEBUG Detective 1's valid move: [[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,342 DEBUG Detective can move
+2017-02-14 22:01:09,342 DEBUG Detective 2's valid move: [[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,343 DEBUG Detective can move
+2017-02-14 22:01:09,343 DEBUG Detective 3's valid move: [[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,344 DEBUG Detective can move
+2017-02-14 22:01:09,344 DEBUG Detective 4's valid move: [[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,345 DEBUG Detective can move
+2017-02-14 22:01:09,345 DEBUG Update Over
+2017-02-14 22:01:09,345 INFO Turn Number: 1
+2017-02-14 22:01:09,345 INFO Turn Sub Counter: 2
+2017-02-14 22:01:09,345 INFO Next Node: 157
+2017-02-14 22:01:09,345 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,345 INFO MRx: [66  8  4  3]
+2017-02-14 22:01:09,346 INFO Detectives: 
+[[153   9   7   4]
+ [157   8   8   4]
+ [ 86   9   8   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,346 INFO #######
+
+
+
+
+2017-02-14 22:01:09,346 DEBUG Observation Called
+2017-02-14 22:01:09,346 DEBUG Turn Number = 1, Sub_Counter = 2
+2017-02-14 22:01:09,346 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,346 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,346 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,346 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,346 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,346 DEBUG Adding One Hot - 153 157 86 88 100
+2017-02-14 22:01:09,346 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,347 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,347 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,347 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,347 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,347 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,347 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,347 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,347 DEBUG Skip Turn
+2017-02-14 22:01:09,347 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,347 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,348 INFO Reward: 0
+2017-02-14 22:01:09,348 INFO Complete: False
+2017-02-14 22:01:09,348 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,348 DEBUG New set of actions: 
+[[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,348 DEBUG Shape of new Set of Actions: (6, 5)
+2017-02-14 22:01:09,348 DEBUG Getting MaxQ for Detective 1 and Optimizing for him/her
+2017-02-14 22:01:09,349 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,349 DEBUG Actions,Actions.shape:(6, 5) 
+[[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,352 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,352 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,359 DEBUG Saving this Observation as last used by Detective 1
+2017-02-14 22:01:09,359 INFO 
+
+
+2017-02-14 22:01:09,359 DEBUG Observation Called
+2017-02-14 22:01:09,359 DEBUG Turn Number = 1, Sub_Counter = 3
+2017-02-14 22:01:09,359 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,359 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,359 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,359 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,359 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,359 DEBUG Adding One Hot - 153 157 86 88 100
+2017-02-14 22:01:09,359 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 8, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,360 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,360 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,360 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,360 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,360 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,360 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,360 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,360 DEBUG Calling observation
+2017-02-14 22:01:09,361 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,361 INFO sub_turn: 3
+2017-02-14 22:01:09,361 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,361 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,361 DEBUG Calling Valid moves
+2017-02-14 22:01:09,361 DEBUG Shape of valid_moves: (7, 5)
+2017-02-14 22:01:09,361 DEBUG valid_actions: 
+[[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,361 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,362 DEBUG Actions,Actions.shape:(7, 5) 
+[[ 86  52   0   1   0]
+ [ 86  69   1   0   0]
+ [ 86 102   0   1   0]
+ [ 86  87   0   1   0]
+ [ 86 104   1   0   0]
+ [ 86 116   0   1   0]
+ [ 86 103   1   0   0]]
+2017-02-14 22:01:09,365 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,366 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,366 DEBUG Optimum_action for Detective 2 : 0
+2017-02-14 22:01:09,366 DEBUG Action_probs: [ 0.14285714  0.14285714  0.14285714  0.14285714  0.14285714  0.14285714
+  0.14285714]
+2017-02-14 22:01:09,366 DEBUG Taken Action: 2
+2017-02-14 22:01:09,366 INFO EXPLORING
+2017-02-14 22:01:09,366 DEBUG next_node: 102
+2017-02-14 22:01:09,367 DEBUG mode: [0 1 0]
+2017-02-14 22:01:09,367 DEBUG take_action called
+2017-02-14 22:01:09,367 DEBUG Turn Number = 1, Sub Counter = 3
+2017-02-14 22:01:09,367 DEBUG Values Given - next_node = 102, mode = [0 1 0]
+2017-02-14 22:01:09,367 DEBUG turn_sub_counter = 3, Playing respective detective
+2017-02-14 22:01:09,367 DEBUG Reached play_detective, next_node = 102, mode = [0 1 0], turn_sub_counter = 3
+2017-02-14 22:01:09,368 DEBUG Before Move-> Detective[2]: [86  9  8  4]
+2017-02-14 22:01:09,368 DEBUG After Move-> Detective[2]: [102   9   7   4]
+2017-02-14 22:01:09,368 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,368 DEBUG Before Sending-> MRx: [66  8  4  3]
+2017-02-14 22:01:09,368 DEBUG After Sending-> MRx: [66  8  5  3]
+2017-02-14 22:01:09,369 DEBUG Calling Update
+2017-02-14 22:01:09,369 DEBUG Valid Moves for MRx: [[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,369 DEBUG MRx has valid moves
+2017-02-14 22:01:09,369 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,370 DEBUG Detective can move
+2017-02-14 22:01:09,371 DEBUG Detective 1's valid move: [[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,371 DEBUG Detective can move
+2017-02-14 22:01:09,371 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,372 DEBUG Detective can move
+2017-02-14 22:01:09,372 DEBUG Detective 3's valid move: [[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,373 DEBUG Detective can move
+2017-02-14 22:01:09,373 DEBUG Detective 4's valid move: [[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,374 DEBUG Detective can move
+2017-02-14 22:01:09,374 DEBUG Update Over
+2017-02-14 22:01:09,374 INFO Turn Number: 1
+2017-02-14 22:01:09,374 INFO Turn Sub Counter: 3
+2017-02-14 22:01:09,374 INFO Next Node: 102
+2017-02-14 22:01:09,374 INFO Mode: [0 1 0]
+2017-02-14 22:01:09,374 INFO MRx: [66  8  5  3]
+2017-02-14 22:01:09,375 INFO Detectives: 
+[[153   9   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 88   9   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,375 INFO #######
+
+
+
+
+2017-02-14 22:01:09,375 DEBUG Observation Called
+2017-02-14 22:01:09,375 DEBUG Turn Number = 1, Sub_Counter = 3
+2017-02-14 22:01:09,375 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,375 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,375 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,375 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,375 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,375 DEBUG Adding One Hot - 153 157 102 88 100
+2017-02-14 22:01:09,375 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,376 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,376 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,376 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,376 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,376 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,376 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,376 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,376 DEBUG Skip Turn
+2017-02-14 22:01:09,377 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,377 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,377 INFO Reward: 0
+2017-02-14 22:01:09,377 INFO Complete: False
+2017-02-14 22:01:09,377 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,377 DEBUG New set of actions: 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,378 DEBUG Shape of new Set of Actions: (6, 5)
+2017-02-14 22:01:09,378 DEBUG Getting MaxQ for Detective 2 and Optimizing for him/her
+2017-02-14 22:01:09,378 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,378 DEBUG Actions,Actions.shape:(6, 5) 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,381 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,382 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,388 DEBUG Saving this Observation as last used by Detective 2
+2017-02-14 22:01:09,388 INFO 
+
+
+2017-02-14 22:01:09,388 DEBUG Observation Called
+2017-02-14 22:01:09,388 DEBUG Turn Number = 1, Sub_Counter = 4
+2017-02-14 22:01:09,388 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,388 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,388 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,388 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,388 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,388 DEBUG Adding One Hot - 153 157 102 88 100
+2017-02-14 22:01:09,389 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [9, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,389 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,389 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,390 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,390 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,390 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,390 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,390 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,390 DEBUG Calling observation
+2017-02-14 22:01:09,390 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,390 INFO sub_turn: 4
+2017-02-14 22:01:09,390 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,391 DEBUG Sending Valid Moves for 4
+2017-02-14 22:01:09,391 DEBUG Calling Valid moves
+2017-02-14 22:01:09,391 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:09,391 DEBUG valid_actions: 
+[[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,391 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,392 DEBUG Actions,Actions.shape:(3, 5) 
+[[ 88  89   1   0   0]
+ [ 88 117   1   0   0]
+ [ 88  87   1   0   0]]
+2017-02-14 22:01:09,395 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,395 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,395 DEBUG Optimum_action for Detective 3 : 0
+2017-02-14 22:01:09,395 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:09,395 DEBUG Taken Action: 0
+2017-02-14 22:01:09,395 INFO NO EXPLORING
+2017-02-14 22:01:09,396 DEBUG next_node: 89
+2017-02-14 22:01:09,396 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,396 DEBUG take_action called
+2017-02-14 22:01:09,396 DEBUG Turn Number = 1, Sub Counter = 4
+2017-02-14 22:01:09,396 DEBUG Values Given - next_node = 89, mode = [1 0 0]
+2017-02-14 22:01:09,396 DEBUG turn_sub_counter = 4, Playing respective detective
+2017-02-14 22:01:09,396 DEBUG Reached play_detective, next_node = 89, mode = [1 0 0], turn_sub_counter = 4
+2017-02-14 22:01:09,397 DEBUG Before Move-> Detective[3]: [88  9  8  4]
+2017-02-14 22:01:09,397 DEBUG After Move-> Detective[3]: [89  8  8  4]
+2017-02-14 22:01:09,397 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,397 DEBUG Before Sending-> MRx: [66  8  5  3]
+2017-02-14 22:01:09,398 DEBUG After Sending-> MRx: [66  9  5  3]
+2017-02-14 22:01:09,398 DEBUG Calling Update
+2017-02-14 22:01:09,398 DEBUG Valid Moves for MRx: [[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,398 DEBUG MRx has valid moves
+2017-02-14 22:01:09,398 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,399 DEBUG Detective can move
+2017-02-14 22:01:09,400 DEBUG Detective 1's valid move: [[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,400 DEBUG Detective can move
+2017-02-14 22:01:09,400 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,401 DEBUG Detective can move
+2017-02-14 22:01:09,401 DEBUG Detective 3's valid move: [[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,402 DEBUG Detective can move
+2017-02-14 22:01:09,402 DEBUG Detective 4's valid move: [[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,403 DEBUG Detective can move
+2017-02-14 22:01:09,403 DEBUG Update Over
+2017-02-14 22:01:09,403 INFO Turn Number: 1
+2017-02-14 22:01:09,403 INFO Turn Sub Counter: 4
+2017-02-14 22:01:09,403 INFO Next Node: 89
+2017-02-14 22:01:09,403 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,404 INFO MRx: [66  9  5  3]
+2017-02-14 22:01:09,404 INFO Detectives: 
+[[153   9   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [100   9   8   4]]
+2017-02-14 22:01:09,404 INFO #######
+
+
+
+
+2017-02-14 22:01:09,404 DEBUG Observation Called
+2017-02-14 22:01:09,404 DEBUG Turn Number = 1, Sub_Counter = 4
+2017-02-14 22:01:09,404 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,404 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,404 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,404 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,404 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,405 DEBUG Adding One Hot - 153 157 102 89 100
+2017-02-14 22:01:09,405 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,405 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,405 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,405 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,405 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,405 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,405 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,406 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,406 DEBUG Skip Turn
+2017-02-14 22:01:09,406 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,406 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,406 INFO Reward: 0
+2017-02-14 22:01:09,406 INFO Complete: False
+2017-02-14 22:01:09,406 DEBUG Sending Valid Moves for 4
+2017-02-14 22:01:09,406 DEBUG New set of actions: 
+[[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,407 DEBUG Shape of new Set of Actions: (9, 5)
+2017-02-14 22:01:09,407 DEBUG Getting MaxQ for Detective 3 and Optimizing for him/her
+2017-02-14 22:01:09,407 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,407 DEBUG Actions,Actions.shape:(9, 5) 
+[[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,412 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,412 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,418 DEBUG Saving this Observation as last used by Detective 3
+2017-02-14 22:01:09,418 INFO 
+
+
+2017-02-14 22:01:09,418 DEBUG Observation Called
+2017-02-14 22:01:09,418 DEBUG Turn Number = 1, Sub_Counter = 5
+2017-02-14 22:01:09,418 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,418 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,418 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,418 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,418 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,419 DEBUG Adding One Hot - 153 157 102 89 100
+2017-02-14 22:01:09,419 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [9, 8, 4]
+2017-02-14 22:01:09,419 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,419 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,419 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,419 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,419 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,419 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,420 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,420 DEBUG Calling observation
+2017-02-14 22:01:09,420 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,420 INFO sub_turn: 5
+2017-02-14 22:01:09,420 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,420 DEBUG Sending Valid Moves for 5
+2017-02-14 22:01:09,420 DEBUG Calling Valid moves
+2017-02-14 22:01:09,420 DEBUG Shape of valid_moves: (8, 5)
+2017-02-14 22:01:09,421 DEBUG valid_actions: 
+[[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,421 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,421 DEBUG Actions,Actions.shape:(8, 5) 
+[[100  80   1   0   0]
+ [100  81   1   0   0]
+ [100  82   0   1   0]
+ [100 101   1   0   0]
+ [100 113   1   0   0]
+ [100 112   1   0   0]
+ [100 111   0   1   0]
+ [100  63   0   1   0]]
+2017-02-14 22:01:09,425 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,425 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,425 DEBUG Optimum_action for Detective 4 : 0
+2017-02-14 22:01:09,425 DEBUG Action_probs: [ 0.125  0.125  0.125  0.125  0.125  0.125  0.125  0.125]
+2017-02-14 22:01:09,426 DEBUG Taken Action: 1
+2017-02-14 22:01:09,426 INFO EXPLORING
+2017-02-14 22:01:09,426 DEBUG next_node: 81
+2017-02-14 22:01:09,426 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,426 DEBUG take_action called
+2017-02-14 22:01:09,426 DEBUG Turn Number = 1, Sub Counter = 5
+2017-02-14 22:01:09,426 DEBUG Values Given - next_node = 81, mode = [1 0 0]
+2017-02-14 22:01:09,426 DEBUG turn_sub_counter = 5, Playing respective detective
+2017-02-14 22:01:09,427 DEBUG Reached play_detective, next_node = 81, mode = [1 0 0], turn_sub_counter = 5
+2017-02-14 22:01:09,427 DEBUG Before Move-> Detective[4]: [100   9   8   4]
+2017-02-14 22:01:09,427 DEBUG After Move-> Detective[4]: [81  8  8  4]
+2017-02-14 22:01:09,427 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,427 DEBUG Before Sending-> MRx: [66  9  5  3]
+2017-02-14 22:01:09,428 DEBUG After Sending-> MRx: [66 10  5  3]
+2017-02-14 22:01:09,428 DEBUG Calling Update
+2017-02-14 22:01:09,428 DEBUG Valid Moves for MRx: [[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,429 DEBUG MRx has valid moves
+2017-02-14 22:01:09,429 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,430 DEBUG Detective can move
+2017-02-14 22:01:09,430 DEBUG Detective 1's valid move: [[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,430 DEBUG Detective can move
+2017-02-14 22:01:09,431 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,431 DEBUG Detective can move
+2017-02-14 22:01:09,431 DEBUG Detective 3's valid move: [[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,432 DEBUG Detective can move
+2017-02-14 22:01:09,432 DEBUG Detective 4's valid move: [[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,433 DEBUG Detective can move
+2017-02-14 22:01:09,433 DEBUG Update Over
+2017-02-14 22:01:09,433 INFO Turn Number: 1
+2017-02-14 22:01:09,433 INFO Turn Sub Counter: 5
+2017-02-14 22:01:09,433 INFO Next Node: 81
+2017-02-14 22:01:09,433 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,434 INFO MRx: [66 10  5  3]
+2017-02-14 22:01:09,434 INFO Detectives: 
+[[153   9   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,434 INFO #######
+
+
+
+
+2017-02-14 22:01:09,434 DEBUG Observation Called
+2017-02-14 22:01:09,434 DEBUG Turn Number = 1, Sub_Counter = 5
+2017-02-14 22:01:09,434 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,434 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,434 DEBUG Last Reveal Turn = 0
+2017-02-14 22:01:09,434 DEBUG Adding 0 node for MRx Location
+2017-02-14 22:01:09,435 DEBUG Turn to next Reveal = 1
+2017-02-14 22:01:09,435 DEBUG Adding One Hot - 153 157 102 89 81
+2017-02-14 22:01:09,435 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,435 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,435 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,435 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,435 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,435 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,435 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,436 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,436 DEBUG Skip Turn
+2017-02-14 22:01:09,436 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,436 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,436 INFO Reward: 0
+2017-02-14 22:01:09,436 INFO Complete: False
+2017-02-14 22:01:09,436 DEBUG Sending Valid Moves for 5
+2017-02-14 22:01:09,436 DEBUG New set of actions: 
+[[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,437 DEBUG Shape of new Set of Actions: (3, 5)
+2017-02-14 22:01:09,437 DEBUG Getting MaxQ for Detective 4 and Optimizing for him/her
+2017-02-14 22:01:09,437 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,437 DEBUG Actions,Actions.shape:(3, 5) 
+[[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,440 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,440 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,446 DEBUG Saving this Observation as last used by Detective 4
+2017-02-14 22:01:09,446 INFO 
+
+
+2017-02-14 22:01:09,446 DEBUG Observation Called
+2017-02-14 22:01:09,446 DEBUG Turn Number = 2, Sub_Counter = 0
+2017-02-14 22:01:09,446 DEBUG Calling MRx's observation
+2017-02-14 22:01:09,447 DEBUG Creating MRx Observation
+2017-02-14 22:01:09,447 DEBUG MRX-> [66 10  5  3]
+2017-02-14 22:01:09,447 DEBUG One Hot Encoding Value: 66
+2017-02-14 22:01:09,447 DEBUG Mode Values: [10, 5, 3]
+2017-02-14 22:01:09,447 DEBUG Adding Detective Positions
+2017-02-14 22:01:09,447 DEBUG Detectives -> [[153   9   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,448 DEBUG Adding One Hot - 153 157 102 89 81
+2017-02-14 22:01:09,448 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,448 DEBUG Adding turn number 2
+2017-02-14 22:01:09,448 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:09,448 DEBUG Calling observation
+2017-02-14 22:01:09,448 DEBUG present_observation: 
+[0 0 0 ..., 8 4 2]
+2017-02-14 22:01:09,448 INFO sub_turn: 0
+2017-02-14 22:01:09,448 DEBUG Shape of present_observation: (1213,)
+2017-02-14 22:01:09,448 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:09,449 DEBUG Calling Valid moves
+2017-02-14 22:01:09,449 DEBUG Shape of valid_moves: (4, 5)
+2017-02-14 22:01:09,449 DEBUG valid_actions: 
+[[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,449 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,449 DEBUG Actions,Actions.shape:(4, 5) 
+[[66 49  1  0  0]
+ [66 82  1  0  0]
+ [66 67  1  0  0]
+ [66 65  1  0  0]]
+2017-02-14 22:01:09,452 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,452 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,452 DEBUG Optimum_action for MRx: 0
+2017-02-14 22:01:09,453 DEBUG Action_probs: [ 0.25  0.25  0.25  0.25]
+2017-02-14 22:01:09,453 DEBUG Taken Action: 2
+2017-02-14 22:01:09,453 INFO EXPLORING
+2017-02-14 22:01:09,453 DEBUG next_node: 67
+2017-02-14 22:01:09,453 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,453 DEBUG take_action called
+2017-02-14 22:01:09,453 DEBUG Turn Number = 2, Sub Counter = 0
+2017-02-14 22:01:09,454 DEBUG Values Given - next_node = 67, mode = [1 0 0]
+2017-02-14 22:01:09,454 DEBUG turn_sub_counter = 0, Playing Mrx with values
+2017-02-14 22:01:09,454 DEBUG Reached play_MRx, next_node = 67, mode = [1 0 0]
+2017-02-14 22:01:09,454 DEBUG Before Move-> MRx: [66 10  5  3]
+2017-02-14 22:01:09,454 DEBUG After Move-> MRx: [67  9  5  3]
+2017-02-14 22:01:09,454 DEBUG Calling Update
+2017-02-14 22:01:09,455 DEBUG Valid Moves for MRx: [[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,456 DEBUG MRx has valid moves
+2017-02-14 22:01:09,456 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,457 DEBUG Detective can move
+2017-02-14 22:01:09,457 DEBUG Detective 1's valid move: [[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,458 DEBUG Detective can move
+2017-02-14 22:01:09,458 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,459 DEBUG Detective can move
+2017-02-14 22:01:09,459 DEBUG Detective 3's valid move: [[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,460 DEBUG Detective can move
+2017-02-14 22:01:09,460 DEBUG Detective 4's valid move: [[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,460 DEBUG Detective can move
+2017-02-14 22:01:09,460 DEBUG Update Over
+2017-02-14 22:01:09,460 INFO Turn Number: 2
+2017-02-14 22:01:09,460 INFO Turn Sub Counter: 0
+2017-02-14 22:01:09,461 INFO Next Node: 67
+2017-02-14 22:01:09,461 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,461 INFO MRx: [67  9  5  3]
+2017-02-14 22:01:09,462 INFO Detectives: 
+[[153   9   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,462 INFO #######
+
+
+
+
+2017-02-14 22:01:09,462 DEBUG Observation Called
+2017-02-14 22:01:09,462 DEBUG Turn Number = 2, Sub_Counter = 0
+2017-02-14 22:01:09,462 DEBUG Calling MRx's observation
+2017-02-14 22:01:09,462 DEBUG Creating MRx Observation
+2017-02-14 22:01:09,462 DEBUG MRX-> [67  9  5  3]
+2017-02-14 22:01:09,462 DEBUG One Hot Encoding Value: 67
+2017-02-14 22:01:09,462 DEBUG Mode Values: [9, 5, 3]
+2017-02-14 22:01:09,463 DEBUG Adding Detective Positions
+2017-02-14 22:01:09,463 DEBUG Detectives -> [[153   9   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,463 DEBUG Adding One Hot - 153 157 102 89 81
+2017-02-14 22:01:09,463 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,463 DEBUG Adding turn number 2
+2017-02-14 22:01:09,463 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:09,463 DEBUG Skip Turn
+2017-02-14 22:01:09,464 DEBUG next_observation: 
+[0 0 0 ..., 8 4 2]
+2017-02-14 22:01:09,464 DEBUG Shape of next_observation: (1213,)
+2017-02-14 22:01:09,464 INFO Reward: 0
+2017-02-14 22:01:09,464 INFO Complete: False
+2017-02-14 22:01:09,464 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:09,464 DEBUG New set of actions: 
+[[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,465 DEBUG Shape of new Set of Actions: (13, 5)
+2017-02-14 22:01:09,465 DEBUG Getting MaxQ for MRx and Optimizing for MRx
+2017-02-14 22:01:09,465 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,465 DEBUG Actions,Actions.shape:(13, 5) 
+[[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,471 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,471 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,477 DEBUG Saving this Observation as last used by MRx
+2017-02-14 22:01:09,478 INFO 
+
+
+2017-02-14 22:01:09,478 DEBUG Observation Called
+2017-02-14 22:01:09,478 DEBUG Turn Number = 2, Sub_Counter = 1
+2017-02-14 22:01:09,478 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,478 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,478 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,478 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,479 DEBUG Adding Node 67
+2017-02-14 22:01:09,479 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,479 DEBUG Adding One Hot - 153 157 102 89 81
+2017-02-14 22:01:09,479 DEBUG Adding modes - [9, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,479 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,479 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,479 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,479 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,480 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,480 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,480 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,480 DEBUG Calling observation
+2017-02-14 22:01:09,480 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,480 INFO sub_turn: 1
+2017-02-14 22:01:09,480 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,480 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:09,480 DEBUG Calling Valid moves
+2017-02-14 22:01:09,480 DEBUG Shape of valid_moves: (14, 5)
+2017-02-14 22:01:09,481 DEBUG valid_actions: 
+[[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,481 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,482 DEBUG Actions,Actions.shape:(14, 5) 
+[[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,487 DEBUG Q_values: [[ 2136816.75 ]
+ [ 2033284.5  ]
+ [ 2040762.75 ]
+ [ 1976450.75 ]
+ [ 2027542.25 ]
+ [ 2114910.   ]
+ [ 2017126.75 ]
+ [ 2106430.75 ]
+ [ 1982020.875]
+ [ 2043575.   ]
+ [ 2169821.   ]
+ [ 1969902.25 ]
+ [ 1916304.   ]
+ [ 1988622.5  ]]
+2017-02-14 22:01:09,487 DEBUG Index,Max: 10 2.16982e+06
+2017-02-14 22:01:09,487 DEBUG Optimum_action for Detective 0 : 10
+2017-02-14 22:01:09,488 DEBUG Action_probs: [ 0.07142857  0.07142857  0.07142857  0.07142857  0.07142857  0.07142857
+  0.07142857  0.07142857  0.07142857  0.07142857  0.07142857  0.07142857
+  0.07142857  0.07142857]
+2017-02-14 22:01:09,488 DEBUG Taken Action: 11
+2017-02-14 22:01:09,488 INFO EXPLORING
+2017-02-14 22:01:09,488 DEBUG next_node: 154
+2017-02-14 22:01:09,488 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,488 DEBUG take_action called
+2017-02-14 22:01:09,488 DEBUG Turn Number = 2, Sub Counter = 1
+2017-02-14 22:01:09,489 DEBUG Values Given - next_node = 154, mode = [1 0 0]
+2017-02-14 22:01:09,489 DEBUG turn_sub_counter = 1, Playing respective detective
+2017-02-14 22:01:09,489 DEBUG Reached play_detective, next_node = 154, mode = [1 0 0], turn_sub_counter = 1
+2017-02-14 22:01:09,489 DEBUG Before Move-> Detective[0]: [153   9   7   4]
+2017-02-14 22:01:09,489 DEBUG After Move-> Detective[0]: [154   8   7   4]
+2017-02-14 22:01:09,490 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,490 DEBUG Before Sending-> MRx: [67  9  5  3]
+2017-02-14 22:01:09,490 DEBUG After Sending-> MRx: [67 10  5  3]
+2017-02-14 22:01:09,490 DEBUG Calling Update
+2017-02-14 22:01:09,490 DEBUG Valid Moves for MRx: [[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,491 DEBUG MRx has valid moves
+2017-02-14 22:01:09,491 DEBUG Detective 0's valid move: [[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,493 DEBUG Detective can move
+2017-02-14 22:01:09,493 DEBUG Detective 1's valid move: [[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,494 DEBUG Detective can move
+2017-02-14 22:01:09,494 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,495 DEBUG Detective can move
+2017-02-14 22:01:09,495 DEBUG Detective 3's valid move: [[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,496 DEBUG Detective can move
+2017-02-14 22:01:09,496 DEBUG Detective 4's valid move: [[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,497 DEBUG Detective can move
+2017-02-14 22:01:09,497 DEBUG Update Over
+2017-02-14 22:01:09,497 INFO Turn Number: 2
+2017-02-14 22:01:09,497 INFO Turn Sub Counter: 1
+2017-02-14 22:01:09,497 INFO Next Node: 154
+2017-02-14 22:01:09,497 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,497 INFO MRx: [67 10  5  3]
+2017-02-14 22:01:09,498 INFO Detectives: 
+[[154   8   7   4]
+ [157   8   8   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,498 INFO #######
+
+
+
+
+2017-02-14 22:01:09,498 DEBUG Observation Called
+2017-02-14 22:01:09,498 DEBUG Turn Number = 2, Sub_Counter = 1
+2017-02-14 22:01:09,498 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,498 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,498 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,498 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,499 DEBUG Adding Node 67
+2017-02-14 22:01:09,499 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,499 DEBUG Adding One Hot - 154 157 102 89 81
+2017-02-14 22:01:09,499 DEBUG Adding modes - [8, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,499 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,500 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,500 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,500 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,500 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,500 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,500 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,500 DEBUG Skip Turn
+2017-02-14 22:01:09,500 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,500 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,500 INFO Reward: 0
+2017-02-14 22:01:09,501 INFO Complete: False
+2017-02-14 22:01:09,501 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:09,501 DEBUG New set of actions: 
+[[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,501 DEBUG Shape of new Set of Actions: (6, 5)
+2017-02-14 22:01:09,501 DEBUG Getting MaxQ for Detective 0 and Optimizing for him/her
+2017-02-14 22:01:09,502 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,502 DEBUG Actions,Actions.shape:(6, 5) 
+[[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,505 DEBUG Q_values: [[ 1995987.125]
+ [ 2001344.875]
+ [ 1961912.125]
+ [ 1934655.75 ]
+ [ 1989507.75 ]
+ [ 2094082.   ]]
+2017-02-14 22:01:09,505 DEBUG Index,Max: 5 2.09408e+06
+2017-02-14 22:01:09,511 DEBUG Saving this Observation as last used by Detective 0
+2017-02-14 22:01:09,512 INFO 
+
+
+2017-02-14 22:01:09,512 DEBUG Observation Called
+2017-02-14 22:01:09,512 DEBUG Turn Number = 2, Sub_Counter = 2
+2017-02-14 22:01:09,512 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,512 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,512 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,512 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,513 DEBUG Adding Node 67
+2017-02-14 22:01:09,513 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,513 DEBUG Adding One Hot - 154 157 102 89 81
+2017-02-14 22:01:09,513 DEBUG Adding modes - [8, 7, 4] [8, 8, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,513 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,513 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,513 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,514 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,514 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,514 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,514 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,514 DEBUG Calling observation
+2017-02-14 22:01:09,514 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,514 INFO sub_turn: 2
+2017-02-14 22:01:09,514 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,514 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,514 DEBUG Calling Valid moves
+2017-02-14 22:01:09,515 DEBUG Shape of valid_moves: (6, 5)
+2017-02-14 22:01:09,515 DEBUG valid_actions: 
+[[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,515 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,515 DEBUG Actions,Actions.shape:(6, 5) 
+[[157 185   0   1   0]
+ [157 170   1   0   0]
+ [157 156   1   0   0]
+ [157 156   0   1   0]
+ [157 133   0   1   0]
+ [157 158   1   0   0]]
+2017-02-14 22:01:09,519 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,519 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,519 DEBUG Optimum_action for Detective 1 : 0
+2017-02-14 22:01:09,519 DEBUG Action_probs: [ 0.16666667  0.16666667  0.16666667  0.16666667  0.16666667  0.16666667]
+2017-02-14 22:01:09,519 DEBUG Taken Action: 0
+2017-02-14 22:01:09,519 INFO NO EXPLORING
+2017-02-14 22:01:09,519 DEBUG next_node: 185
+2017-02-14 22:01:09,520 DEBUG mode: [0 1 0]
+2017-02-14 22:01:09,520 DEBUG take_action called
+2017-02-14 22:01:09,520 DEBUG Turn Number = 2, Sub Counter = 2
+2017-02-14 22:01:09,520 DEBUG Values Given - next_node = 185, mode = [0 1 0]
+2017-02-14 22:01:09,520 DEBUG turn_sub_counter = 2, Playing respective detective
+2017-02-14 22:01:09,520 DEBUG Reached play_detective, next_node = 185, mode = [0 1 0], turn_sub_counter = 2
+2017-02-14 22:01:09,521 DEBUG Before Move-> Detective[1]: [157   8   8   4]
+2017-02-14 22:01:09,521 DEBUG After Move-> Detective[1]: [185   8   7   4]
+2017-02-14 22:01:09,521 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,521 DEBUG Before Sending-> MRx: [67 10  5  3]
+2017-02-14 22:01:09,522 DEBUG After Sending-> MRx: [67 10  6  3]
+2017-02-14 22:01:09,522 DEBUG Calling Update
+2017-02-14 22:01:09,522 DEBUG Valid Moves for MRx: [[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,523 DEBUG MRx has valid moves
+2017-02-14 22:01:09,523 DEBUG Detective 0's valid move: [[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,524 DEBUG Detective can move
+2017-02-14 22:01:09,524 DEBUG Detective 1's valid move: [[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,524 DEBUG Detective can move
+2017-02-14 22:01:09,525 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,525 DEBUG Detective can move
+2017-02-14 22:01:09,525 DEBUG Detective 3's valid move: [[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,526 DEBUG Detective can move
+2017-02-14 22:01:09,526 DEBUG Detective 4's valid move: [[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,527 DEBUG Detective can move
+2017-02-14 22:01:09,527 DEBUG Update Over
+2017-02-14 22:01:09,527 INFO Turn Number: 2
+2017-02-14 22:01:09,527 INFO Turn Sub Counter: 2
+2017-02-14 22:01:09,527 INFO Next Node: 185
+2017-02-14 22:01:09,527 INFO Mode: [0 1 0]
+2017-02-14 22:01:09,528 INFO MRx: [67 10  6  3]
+2017-02-14 22:01:09,528 INFO Detectives: 
+[[154   8   7   4]
+ [185   8   7   4]
+ [102   9   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,528 INFO #######
+
+
+
+
+2017-02-14 22:01:09,528 DEBUG Observation Called
+2017-02-14 22:01:09,528 DEBUG Turn Number = 2, Sub_Counter = 2
+2017-02-14 22:01:09,528 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,528 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,528 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,528 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,529 DEBUG Adding Node 67
+2017-02-14 22:01:09,529 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,529 DEBUG Adding One Hot - 154 185 102 89 81
+2017-02-14 22:01:09,529 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,530 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,530 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,530 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,530 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,530 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,530 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,530 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,530 DEBUG Skip Turn
+2017-02-14 22:01:09,531 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,531 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,531 INFO Reward: 0
+2017-02-14 22:01:09,531 INFO Complete: False
+2017-02-14 22:01:09,531 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,531 DEBUG New set of actions: 
+[[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,532 DEBUG Shape of new Set of Actions: (7, 5)
+2017-02-14 22:01:09,532 DEBUG Getting MaxQ for Detective 1 and Optimizing for him/her
+2017-02-14 22:01:09,532 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,533 DEBUG Actions,Actions.shape:(7, 5) 
+[[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,537 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,538 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,546 DEBUG Saving this Observation as last used by Detective 1
+2017-02-14 22:01:09,546 INFO 
+
+
+2017-02-14 22:01:09,546 DEBUG Observation Called
+2017-02-14 22:01:09,546 DEBUG Turn Number = 2, Sub_Counter = 3
+2017-02-14 22:01:09,546 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,547 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,547 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,547 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,548 DEBUG Adding Node 67
+2017-02-14 22:01:09,548 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,548 DEBUG Adding One Hot - 154 185 102 89 81
+2017-02-14 22:01:09,548 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [9, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,548 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,548 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,548 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,549 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,549 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,549 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,549 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,549 DEBUG Calling observation
+2017-02-14 22:01:09,549 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,549 INFO sub_turn: 3
+2017-02-14 22:01:09,549 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,550 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,550 DEBUG Calling Valid moves
+2017-02-14 22:01:09,550 DEBUG Shape of valid_moves: (6, 5)
+2017-02-14 22:01:09,550 DEBUG valid_actions: 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,550 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,551 DEBUG Actions,Actions.shape:(6, 5) 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,554 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,554 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,554 DEBUG Optimum_action for Detective 2 : 0
+2017-02-14 22:01:09,555 DEBUG Action_probs: [ 0.16666667  0.16666667  0.16666667  0.16666667  0.16666667  0.16666667]
+2017-02-14 22:01:09,555 DEBUG Taken Action: 4
+2017-02-14 22:01:09,555 INFO EXPLORING
+2017-02-14 22:01:09,555 DEBUG next_node: 83
+2017-02-14 22:01:09,555 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,556 DEBUG take_action called
+2017-02-14 22:01:09,556 DEBUG Turn Number = 2, Sub Counter = 3
+2017-02-14 22:01:09,556 DEBUG Values Given - next_node = 83, mode = [1 0 0]
+2017-02-14 22:01:09,556 DEBUG turn_sub_counter = 3, Playing respective detective
+2017-02-14 22:01:09,556 DEBUG Reached play_detective, next_node = 83, mode = [1 0 0], turn_sub_counter = 3
+2017-02-14 22:01:09,556 DEBUG Before Move-> Detective[2]: [102   9   7   4]
+2017-02-14 22:01:09,557 DEBUG After Move-> Detective[2]: [83  8  7  4]
+2017-02-14 22:01:09,557 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,557 DEBUG Before Sending-> MRx: [67 10  6  3]
+2017-02-14 22:01:09,557 DEBUG After Sending-> MRx: [67 11  6  3]
+2017-02-14 22:01:09,557 DEBUG Calling Update
+2017-02-14 22:01:09,557 DEBUG Valid Moves for MRx: [[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,559 DEBUG MRx has valid moves
+2017-02-14 22:01:09,559 DEBUG Detective 0's valid move: [[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,560 DEBUG Detective can move
+2017-02-14 22:01:09,560 DEBUG Detective 1's valid move: [[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,561 DEBUG Detective can move
+2017-02-14 22:01:09,561 DEBUG Detective 2's valid move: [[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,561 DEBUG Detective can move
+2017-02-14 22:01:09,561 DEBUG Detective 3's valid move: [[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,562 DEBUG Detective can move
+2017-02-14 22:01:09,562 DEBUG Detective 4's valid move: [[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,563 DEBUG Detective can move
+2017-02-14 22:01:09,563 DEBUG Update Over
+2017-02-14 22:01:09,563 INFO Turn Number: 2
+2017-02-14 22:01:09,563 INFO Turn Sub Counter: 3
+2017-02-14 22:01:09,563 INFO Next Node: 83
+2017-02-14 22:01:09,564 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,564 INFO MRx: [67 11  6  3]
+2017-02-14 22:01:09,564 INFO Detectives: 
+[[154   8   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 89   8   8   4]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,564 INFO #######
+
+
+
+
+2017-02-14 22:01:09,564 DEBUG Observation Called
+2017-02-14 22:01:09,564 DEBUG Turn Number = 2, Sub_Counter = 3
+2017-02-14 22:01:09,564 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,565 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,565 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,565 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,565 DEBUG Adding Node 67
+2017-02-14 22:01:09,565 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,565 DEBUG Adding One Hot - 154 185 83 89 81
+2017-02-14 22:01:09,565 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,566 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,566 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,566 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,566 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,566 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,566 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,566 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,566 DEBUG Skip Turn
+2017-02-14 22:01:09,567 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,567 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,567 INFO Reward: 0
+2017-02-14 22:01:09,567 INFO Complete: False
+2017-02-14 22:01:09,567 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,567 DEBUG New set of actions: 
+[[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,568 DEBUG Shape of new Set of Actions: (2, 5)
+2017-02-14 22:01:09,568 DEBUG Getting MaxQ for Detective 2 and Optimizing for him/her
+2017-02-14 22:01:09,568 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,568 DEBUG Actions,Actions.shape:(2, 5) 
+[[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,571 DEBUG Q_values: [[ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,571 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,578 DEBUG Saving this Observation as last used by Detective 2
+2017-02-14 22:01:09,578 INFO 
+
+
+2017-02-14 22:01:09,578 DEBUG Observation Called
+2017-02-14 22:01:09,578 DEBUG Turn Number = 2, Sub_Counter = 4
+2017-02-14 22:01:09,579 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,579 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,579 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,579 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,579 DEBUG Adding Node 67
+2017-02-14 22:01:09,579 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,580 DEBUG Adding One Hot - 154 185 83 89 81
+2017-02-14 22:01:09,580 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 4] [8, 8, 4]
+2017-02-14 22:01:09,580 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,580 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,580 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,580 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,580 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,581 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,581 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,581 DEBUG Calling observation
+2017-02-14 22:01:09,581 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,581 INFO sub_turn: 4
+2017-02-14 22:01:09,581 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,581 DEBUG Sending Valid Moves for 4
+2017-02-14 22:01:09,581 DEBUG Calling Valid moves
+2017-02-14 22:01:09,582 DEBUG Shape of valid_moves: (9, 5)
+2017-02-14 22:01:09,582 DEBUG valid_actions: 
+[[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,582 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,583 DEBUG Actions,Actions.shape:(9, 5) 
+[[ 89 128   0   0   1]
+ [ 89  67   0   0   1]
+ [ 89  55   0   1   0]
+ [ 89  88   1   0   0]
+ [ 89 105   1   0   0]
+ [ 89 105   0   1   0]
+ [ 89  71   1   0   0]
+ [ 89 140   0   0   1]
+ [ 89  13   0   0   1]]
+2017-02-14 22:01:09,587 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,587 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,587 DEBUG Optimum_action for Detective 3 : 0
+2017-02-14 22:01:09,588 DEBUG Action_probs: [ 0.11111111  0.11111111  0.11111111  0.11111111  0.11111111  0.11111111
+  0.11111111  0.11111111  0.11111111]
+2017-02-14 22:01:09,588 DEBUG Taken Action: 8
+2017-02-14 22:01:09,588 INFO EXPLORING
+2017-02-14 22:01:09,588 DEBUG next_node: 13
+2017-02-14 22:01:09,588 DEBUG mode: [0 0 1]
+2017-02-14 22:01:09,588 DEBUG take_action called
+2017-02-14 22:01:09,588 DEBUG Turn Number = 2, Sub Counter = 4
+2017-02-14 22:01:09,589 DEBUG Values Given - next_node = 13, mode = [0 0 1]
+2017-02-14 22:01:09,589 DEBUG turn_sub_counter = 4, Playing respective detective
+2017-02-14 22:01:09,589 DEBUG Reached play_detective, next_node = 13, mode = [0 0 1], turn_sub_counter = 4
+2017-02-14 22:01:09,589 DEBUG Before Move-> Detective[3]: [89  8  8  4]
+2017-02-14 22:01:09,589 DEBUG After Move-> Detective[3]: [13  8  8  3]
+2017-02-14 22:01:09,590 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,590 DEBUG Before Sending-> MRx: [67 11  6  3]
+2017-02-14 22:01:09,590 DEBUG After Sending-> MRx: [67 11  6  4]
+2017-02-14 22:01:09,590 DEBUG Calling Update
+2017-02-14 22:01:09,590 DEBUG Valid Moves for MRx: [[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,591 DEBUG MRx has valid moves
+2017-02-14 22:01:09,591 DEBUG Detective 0's valid move: [[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,592 DEBUG Detective can move
+2017-02-14 22:01:09,592 DEBUG Detective 1's valid move: [[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,593 DEBUG Detective can move
+2017-02-14 22:01:09,593 DEBUG Detective 2's valid move: [[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,594 DEBUG Detective can move
+2017-02-14 22:01:09,594 DEBUG Detective 3's valid move: [[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,595 DEBUG Detective can move
+2017-02-14 22:01:09,595 DEBUG Detective 4's valid move: [[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,596 DEBUG Detective can move
+2017-02-14 22:01:09,596 DEBUG Update Over
+2017-02-14 22:01:09,596 INFO Turn Number: 2
+2017-02-14 22:01:09,596 INFO Turn Sub Counter: 4
+2017-02-14 22:01:09,596 INFO Next Node: 13
+2017-02-14 22:01:09,596 INFO Mode: [0 0 1]
+2017-02-14 22:01:09,596 INFO MRx: [67 11  6  4]
+2017-02-14 22:01:09,597 INFO Detectives: 
+[[154   8   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 81   8   8   4]]
+2017-02-14 22:01:09,597 INFO #######
+
+
+
+
+2017-02-14 22:01:09,597 DEBUG Observation Called
+2017-02-14 22:01:09,597 DEBUG Turn Number = 2, Sub_Counter = 4
+2017-02-14 22:01:09,597 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,597 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,597 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,597 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,598 DEBUG Adding Node 67
+2017-02-14 22:01:09,598 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,598 DEBUG Adding One Hot - 154 185 83 13 81
+2017-02-14 22:01:09,598 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [8, 8, 4]
+2017-02-14 22:01:09,599 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,599 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,599 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,599 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,599 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,599 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,599 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,599 DEBUG Skip Turn
+2017-02-14 22:01:09,600 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,600 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,600 INFO Reward: 0
+2017-02-14 22:01:09,600 INFO Complete: False
+2017-02-14 22:01:09,600 DEBUG Sending Valid Moves for 4
+2017-02-14 22:01:09,600 DEBUG New set of actions: 
+[[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,601 DEBUG Shape of new Set of Actions: (8, 5)
+2017-02-14 22:01:09,601 DEBUG Getting MaxQ for Detective 3 and Optimizing for him/her
+2017-02-14 22:01:09,601 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,601 DEBUG Actions,Actions.shape:(8, 5) 
+[[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,605 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,606 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,612 DEBUG Saving this Observation as last used by Detective 3
+2017-02-14 22:01:09,612 INFO 
+
+
+2017-02-14 22:01:09,612 DEBUG Observation Called
+2017-02-14 22:01:09,612 DEBUG Turn Number = 2, Sub_Counter = 5
+2017-02-14 22:01:09,612 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,612 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,612 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,612 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,613 DEBUG Adding Node 67
+2017-02-14 22:01:09,613 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,613 DEBUG Adding One Hot - 154 185 83 13 81
+2017-02-14 22:01:09,613 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [8, 8, 4]
+2017-02-14 22:01:09,614 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,614 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,614 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,614 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,614 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,614 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,614 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,614 DEBUG Calling observation
+2017-02-14 22:01:09,614 DEBUG present_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,615 INFO sub_turn: 5
+2017-02-14 22:01:09,615 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,615 DEBUG Sending Valid Moves for 5
+2017-02-14 22:01:09,615 DEBUG Calling Valid moves
+2017-02-14 22:01:09,615 DEBUG Shape of valid_moves: (3, 5)
+2017-02-14 22:01:09,615 DEBUG valid_actions: 
+[[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,615 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,616 DEBUG Actions,Actions.shape:(3, 5) 
+[[ 81  64   1   0   0]
+ [ 81  82   1   0   0]
+ [ 81 100   1   0   0]]
+2017-02-14 22:01:09,619 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,619 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,619 DEBUG Optimum_action for Detective 4 : 0
+2017-02-14 22:01:09,619 DEBUG Action_probs: [ 0.33333333  0.33333333  0.33333333]
+2017-02-14 22:01:09,620 DEBUG Taken Action: 1
+2017-02-14 22:01:09,620 INFO EXPLORING
+2017-02-14 22:01:09,620 DEBUG next_node: 82
+2017-02-14 22:01:09,620 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,620 DEBUG take_action called
+2017-02-14 22:01:09,620 DEBUG Turn Number = 2, Sub Counter = 5
+2017-02-14 22:01:09,620 DEBUG Values Given - next_node = 82, mode = [1 0 0]
+2017-02-14 22:01:09,621 DEBUG turn_sub_counter = 5, Playing respective detective
+2017-02-14 22:01:09,621 DEBUG Reached play_detective, next_node = 82, mode = [1 0 0], turn_sub_counter = 5
+2017-02-14 22:01:09,621 DEBUG Before Move-> Detective[4]: [81  8  8  4]
+2017-02-14 22:01:09,622 DEBUG After Move-> Detective[4]: [82  7  8  4]
+2017-02-14 22:01:09,622 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,622 DEBUG Before Sending-> MRx: [67 11  6  4]
+2017-02-14 22:01:09,622 DEBUG After Sending-> MRx: [67 12  6  4]
+2017-02-14 22:01:09,622 DEBUG Calling Update
+2017-02-14 22:01:09,622 DEBUG Valid Moves for MRx: [[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,623 DEBUG MRx has valid moves
+2017-02-14 22:01:09,623 DEBUG Detective 0's valid move: [[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,624 DEBUG Detective can move
+2017-02-14 22:01:09,624 DEBUG Detective 1's valid move: [[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,625 DEBUG Detective can move
+2017-02-14 22:01:09,625 DEBUG Detective 2's valid move: [[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,626 DEBUG Detective can move
+2017-02-14 22:01:09,626 DEBUG Detective 3's valid move: [[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,627 DEBUG Detective can move
+2017-02-14 22:01:09,627 DEBUG Detective 4's valid move: [[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,628 DEBUG Detective can move
+2017-02-14 22:01:09,628 DEBUG Update Over
+2017-02-14 22:01:09,628 INFO Turn Number: 2
+2017-02-14 22:01:09,628 INFO Turn Sub Counter: 5
+2017-02-14 22:01:09,628 INFO Next Node: 82
+2017-02-14 22:01:09,628 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,628 INFO MRx: [67 12  6  4]
+2017-02-14 22:01:09,629 INFO Detectives: 
+[[154   8   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,629 INFO #######
+
+
+
+
+2017-02-14 22:01:09,629 DEBUG Observation Called
+2017-02-14 22:01:09,629 DEBUG Turn Number = 2, Sub_Counter = 5
+2017-02-14 22:01:09,629 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,629 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,629 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,629 DEBUG MRX Location Log - > [49 66 67  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+2017-02-14 22:01:09,630 DEBUG Adding Node 67
+2017-02-14 22:01:09,630 DEBUG Turn to next Reveal = 0
+2017-02-14 22:01:09,630 DEBUG Adding One Hot - 154 185 83 13 82
+2017-02-14 22:01:09,630 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,631 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,631 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,631 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,631 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,631 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,631 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,631 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,631 DEBUG Skip Turn
+2017-02-14 22:01:09,631 DEBUG next_observation: 
+[0 0 0 ..., 1 0 0]
+2017-02-14 22:01:09,631 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,632 INFO Reward: 0
+2017-02-14 22:01:09,632 INFO Complete: False
+2017-02-14 22:01:09,632 DEBUG Sending Valid Moves for 5
+2017-02-14 22:01:09,632 DEBUG New set of actions: 
+[[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,633 DEBUG Shape of new Set of Actions: (8, 5)
+2017-02-14 22:01:09,633 DEBUG Getting MaxQ for Detective 4 and Optimizing for him/her
+2017-02-14 22:01:09,633 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,633 DEBUG Actions,Actions.shape:(8, 5) 
+[[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,637 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,637 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,644 DEBUG Saving this Observation as last used by Detective 4
+2017-02-14 22:01:09,644 INFO 
+
+
+2017-02-14 22:01:09,644 DEBUG Observation Called
+2017-02-14 22:01:09,644 DEBUG Turn Number = 3, Sub_Counter = 0
+2017-02-14 22:01:09,644 DEBUG Calling MRx's observation
+2017-02-14 22:01:09,644 DEBUG Creating MRx Observation
+2017-02-14 22:01:09,644 DEBUG MRX-> [67 12  6  4]
+2017-02-14 22:01:09,644 DEBUG One Hot Encoding Value: 67
+2017-02-14 22:01:09,645 DEBUG Mode Values: [12, 6, 4]
+2017-02-14 22:01:09,645 DEBUG Adding Detective Positions
+2017-02-14 22:01:09,645 DEBUG Detectives -> [[154   8   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,645 DEBUG Adding One Hot - 154 185 83 13 82
+2017-02-14 22:01:09,645 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,645 DEBUG Adding turn number 3
+2017-02-14 22:01:09,645 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:09,645 DEBUG Calling observation
+2017-02-14 22:01:09,646 DEBUG present_observation: 
+[0 0 0 ..., 8 4 3]
+2017-02-14 22:01:09,646 INFO sub_turn: 0
+2017-02-14 22:01:09,646 DEBUG Shape of present_observation: (1213,)
+2017-02-14 22:01:09,646 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:09,646 DEBUG Calling Valid moves
+2017-02-14 22:01:09,646 DEBUG Shape of valid_moves: (13, 5)
+2017-02-14 22:01:09,647 DEBUG valid_actions: 
+[[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,647 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,647 DEBUG Actions,Actions.shape:(13, 5) 
+[[ 67  65   0   1   0]
+ [ 67  66   1   0   0]
+ [ 67  68   1   0   0]
+ [ 67 102   0   1   0]
+ [ 67  13   0   0   1]
+ [ 67  79   0   0   1]
+ [ 67  82   0   1   0]
+ [ 67  51   1   0   0]
+ [ 67  84   1   0   0]
+ [ 67  89   0   0   1]
+ [ 67  23   0   1   0]
+ [ 67  52   0   1   0]
+ [ 67 111   0   0   1]]
+2017-02-14 22:01:09,652 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,652 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,652 DEBUG Optimum_action for MRx: 0
+2017-02-14 22:01:09,653 DEBUG Action_probs: [ 0.07692308  0.07692308  0.07692308  0.07692308  0.07692308  0.07692308
+  0.07692308  0.07692308  0.07692308  0.07692308  0.07692308  0.07692308
+  0.07692308]
+2017-02-14 22:01:09,653 DEBUG Taken Action: 3
+2017-02-14 22:01:09,653 INFO EXPLORING
+2017-02-14 22:01:09,653 DEBUG next_node: 102
+2017-02-14 22:01:09,653 DEBUG mode: [0 1 0]
+2017-02-14 22:01:09,653 DEBUG take_action called
+2017-02-14 22:01:09,653 DEBUG Turn Number = 3, Sub Counter = 0
+2017-02-14 22:01:09,654 DEBUG Values Given - next_node = 102, mode = [0 1 0]
+2017-02-14 22:01:09,654 DEBUG turn_sub_counter = 0, Playing Mrx with values
+2017-02-14 22:01:09,654 DEBUG Reached play_MRx, next_node = 102, mode = [0 1 0]
+2017-02-14 22:01:09,654 DEBUG Before Move-> MRx: [67 12  6  4]
+2017-02-14 22:01:09,654 DEBUG After Move-> MRx: [102  12   5   4]
+2017-02-14 22:01:09,655 DEBUG Calling Update
+2017-02-14 22:01:09,655 DEBUG Valid Moves for MRx: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,655 DEBUG MRx has valid moves
+2017-02-14 22:01:09,655 DEBUG Detective 0's valid move: [[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,656 DEBUG Detective can move
+2017-02-14 22:01:09,656 DEBUG Detective 1's valid move: [[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 153   0   0   1]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,657 DEBUG Detective can move
+2017-02-14 22:01:09,657 DEBUG Detective 2's valid move: [[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,658 DEBUG Detective can move
+2017-02-14 22:01:09,658 DEBUG Detective 3's valid move: [[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,659 DEBUG Detective can move
+2017-02-14 22:01:09,659 DEBUG Detective 4's valid move: [[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,660 DEBUG Detective can move
+2017-02-14 22:01:09,660 DEBUG Update Over
+2017-02-14 22:01:09,660 INFO Turn Number: 3
+2017-02-14 22:01:09,660 INFO Turn Sub Counter: 0
+2017-02-14 22:01:09,660 INFO Next Node: 102
+2017-02-14 22:01:09,660 INFO Mode: [0 1 0]
+2017-02-14 22:01:09,660 INFO MRx: [102  12   5   4]
+2017-02-14 22:01:09,661 INFO Detectives: 
+[[154   8   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,661 INFO #######
+
+
+
+
+2017-02-14 22:01:09,661 DEBUG Observation Called
+2017-02-14 22:01:09,661 DEBUG Turn Number = 3, Sub_Counter = 0
+2017-02-14 22:01:09,661 DEBUG Calling MRx's observation
+2017-02-14 22:01:09,661 DEBUG Creating MRx Observation
+2017-02-14 22:01:09,661 DEBUG MRX-> [102  12   5   4]
+2017-02-14 22:01:09,661 DEBUG One Hot Encoding Value: 102
+2017-02-14 22:01:09,662 DEBUG Mode Values: [12, 5, 4]
+2017-02-14 22:01:09,662 DEBUG Adding Detective Positions
+2017-02-14 22:01:09,662 DEBUG Detectives -> [[154   8   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,662 DEBUG Adding One Hot - 154 185 83 13 82
+2017-02-14 22:01:09,662 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,662 DEBUG Adding turn number 3
+2017-02-14 22:01:09,662 DEBUG Shape of Observation = (1213,)
+2017-02-14 22:01:09,663 DEBUG Skip Turn
+2017-02-14 22:01:09,663 DEBUG next_observation: 
+[0 0 0 ..., 8 4 3]
+2017-02-14 22:01:09,663 DEBUG Shape of next_observation: (1213,)
+2017-02-14 22:01:09,663 INFO Reward: 0
+2017-02-14 22:01:09,663 INFO Complete: False
+2017-02-14 22:01:09,663 DEBUG Sending Valid Moves for 0
+2017-02-14 22:01:09,663 DEBUG New set of actions: 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,664 DEBUG Shape of new Set of Actions: (6, 5)
+2017-02-14 22:01:09,664 DEBUG Getting MaxQ for MRx and Optimizing for MRx
+2017-02-14 22:01:09,664 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,664 DEBUG Actions,Actions.shape:(6, 5) 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,668 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,668 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,674 DEBUG Saving this Observation as last used by MRx
+2017-02-14 22:01:09,674 INFO 
+
+
+2017-02-14 22:01:09,674 DEBUG Observation Called
+2017-02-14 22:01:09,674 DEBUG Turn Number = 3, Sub_Counter = 1
+2017-02-14 22:01:09,674 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,674 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,674 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,674 DEBUG MRX Location Log - > [ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,675 DEBUG Adding Node 67
+2017-02-14 22:01:09,675 DEBUG Turn to next Reveal = 4
+2017-02-14 22:01:09,675 DEBUG Adding One Hot - 154 185 83 13 82
+2017-02-14 22:01:09,675 DEBUG Adding modes - [8, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,676 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,676 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,676 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,676 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,676 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,676 DEBUG Adding : [0, 1, 0]
+2017-02-14 22:01:09,676 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,676 DEBUG Calling observation
+2017-02-14 22:01:09,676 DEBUG present_observation: 
+[0 0 0 ..., 0 1 0]
+2017-02-14 22:01:09,677 INFO sub_turn: 1
+2017-02-14 22:01:09,677 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,677 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:09,677 DEBUG Calling Valid moves
+2017-02-14 22:01:09,677 DEBUG Shape of valid_moves: (6, 5)
+2017-02-14 22:01:09,677 DEBUG valid_actions: 
+[[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,677 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,678 DEBUG Actions,Actions.shape:(6, 5) 
+[[154 153   1   0   0]
+ [154 153   0   1   0]
+ [154 156   0   1   0]
+ [154 139   1   0   0]
+ [154 140   1   0   0]
+ [154 155   1   0   0]]
+2017-02-14 22:01:09,682 DEBUG Q_values: [[ 2642072.25]
+ [ 2574484.75]
+ [ 2567278.25]
+ [ 2555025.5 ]
+ [ 2615558.  ]
+ [ 2654586.25]]
+2017-02-14 22:01:09,682 DEBUG Index,Max: 5 2.65459e+06
+2017-02-14 22:01:09,682 DEBUG Optimum_action for Detective 0 : 5
+2017-02-14 22:01:09,682 DEBUG Action_probs: [ 0.16666667  0.16666667  0.16666667  0.16666667  0.16666667  0.16666667]
+2017-02-14 22:01:09,682 DEBUG Taken Action: 0
+2017-02-14 22:01:09,682 INFO EXPLORING
+2017-02-14 22:01:09,683 DEBUG next_node: 153
+2017-02-14 22:01:09,683 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,683 DEBUG take_action called
+2017-02-14 22:01:09,683 DEBUG Turn Number = 3, Sub Counter = 1
+2017-02-14 22:01:09,683 DEBUG Values Given - next_node = 153, mode = [1 0 0]
+2017-02-14 22:01:09,683 DEBUG turn_sub_counter = 1, Playing respective detective
+2017-02-14 22:01:09,684 DEBUG Reached play_detective, next_node = 153, mode = [1 0 0], turn_sub_counter = 1
+2017-02-14 22:01:09,684 DEBUG Before Move-> Detective[0]: [154   8   7   4]
+2017-02-14 22:01:09,684 DEBUG After Move-> Detective[0]: [153   7   7   4]
+2017-02-14 22:01:09,684 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,684 DEBUG Before Sending-> MRx: [102  12   5   4]
+2017-02-14 22:01:09,685 DEBUG After Sending-> MRx: [102  13   5   4]
+2017-02-14 22:01:09,685 DEBUG Calling Update
+2017-02-14 22:01:09,685 DEBUG Valid Moves for MRx: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,686 DEBUG MRx has valid moves
+2017-02-14 22:01:09,686 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,687 DEBUG Detective can move
+2017-02-14 22:01:09,687 DEBUG Detective 1's valid move: [[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,688 DEBUG Detective can move
+2017-02-14 22:01:09,688 DEBUG Detective 2's valid move: [[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,688 DEBUG Detective can move
+2017-02-14 22:01:09,688 DEBUG Detective 3's valid move: [[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,689 DEBUG Detective can move
+2017-02-14 22:01:09,689 DEBUG Detective 4's valid move: [[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,690 DEBUG Detective can move
+2017-02-14 22:01:09,690 DEBUG Update Over
+2017-02-14 22:01:09,690 INFO Turn Number: 3
+2017-02-14 22:01:09,690 INFO Turn Sub Counter: 1
+2017-02-14 22:01:09,690 INFO Next Node: 153
+2017-02-14 22:01:09,691 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,691 INFO MRx: [102  13   5   4]
+2017-02-14 22:01:09,691 INFO Detectives: 
+[[153   7   7   4]
+ [185   8   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,691 INFO #######
+
+
+
+
+2017-02-14 22:01:09,691 DEBUG Observation Called
+2017-02-14 22:01:09,691 DEBUG Turn Number = 3, Sub_Counter = 1
+2017-02-14 22:01:09,692 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,692 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,692 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,692 DEBUG MRX Location Log - > [ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,692 DEBUG Adding Node 67
+2017-02-14 22:01:09,692 DEBUG Turn to next Reveal = 4
+2017-02-14 22:01:09,692 DEBUG Adding One Hot - 153 185 83 13 82
+2017-02-14 22:01:09,692 DEBUG Adding modes - [7, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,693 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,693 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,693 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,693 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,693 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,693 DEBUG Adding : [0, 1, 0]
+2017-02-14 22:01:09,693 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,693 DEBUG Skip Turn
+2017-02-14 22:01:09,694 DEBUG next_observation: 
+[0 0 0 ..., 0 1 0]
+2017-02-14 22:01:09,694 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,694 INFO Reward: 0
+2017-02-14 22:01:09,694 INFO Complete: False
+2017-02-14 22:01:09,694 DEBUG Sending Valid Moves for 1
+2017-02-14 22:01:09,694 DEBUG New set of actions: 
+[[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,695 DEBUG Shape of new Set of Actions: (13, 5)
+2017-02-14 22:01:09,695 DEBUG Getting MaxQ for Detective 0 and Optimizing for him/her
+2017-02-14 22:01:09,695 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,696 DEBUG Actions,Actions.shape:(13, 5) 
+[[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,701 DEBUG Q_values: [[ 2603613.  ]
+ [ 2519491.  ]
+ [ 2464048.5 ]
+ [ 2489213.75]
+ [ 2512938.5 ]
+ [ 2651848.5 ]
+ [ 2503335.75]
+ [ 2545448.75]
+ [ 2506484.25]
+ [ 2561194.  ]
+ [ 2467735.  ]
+ [ 2437785.75]
+ [ 2456507.  ]]
+2017-02-14 22:01:09,701 DEBUG Index,Max: 5 2.65185e+06
+2017-02-14 22:01:09,707 DEBUG Saving this Observation as last used by Detective 0
+2017-02-14 22:01:09,707 INFO 
+
+
+2017-02-14 22:01:09,707 DEBUG Observation Called
+2017-02-14 22:01:09,707 DEBUG Turn Number = 3, Sub_Counter = 2
+2017-02-14 22:01:09,707 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,707 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,708 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,708 DEBUG MRX Location Log - > [ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,708 DEBUG Adding Node 67
+2017-02-14 22:01:09,708 DEBUG Turn to next Reveal = 4
+2017-02-14 22:01:09,708 DEBUG Adding One Hot - 153 185 83 13 82
+2017-02-14 22:01:09,708 DEBUG Adding modes - [7, 7, 4] [8, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,709 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,709 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,709 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,709 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,709 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,709 DEBUG Adding : [0, 1, 0]
+2017-02-14 22:01:09,709 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,709 DEBUG Calling observation
+2017-02-14 22:01:09,710 DEBUG present_observation: 
+[0 0 0 ..., 0 1 0]
+2017-02-14 22:01:09,710 INFO sub_turn: 2
+2017-02-14 22:01:09,710 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,710 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,710 DEBUG Calling Valid moves
+2017-02-14 22:01:09,710 DEBUG Shape of valid_moves: (6, 5)
+2017-02-14 22:01:09,710 DEBUG valid_actions: 
+[[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,711 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,711 DEBUG Actions,Actions.shape:(6, 5) 
+[[185 184   1   0   0]
+ [185 184   0   1   0]
+ [185 170   1   0   0]
+ [185 187   0   1   0]
+ [185 186   1   0   0]
+ [185 157   0   1   0]]
+2017-02-14 22:01:09,714 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,715 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,715 DEBUG Optimum_action for Detective 1 : 0
+2017-02-14 22:01:09,715 DEBUG Action_probs: [ 0.16666667  0.16666667  0.16666667  0.16666667  0.16666667  0.16666667]
+2017-02-14 22:01:09,715 DEBUG Taken Action: 2
+2017-02-14 22:01:09,715 INFO EXPLORING
+2017-02-14 22:01:09,715 DEBUG next_node: 170
+2017-02-14 22:01:09,716 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,716 DEBUG take_action called
+2017-02-14 22:01:09,716 DEBUG Turn Number = 3, Sub Counter = 2
+2017-02-14 22:01:09,716 DEBUG Values Given - next_node = 170, mode = [1 0 0]
+2017-02-14 22:01:09,716 DEBUG turn_sub_counter = 2, Playing respective detective
+2017-02-14 22:01:09,716 DEBUG Reached play_detective, next_node = 170, mode = [1 0 0], turn_sub_counter = 2
+2017-02-14 22:01:09,717 DEBUG Before Move-> Detective[1]: [185   8   7   4]
+2017-02-14 22:01:09,717 DEBUG After Move-> Detective[1]: [170   7   7   4]
+2017-02-14 22:01:09,717 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,717 DEBUG Before Sending-> MRx: [102  13   5   4]
+2017-02-14 22:01:09,717 DEBUG After Sending-> MRx: [102  14   5   4]
+2017-02-14 22:01:09,718 DEBUG Calling Update
+2017-02-14 22:01:09,718 DEBUG Valid Moves for MRx: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,718 DEBUG MRx has valid moves
+2017-02-14 22:01:09,718 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,720 DEBUG Detective can move
+2017-02-14 22:01:09,720 DEBUG Detective 1's valid move: [[170 185   1   0   0]
+ [170 157   1   0   0]
+ [170 159   1   0   0]]
+2017-02-14 22:01:09,720 DEBUG Detective can move
+2017-02-14 22:01:09,720 DEBUG Detective 2's valid move: [[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,721 DEBUG Detective can move
+2017-02-14 22:01:09,721 DEBUG Detective 3's valid move: [[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,722 DEBUG Detective can move
+2017-02-14 22:01:09,722 DEBUG Detective 4's valid move: [[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,723 DEBUG Detective can move
+2017-02-14 22:01:09,723 DEBUG Update Over
+2017-02-14 22:01:09,723 INFO Turn Number: 3
+2017-02-14 22:01:09,723 INFO Turn Sub Counter: 2
+2017-02-14 22:01:09,723 INFO Next Node: 170
+2017-02-14 22:01:09,723 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,724 INFO MRx: [102  14   5   4]
+2017-02-14 22:01:09,724 INFO Detectives: 
+[[153   7   7   4]
+ [170   7   7   4]
+ [ 83   8   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,724 INFO #######
+
+
+
+
+2017-02-14 22:01:09,724 DEBUG Observation Called
+2017-02-14 22:01:09,724 DEBUG Turn Number = 3, Sub_Counter = 2
+2017-02-14 22:01:09,724 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,724 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,724 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,724 DEBUG MRX Location Log - > [ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,725 DEBUG Adding Node 67
+2017-02-14 22:01:09,725 DEBUG Turn to next Reveal = 4
+2017-02-14 22:01:09,725 DEBUG Adding One Hot - 153 170 83 13 82
+2017-02-14 22:01:09,725 DEBUG Adding modes - [7, 7, 4] [7, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,726 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,726 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,726 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,726 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,726 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,726 DEBUG Adding : [0, 1, 0]
+2017-02-14 22:01:09,726 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,726 DEBUG Skip Turn
+2017-02-14 22:01:09,726 DEBUG next_observation: 
+[0 0 0 ..., 0 1 0]
+2017-02-14 22:01:09,726 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,727 INFO Reward: 0
+2017-02-14 22:01:09,727 INFO Complete: False
+2017-02-14 22:01:09,727 DEBUG Sending Valid Moves for 2
+2017-02-14 22:01:09,727 DEBUG New set of actions: 
+[[170 185   1   0   0]
+ [170 157   1   0   0]
+ [170 159   1   0   0]]
+2017-02-14 22:01:09,727 DEBUG Shape of new Set of Actions: (3, 5)
+2017-02-14 22:01:09,727 DEBUG Getting MaxQ for Detective 1 and Optimizing for him/her
+2017-02-14 22:01:09,727 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,728 DEBUG Actions,Actions.shape:(3, 5) 
+[[170 185   1   0   0]
+ [170 157   1   0   0]
+ [170 159   1   0   0]]
+2017-02-14 22:01:09,730 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,731 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,737 DEBUG Saving this Observation as last used by Detective 1
+2017-02-14 22:01:09,737 INFO 
+
+
+2017-02-14 22:01:09,737 DEBUG Observation Called
+2017-02-14 22:01:09,737 DEBUG Turn Number = 3, Sub_Counter = 3
+2017-02-14 22:01:09,737 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,737 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,737 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,737 DEBUG MRX Location Log - > [ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,738 DEBUG Adding Node 67
+2017-02-14 22:01:09,738 DEBUG Turn to next Reveal = 4
+2017-02-14 22:01:09,738 DEBUG Adding One Hot - 153 170 83 13 82
+2017-02-14 22:01:09,738 DEBUG Adding modes - [7, 7, 4] [7, 7, 4] [8, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,739 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,739 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,739 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,739 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,739 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,739 DEBUG Adding : [0, 1, 0]
+2017-02-14 22:01:09,739 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,739 DEBUG Calling observation
+2017-02-14 22:01:09,740 DEBUG present_observation: 
+[0 0 0 ..., 0 1 0]
+2017-02-14 22:01:09,740 INFO sub_turn: 3
+2017-02-14 22:01:09,740 DEBUG Shape of present_observation: (1225,)
+2017-02-14 22:01:09,740 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,740 DEBUG Calling Valid moves
+2017-02-14 22:01:09,740 DEBUG Shape of valid_moves: (2, 5)
+2017-02-14 22:01:09,740 DEBUG valid_actions: 
+[[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,740 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,741 DEBUG Actions,Actions.shape:(2, 5) 
+[[ 83 101   1   0   0]
+ [ 83 102   1   0   0]]
+2017-02-14 22:01:09,743 DEBUG Q_values: [[ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,743 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,744 DEBUG Optimum_action for Detective 2 : 0
+2017-02-14 22:01:09,744 DEBUG Action_probs: [ 0.5  0.5]
+2017-02-14 22:01:09,744 DEBUG Taken Action: 1
+2017-02-14 22:01:09,744 INFO EXPLORING
+2017-02-14 22:01:09,744 DEBUG next_node: 102
+2017-02-14 22:01:09,744 DEBUG mode: [1 0 0]
+2017-02-14 22:01:09,744 DEBUG take_action called
+2017-02-14 22:01:09,745 DEBUG Turn Number = 3, Sub Counter = 3
+2017-02-14 22:01:09,745 DEBUG Values Given - next_node = 102, mode = [1 0 0]
+2017-02-14 22:01:09,745 DEBUG turn_sub_counter = 3, Playing respective detective
+2017-02-14 22:01:09,745 DEBUG Reached play_detective, next_node = 102, mode = [1 0 0], turn_sub_counter = 3
+2017-02-14 22:01:09,745 DEBUG Before Move-> Detective[2]: [83  8  7  4]
+2017-02-14 22:01:09,746 DEBUG After Move-> Detective[2]: [102   7   7   4]
+2017-02-14 22:01:09,746 DEBUG Sending Tokens to MRx
+2017-02-14 22:01:09,746 DEBUG Before Sending-> MRx: [102  14   5   4]
+2017-02-14 22:01:09,746 DEBUG After Sending-> MRx: [102  15   5   4]
+2017-02-14 22:01:09,746 DEBUG Calling Update
+2017-02-14 22:01:09,746 DEBUG Valid Moves for MRx: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,747 DEBUG MRx has valid moves
+2017-02-14 22:01:09,747 DEBUG Detective 0's valid move: [[153 163   0   0   1]
+ [153 166   1   0   0]
+ [153 167   1   0   0]
+ [153 139   1   0   0]
+ [153 140   0   1   0]
+ [153 140   0   0   1]
+ [153 111   0   0   1]
+ [153 152   1   0   0]
+ [153 180   0   1   0]
+ [153 184   0   1   0]
+ [153 185   0   0   1]
+ [153 154   1   0   0]
+ [153 154   0   1   0]
+ [153 124   0   1   0]]
+2017-02-14 22:01:09,748 DEBUG Detective can move
+2017-02-14 22:01:09,748 DEBUG Detective 1's valid move: [[170 185   1   0   0]
+ [170 157   1   0   0]
+ [170 159   1   0   0]]
+2017-02-14 22:01:09,749 DEBUG Detective can move
+2017-02-14 22:01:09,749 DEBUG Detective 2's valid move: [[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,750 DEBUG Detective can move
+2017-02-14 22:01:09,750 DEBUG Detective 3's valid move: [[13 67  0  0  1]
+ [13 52  0  1  0]
+ [13 46  0  0  1]
+ [13 89  0  0  1]
+ [13 23  0  1  0]
+ [13 24  1  0  0]
+ [13  4  1  0  0]
+ [13 14  0  1  0]]
+2017-02-14 22:01:09,751 DEBUG Detective can move
+2017-02-14 22:01:09,751 DEBUG Detective 4's valid move: [[ 82  65   1   0   0]
+ [ 82  65   0   1   0]
+ [ 82  66   1   0   0]
+ [ 82  67   0   1   0]
+ [ 82 100   0   1   0]
+ [ 82 101   1   0   0]
+ [ 82  81   1   0   0]
+ [ 82 140   0   1   0]]
+2017-02-14 22:01:09,752 DEBUG Detective can move
+2017-02-14 22:01:09,752 DEBUG Detective on MRx' position
+2017-02-14 22:01:09,752 INFO Detetives won
+2017-02-14 22:01:09,752 DEBUG Update Over
+2017-02-14 22:01:09,752 INFO Turn Number: 3
+2017-02-14 22:01:09,752 INFO Turn Sub Counter: 3
+2017-02-14 22:01:09,752 INFO Next Node: 102
+2017-02-14 22:01:09,752 INFO Mode: [1 0 0]
+2017-02-14 22:01:09,753 INFO MRx: [102  15   5   4]
+2017-02-14 22:01:09,753 INFO Detectives: 
+[[153   7   7   4]
+ [170   7   7   4]
+ [102   7   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,753 INFO #######
+
+
+
+
+2017-02-14 22:01:09,753 DEBUG Observation Called
+2017-02-14 22:01:09,753 DEBUG Turn Number = 3, Sub_Counter = 3
+2017-02-14 22:01:09,753 DEBUG Calling Detective Observation
+2017-02-14 22:01:09,753 DEBUG Creating Detective Observation
+2017-02-14 22:01:09,753 DEBUG Last Reveal Turn = 2
+2017-02-14 22:01:09,753 DEBUG MRX Location Log - > [ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,754 DEBUG Adding Node 67
+2017-02-14 22:01:09,754 DEBUG Turn to next Reveal = 4
+2017-02-14 22:01:09,754 DEBUG Adding One Hot - 153 170 102 13 82
+2017-02-14 22:01:09,754 DEBUG Adding modes - [7, 7, 4] [7, 7, 4] [7, 7, 4] [8, 8, 3] [7, 8, 4]
+2017-02-14 22:01:09,755 DEBUG MRx's Last transport: [[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,755 DEBUG Adding : [0, 0, 0]
+2017-02-14 22:01:09,755 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,755 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,755 DEBUG Adding : [1, 0, 0]
+2017-02-14 22:01:09,755 DEBUG Adding : [0, 1, 0]
+2017-02-14 22:01:09,755 DEBUG Shape of Observations (1225,)
+2017-02-14 22:01:09,755 DEBUG Skip Turn
+2017-02-14 22:01:09,755 INFO 
+
+
+
+####### ###### END GAME
+2017-02-14 22:01:09,755 INFO Turn Number: 3
+2017-02-14 22:01:09,755 INFO Turn Sub Counter: 4
+2017-02-14 22:01:09,756 INFO MRx: [102  15   5   4]
+2017-02-14 22:01:09,756 INFO MRx Locations:
+[ 49  66  67 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0]
+2017-02-14 22:01:09,756 INFO MRx transport_log:
+[[1 0 0]
+ [1 0 0]
+ [1 0 0]
+ [0 1 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]
+ [0 0 0]]
+2017-02-14 22:01:09,756 INFO Does MRx have a valid move? True
+2017-02-14 22:01:09,757 INFO Detectives:
+[[153   7   7   4]
+ [170   7   7   4]
+ [102   7   7   4]
+ [ 13   8   8   3]
+ [ 82   7   8   4]]
+2017-02-14 22:01:09,757 INFO Detectives Location Log:
+[[140 153 154 153   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    0   0   0   0   0   0]
+ [156 157 185 170   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    0   0   0   0   0   0]
+ [ 86 102  83 102   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    0   0   0   0   0   0]
+ [ 88  89  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    0   0   0   0   0   0]
+ [100  81  82   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    0   0   0   0   0   0]]
+2017-02-14 22:01:09,773 INFO Detective Transport Log 
+[1 0 0]	[1 0 0]	[1 0 0]	[1 0 0]	[1 0 0]	
+[0 1 0]	[1 0 0]	[0 1 0]	[1 0 0]	[1 0 0]	
+[1 0 0]	[0 1 0]	[1 0 0]	[0 0 1]	[1 0 0]	
+[1 0 0]	[1 0 0]	[1 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	[0 0 0]	
+
+2017-02-14 22:01:09,773 INFO Does a detective have a valid move? [True, True, True, True, True]
+2017-02-14 22:01:09,773 INFO Complete: True
+2017-02-14 22:01:09,773 INFO Reward: 100
+2017-02-14 22:01:09,773 INFO #######
+
+
+
+2017-02-14 22:01:09,774 DEBUG next_observation: 
+[0 0 0 ..., 0 1 0]
+2017-02-14 22:01:09,774 DEBUG Shape of next_observation: (1225,)
+2017-02-14 22:01:09,774 INFO Reward: 100
+2017-02-14 22:01:09,774 INFO Complete: True
+2017-02-14 22:01:09,774 DEBUG Sending Valid Moves for 3
+2017-02-14 22:01:09,774 DEBUG New set of actions: 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,775 DEBUG Shape of new Set of Actions: (6, 5)
+2017-02-14 22:01:09,775 DEBUG Getting MaxQ for Detective 2 and Optimizing for him/her
+2017-02-14 22:01:09,775 DEBUG In getOptimum_Action
+2017-02-14 22:01:09,775 DEBUG Actions,Actions.shape:(6, 5) 
+[[102  67   0   1   0]
+ [102 115   1   0   0]
+ [102  86   0   1   0]
+ [102 103   1   0   0]
+ [102  83   1   0   0]
+ [102 127   0   1   0]]
+2017-02-14 22:01:09,778 DEBUG Q_values: [[ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]
+ [ 0.]]
+2017-02-14 22:01:09,779 DEBUG Index,Max: 0 0.0
+2017-02-14 22:01:09,785 INFO 
+
+
+2017-02-14 22:01:09,785 INFO LAST TURN: 3
+2017-02-14 22:01:09,785 INFO Reward = 100
+2017-02-14 22:01:09,785 DEBUG Last Turn By Detective 3
+2017-02-14 22:01:09,785 DEBUG Optimizing MRx
+2017-02-14 22:01:09,792 DEBUG Optimizing Detective 0
+2017-02-14 22:01:09,798 DEBUG Optimizing Detective 1
+2017-02-14 22:01:09,804 DEBUG Optimizing Detective 3
+2017-02-14 22:01:09,811 DEBUG Optimizing Detective 4

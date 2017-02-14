@@ -115,6 +115,8 @@ class q_learn(object):
                 self.logger.debug('Optimizing Detective %s',str(i))
                 self.mdd[i].optimize([self.d_last_obs[i]],[[self.reward]])
 
+        self.SL.close_log() #Closing the log file
+
         return self.reward
 
 
@@ -135,3 +137,9 @@ class q_learn(object):
         self.logger.debug('Q_values: %s',str(Q_values))
         self.logger.debug('Index,Max: %s %s',str(np.argmax(Q_values)),str(np.amax(Q_values)))
         return np.argmax(Q_values),np.amax(Q_values)
+
+    def close_log(self):
+        handlers = self.logger.handlers[:]
+        for handler in handlers:
+            handler.close()
+            self.logger.removeHandler(handler)
