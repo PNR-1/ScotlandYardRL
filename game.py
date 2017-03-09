@@ -109,7 +109,7 @@ class ScotlandYard(object):
             self.turn_sub_counter = 0
             self.turn_number = self.turn_number + 1
 
-        self.skip_turn()
+        #self.skip_turn()
 
         if self.complete == True:
             self.complete_log()
