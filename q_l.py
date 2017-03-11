@@ -82,12 +82,14 @@ class q_learn(object):
                 self.logger.debug('Getting MaxQ for MRx and Optimizing for MRx')
                 _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdx)
                 q_target = [Q_max - reward]
+                q_target = np.transpose(q_target)
                 self.mdx.optimize([state_used], [q_target])
 
             else:
                 self.logger.debug('Getting MaxQ for Detective %s and Optimizing for him/her',str(sub_turn - 1))
                 _,Q_max = self.getOptimum_Action(next_observation,actions,self.mdd[sub_turn - 1])
                 q_target = [Q_max + reward]
+                q_target = np.transpose(q_target)
                 self.mdd[sub_turn -1].optimize([state_used], [q_target])
 
             if done == False:
@@ -105,7 +107,7 @@ class q_learn(object):
             self.logger.debug('Last Turn by MRx, Optimizing for detective')
             for i in range(5):
                 self.mdd[i].optimize([self.d_last_obs[i]],[[self.reward]])
-             self.mdx.optimize([self.x_last_obs],[[self.reward]])
+            self.mdx.optimize([self.x_last_obs],[[self.reward]])
 
         else:
             self.logger.debug('Last Turn By Detective %s',str(sub_turn))
@@ -119,7 +121,7 @@ class q_learn(object):
 
         self.SL.close_log() #Closing the log file
 
-        return self.reward
+        return self.reward, self.mdx, self.mdd
 
 
     def getOptimum_Action(self,present_state,actions,model):
@@ -135,6 +137,7 @@ class q_learn(object):
         for i in range(actions.shape[0]):
             next_node = g_util.node_one_hot(actions[i][1])
             observation[i] = present_state.tolist() + next_node + actions[i][2:].tolist()
+        observation = np.transpose([(np.transpose(observation))])
         Q_values = model.predict(observation)
         self.logger.debug('Q_values: %s',str(Q_values))
         self.logger.debug('Index,Max: %s %s',str(np.argmax(Q_values)),str(np.amax(Q_values)))
