@@ -30,8 +30,7 @@ def move_x(x,target_node,mode):
         x[3] = x[3] - 1
         x[0] = target_node
         return np.copy(x)
-    print ('ERROR ERROR ERROR')
-    print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
+    return np.copy(x)
 
 def x_valid_list(MRx,G):
 
