@@ -16,36 +16,6 @@ class q_learn(object):
 
         self.x_obs = []
         self.x_y = []
-        self.detective_obs = []
-        self.detective_y = []
-        self.reward = 0
-
-    def run_episode(self):
-        self.SL.initialize_game()
-        done = False
-        while done == False:
-            present_observation,sub_turn = self.SL.observe()
-            actions = self.SL.valid_moves()
-            if sub_turn == 0:
-                optimum_action,_ = self.getOptimum_Action(present_observation,actions,self.mdx)
-import numpy as np
-import os
-import utilities.graph_utils as g_util
-import game
-import logging
-import random as rd
-
-class q_learn(object):
-    def __init__(self,mdx,mdd,explore = 0.0):
-
-        self.SL = game.ScotlandYard()
-        self.explore = explore
-
-        self.mdx = mdx
-        self.mdd = mdd #MDD passed is an array here.
-
-        self.x_obs = []
-        self.x_y = []
         self.detective_obs1 = []
         self.detective_obs2 = []
         self.detective_obs3 = []
