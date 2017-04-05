@@ -30,6 +30,8 @@ class ScotlandYard(object):
         self.detectives_transport_log = np.array([self.transport_log] * 5)
         self.detectives_location_log = np.array([self.locations] * 5)
         self.last_move_by_which_player = 0
+
+        self.long_path = 10 # Hard coded to longest possible path calculated using longest_path() function after one run.
 #Done
 
     def initialize_game(self):
@@ -58,6 +60,7 @@ class ScotlandYard(object):
         self.detectives_location_log = np.array([self.locations] * 5)
         self.last_move_by_which_player = 0
 
+        #self.long_path = self.longest_path()
 
     def valid_moves(self):
         if self.turn_sub_counter == 0:
@@ -245,3 +248,19 @@ class ScotlandYard(object):
             observation = observation + self.transport_log[i].tolist()
 
         return np.array(observation)
+
+    ## Used to calculate the shortest path between detectives and X when game is done.
+    def shortest_path(self,number):
+        length = nx.dijkstra_path_length(self.G,self.detectives[number][0],self.MRx[0])
+        return length
+
+    ## Used to calculate the longest possible distance between all the nodes. Takes too long to calculate so hard coded after one run.
+    # For 200 node graph longest path = 10
+    def longest_path(self):
+        long_path = 0
+        for i in range(1,200):
+            for j in range(i,200):
+                path = nx.dijkstra_path_length(self.G,i,j)
+                if (path > long_path):
+                    long_path = path
+        return long_path
