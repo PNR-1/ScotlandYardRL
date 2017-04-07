@@ -109,7 +109,7 @@ class q_learn(object):
 
         rnge = np.array(self.detective_obs1).shape[0]
         if rnge!=0 :
-            reward = (self.long_path-self.length[0])/self.long_path*self.reward
+            reward = self.reward * ( (1/2) ** (self.length[0]) )
             for i in range(rnge):
                 multiplier = rnge - i
                 self.detective_y1[i][0] = self.detective_y1[i][0] + ((0.9)**multiplier) * reward
@@ -117,7 +117,7 @@ class q_learn(object):
 
         rnge = np.array(self.detective_obs2).shape[0]
         if rnge!=0 :
-            reward = (self.long_path-self.length[1])/self.long_path * self.reward
+            reward = self.reward * ( (1/2) ** (self.length[1]) )
             for i in range(rnge):
                 multiplier = rnge - i
                 self.detective_y2[i][0] = self.detective_y2[i][0] + ((0.9)**multiplier) * reward
@@ -125,7 +125,7 @@ class q_learn(object):
 
         rnge = np.array(self.detective_obs3).shape[0]
         if rnge!=0 :
-            reward = (self.long_path-self.length[2])/self.long_path*self.reward
+            reward = self.reward * ( (1/2) ** (self.length[2]) )
             for i in range(rnge):
                 multiplier = rnge - i
                 self.detective_y3[i][0] = self.detective_y3[i][0] + ((0.9)**multiplier) * reward
@@ -133,7 +133,7 @@ class q_learn(object):
 
         rnge = np.array(self.detective_obs4).shape[0]
         if rnge!=0 :
-            reward = (self.long_path-self.length[3])/self.long_path*self.reward
+            reward = self.reward * ( (1/2) ** (self.length[3]) )
             for i in range(rnge):
                 multiplier = rnge - i
                 self.detective_y4[i][0] = self.detective_y4[i][0] + ((0.9)**multiplier) * reward
@@ -141,7 +141,7 @@ class q_learn(object):
 
         rnge = np.array(self.detective_obs5).shape[0]
         if rnge!=0 :
-            reward = (self.long_path-self.length[4])/self.long_path*self.reward
+            reward = self.reward * ( (1/2) ** (self.length[4]) )
             for i in range(rnge):
                 multiplier = rnge - i
                 self.detective_y5[i][0] = self.detective_y5[i][0] + ((0.9)**multiplier) * reward
