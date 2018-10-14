@@ -30,8 +30,7 @@ def move_detective(detective,target_node,mode):
         detective[3] = detective[3] - 1
         detective[0] = target_node
         return np.copy(detective)
-    print ('ERROR ERROR ERROR')
-    print('x - ',x,'\t target_node - ',target_node,'\t mode - ',mode)
+    return np.copy(detective)
 
 def dec_valid_list(detectives,G,detective_id):
     #detective_id is the id of detective - [0,4]
